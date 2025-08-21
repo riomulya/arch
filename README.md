@@ -1,37 +1,195 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# PT ARCH CONTINENT TECH - Company Website
 
-## Getting Started
+Sebuah website company profile dan e-commerce yang profesional untuk PT ARCH CONTINENT TECH, dibangun dengan Next.js 15, Tailwind CSS v4, dan Framer Motion.
 
-First, run the development server:
+## 🚀 Fitur Utama
+
+### Company Profile
+
+- **Homepage** dengan hero section yang menarik
+- **About Us** dengan informasi lengkap perusahaan dan legalitas
+- **Services** berdasarkan KBLI 2020
+- **Legal** dengan informasi Akta Notaris dan status hukum
+- **Contact** dengan form dan informasi kontak
+
+### E-commerce
+
+- **Product Page** untuk Plastik Core Tray
+- **Shopping Cart** dengan fungsi add/remove items
+- **Checkout** terintegrasi dengan WhatsApp
+- **Product Gallery** dan spesifikasi detail
+
+### SEO & Performance
+
+- **SEO Optimized** dengan meta tags dan structured data
+- **Sitemap.xml** dan robots.txt otomatis
+- **Fast Loading** dengan optimasi Next.js
+- **Responsive Design** untuk semua device
+- **Framer Motion** untuk animasi yang smooth
+
+### Blog System
+
+- **Blog Page** untuk artikel SEO
+- **Category System** dan tag management
+- **Newsletter Subscription** placeholder
+
+## 🛠 Tech Stack
+
+- **Framework**: Next.js 15 (App Router)
+- **Styling**: Tailwind CSS v4
+- **Animations**: Framer Motion
+- **Icons**: Heroicons
+- **Language**: JavaScript (React)
+
+## 📦 Instalasi
+
+1. **Clone repository**
+
+```bash
+git clone <repository-url>
+cd arch
+```
+
+2. **Install dependencies**
+
+```bash
+npm install
+```
+
+3. **Run development server**
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. **Build for production**
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+```bash
+npm run build
+npm start
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🏗 Struktur Project
 
-## Learn More
+```
+arch/
+├── app/
+│   ├── components/          # Reusable components
+│   │   ├── Header.js       # Navigation header
+│   │   └── Footer.js       # Footer component
+│   ├── about/              # About page
+│   ├── products/           # Products page
+│   ├── services/           # Services page
+│   ├── contact/            # Contact page
+│   ├── legal/              # Legal information
+│   ├── blog/               # Blog system
+│   ├── cart/               # Shopping cart
+│   ├── sitemap.xml/        # Dynamic sitemap
+│   ├── robots.txt/         # SEO robots file
+│   ├── globals.css         # Global styles
+│   ├── layout.js           # Root layout
+│   └── page.js             # Homepage
+├── public/                 # Static assets
+├── package.json           # Dependencies
+└── README.md             # This file
+```
 
-To learn more about Next.js, take a look at the following resources:
+## 🎨 Kustomisasi
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Colors & Branding
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Primary colors sudah diset dalam Tailwind config:
 
-## Deploy on Vercel
+- **Primary**: Blue (600-900)
+- **Secondary**: Purple (600)
+- **Accent**: Yellow/Orange untuk CTA
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Content Management
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# arch
+Untuk mengupdate konten:
+
+1. **Company Info**: Edit di `app/layout.js` untuk SEO metadata
+2. **Product Info**: Edit di `app/products/page.js`
+3. **Contact Info**: Edit di `app/contact/page.js`
+4. **Blog Posts**: Edit array di `app/blog/page.js`
+
+### Images
+
+Tambahkan gambar ke folder `public/` dan update path di komponen terkait.
+
+## 🚀 Deployment
+
+### Vercel (Recommended)
+
+1. Push ke GitHub repository
+2. Connect ke Vercel
+3. Deploy otomatis
+
+### Manual Deployment
+
+```bash
+npm run build
+# Upload folder .next dan public ke hosting
+```
+
+## 📱 Fitur Responsif
+
+Website ini fully responsive dengan breakpoints:
+
+- **Mobile**: < 768px
+- **Tablet**: 768px - 1024px
+- **Desktop**: > 1024px
+
+## 🔧 Environment Variables
+
+Buat file `.env.local` untuk konfigurasi:
+
+```env
+NEXT_PUBLIC_SITE_URL=https://archcontinenttech.com
+NEXT_PUBLIC_WHATSAPP_NUMBER=6289514024380
+NEXT_PUBLIC_EMAIL=ptarchcontinenttech@gmail.com
+```
+
+## 📞 Integrasi WhatsApp
+
+WhatsApp integration sudah disetup untuk:
+
+- **Product Inquiry** dari halaman produk
+- **Contact Form** alternatif
+- **Cart Checkout** untuk pembelian langsung
+
+## 🎯 SEO Features
+
+- **Meta Tags** untuk setiap halaman
+- **Open Graph** tags untuk social media
+- **Structured Data** (JSON-LD) untuk Google
+- **Sitemap.xml** dinamis
+- **Robots.txt** untuk crawler
+- **Fast loading** dengan Next.js optimizations
+
+## 🔄 Future Enhancements
+
+Fitur yang bisa ditambahkan:
+
+- [ ] CMS Integration (Contentful/Strapi)
+- [ ] Payment Gateway (Midtrans/Xendit)
+- [ ] User Authentication
+- [ ] Product Reviews System
+- [ ] Multi-language Support
+- [ ] Analytics Integration (Google Analytics)
+- [ ] Live Chat System
+
+## 📄 License
+
+© 2025 PT ARCH CONTINENT TECH. All rights reserved.
+
+## 👥 Support
+
+Untuk support teknis atau pertanyaan:
+
+- **Email**: ptarchcontinenttech@gmail.com
+- **WhatsApp**: +62 895-1402-4380
+
+---
+
+**Built with ❤️ by AI Assistant for PT ARCH CONTINENT TECH**
