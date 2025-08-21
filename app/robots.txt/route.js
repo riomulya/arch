@@ -3,7 +3,7 @@ export async function GET() {
 Allow: /
 
 # Sitemap
-Sitemap: https://archcontinenttech.com/sitemap.xml
+Sitemap: https://arch-continent-tech.vercel.app/sitemap.xml
 
 # Disallow admin and private areas
 Disallow: /admin/
