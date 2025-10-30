@@ -62,7 +62,7 @@ export default function Home() {
         <div className='absolute inset-0 '>
           <MeshGradient
             className='absolute inset-0 w-full h-full'
-            colors={['#e0eaff', '#b57c21', '#321e0b', '#9f917a']}
+            colors={['#e0eaff', '#241d9a', '#4145b4', '#4e60d4']}
             distortion={0.8}
             swirl={0.1}
             grainMixer={0}

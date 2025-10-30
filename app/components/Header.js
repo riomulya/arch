@@ -65,9 +65,7 @@ const Header = () => {
                 <h1 className='text-lg font-bold text-gray-900'>
                   PT ARCH CONTINENT TECH
                 </h1>
-                <p className='text-xs text-gray-600'>
-                  Solusi Konstruksi & Teknis
-                </p>
+                <p className='text-xs text-black'>Solusi Konstruksi & Teknis</p>
               </div>
             </Link>
           </motion.div>
@@ -98,7 +96,7 @@ const Header = () => {
               <ShoppingCartIcon className='h-6 w-6' />
               {cartItems > 0 && (
                 <motion.span
-                  className='absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center'
+                  className='absolute -top-1 -right-1 bg-red-500 text-black text-xs rounded-full h-5 w-5 flex items-center justify-center'
                   initial={{ scale: 0 }}
                   animate={{ scale: 1 }}
                   transition={{ type: 'spring', stiffness: 500, damping: 30 }}
@@ -139,7 +137,7 @@ const Header = () => {
               <Link
                 key={item.name}
                 href={item.href}
-                className='text-white-700 hover:text-blue-600 hover:bg-gray-50 block px-3 py-2 text-base font-medium rounded-md transition-colors duration-300'
+                className='text-white-700 text-black hover:text-blue-600 hover:bg-gray-50 block px-3 py-2 text-base font-medium rounded-md transition-colors duration-300'
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item.name}
