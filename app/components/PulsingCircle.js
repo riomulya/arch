@@ -24,7 +24,7 @@ export default function PulsingCircle() {
             '#FF6B35',
             '#8A2BE2',
           ]}
-          color-back='#00000000'
+          // color-back='#00000000'
           speed={1.5}
           roundness={1}
           thickness={0.1}
@@ -70,11 +70,6 @@ export default function PulsingCircle() {
               d='M 50, 50 m -38, 0 a 38,38 0 1,1 76,0 a 38,38 0 1,1 -76,0'
             />
           </defs>
-          <text className='text-sm fill-white/80'>
-            <textPath href='#circle-path' startOffset='0%'>
-              {`Chat WhatsApp: +62 852-1544-2024 • `.repeat(4)}
-            </textPath>
-          </text>
         </motion.svg>
       </div>
     </a>
