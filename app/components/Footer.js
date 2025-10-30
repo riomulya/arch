@@ -8,6 +8,7 @@ import {
   EnvelopeIcon,
   ChevronUpIcon,
 } from '@heroicons/react/24/outline';
+import Image from 'next/image';
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -43,8 +44,13 @@ const Footer = () => {
             className='lg:col-span-2'
           >
             <div className='flex items-center space-x-2 mb-4'>
-              <div className='w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center'>
-                <span className='text-white font-bold text-lg'>ACT</span>
+              <div className='w-16 h-16 bg-gradient-to-r  rounded-lg flex items-center justify-center'>
+                <Image
+                  src='/logo.png'
+                  width={900}
+                  height={900}
+                  alt='PT ARCH CONTINENT TECH'
+                />
               </div>
               <div>
                 <h3 className='text-xl font-bold'>PT ARCH CONTINENT TECH</h3>
