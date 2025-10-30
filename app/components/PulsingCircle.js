@@ -9,7 +9,7 @@ export default function PulsingCircle() {
       href='https://wa.me/6285215442024'
       target='_blank'
       rel='noopener noreferrer'
-      className='fixed bottom-8 right-8 z-30 cursor-pointer group'
+      className='fixed bottom-4 right-4 z-30 cursor-pointer group'
       aria-label='Chat WhatsApp: +62 852-1544-2024'
     >
       <div className='relative w-20 h-20 flex items-center justify-center'>

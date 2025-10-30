@@ -2,6 +2,7 @@ import { Inter } from 'next/font/google';
 import { Analytics } from '@vercel/analytics/next';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import './globals.css';
+import FabrikasiCursor from './components/ui/FabrikasiCursor';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -112,7 +113,11 @@ export default function RootLayout({ children }) {
         />
         <link rel='canonical' href='https://archcontinenttech.com' />
       </head>
-      <body className={`${inter.className} antialiased bg-white text-gray-900`} suppressHydrationWarning>
+      <body
+        className={`${inter.className} antialiased bg-white text-gray-900`}
+        suppressHydrationWarning
+      >
+        <FabrikasiCursor />
         {children}
         <Analytics />
         <SpeedInsights />

@@ -13,6 +13,8 @@ import {
   ArrowRightIcon,
 } from '@heroicons/react/24/outline';
 import PulsingCircle from './components/PulsingCircle';
+import { PointerHighlight } from './components/ui/PointerHighlight';
+import { HeroHighlight, Highlight } from './components/ui/HeroHighlight';
 
 export default function Home() {
   const valuePropositions = [
@@ -71,28 +73,32 @@ export default function Home() {
           />
           <div className="absolute inset-0 bg-[url('/construction-pattern.svg')] bg-repeat opacity-20"></div>
         </div>
+
         <div className='container mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
           <div className='text-center'>
-            <motion.h1
-              className='text-4xl sm:text-5xl lg:text-7xl font-bold text-white mb-6'
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              Solusi Terpercaya untuk{' '}
-              <span className='bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent'>
-                Konstruksi & Teknis
-              </span>
-            </motion.h1>
-
+            <PointerHighlight>
+              <motion.h1
+                className='text-4xl sm:text-5xl lg:text-7xl font-bold text-white mb-6'
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+              >
+                Solusi Terpercaya untuk{' '}
+                <span className='bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent'>
+                  Konstruksi & Teknis
+                </span>
+              </motion.h1>
+            </PointerHighlight>
             <motion.p
               className='text-xl sm:text-2xl text-black mb-8 max-w-3xl mx-auto leading-relaxed'
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              PT ARCH CONTINENT TECH menyediakan bahan konstruksi dan
-              perlengkapan teknis berkualitas tinggi untuk mendukung proyek
+              {' '}
+              <Highlight>PT ARCH CONTINENT TECH</Highlight> menyediakan bahan
+              konstruksi dan perlengkapan teknis{' '}
+              <Highlight>berkualitas tinggi</Highlight> untuk mendukung proyek
               konstruksi Anda
             </motion.p>
 

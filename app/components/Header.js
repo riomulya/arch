@@ -10,6 +10,7 @@ import {
   ShoppingCartIcon,
 } from '@heroicons/react/24/outline';
 import Image from 'next/image';
+import { PointerHighlight } from './ui/PointerHighlight';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
