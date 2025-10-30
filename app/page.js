@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import { MeshGradient } from '@paper-design/shaders-react';
 import {
   CheckCircleIcon,
   CurrencyDollarIcon,
@@ -11,6 +12,7 @@ import {
   DocumentCheckIcon,
   ArrowRightIcon,
 } from '@heroicons/react/24/outline';
+import PulsingCircle from './components/PulsingCircle';
 
 export default function Home() {
   const valuePropositions = [
@@ -46,11 +48,29 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className='relative min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 overflow-hidden'>
+        {/* <MeshGradient
+          width={1280}
+          height={720}
+          colors={['#e0eaff', '#241d9a', '#f75092', '#9f50d3']}
+          distortion={0.8}
+          swirl={0.1}
+          grainMixer={0}
+          grainOverlay={0}
+          speed={1}
+        /> */}
         {/* Background Pattern */}
-        <div className='absolute inset-0 opacity-10'>
+        <div className='absolute inset-0 '>
+          <MeshGradient
+            className='absolute inset-0 w-full h-full'
+            colors={['#e0eaff', '#b57c21', '#321e0b', '#9f917a']}
+            distortion={0.8}
+            swirl={0.1}
+            grainMixer={0}
+            grainOverlay={0}
+            speed={1}
+          />
           <div className="absolute inset-0 bg-[url('/construction-pattern.svg')] bg-repeat opacity-20"></div>
         </div>
-
         <div className='container mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
           <div className='text-center'>
             <motion.h1
@@ -66,7 +86,7 @@ export default function Home() {
             </motion.h1>
 
             <motion.p
-              className='text-xl sm:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto leading-relaxed'
+              className='text-xl sm:text-2xl text-black mb-8 max-w-3xl mx-auto leading-relaxed'
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
@@ -98,7 +118,8 @@ export default function Home() {
             </motion.div>
           </div>
         </div>
-
+        {/* Tambahkan PulsingCircle di sudut kanan bawah Hero */}
+        <PulsingCircle />
         {/* Scroll Indicator */}
         <motion.div
           className='absolute bottom-8 left-1/2 transform -translate-x-1/2'

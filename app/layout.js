@@ -98,7 +98,7 @@ const structuredData = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang='id' className='scroll-smooth'>
+    <html lang='id' className='scroll-smooth' suppressHydrationWarning>
       <head>
         <meta
           name='google-site-verification'
@@ -112,10 +112,10 @@ export default function RootLayout({ children }) {
         />
         <link rel='canonical' href='https://archcontinenttech.com' />
       </head>
-      <Analytics />
-      <SpeedInsights />
-      <body className={`${inter.className} antialiased bg-white text-gray-900`}>
+      <body className={`${inter.className} antialiased bg-white text-gray-900`} suppressHydrationWarning>
         {children}
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );

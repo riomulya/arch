@@ -1,193 +1,236 @@
 'use client';
 
 import Link from 'next/link';
-import { motion } from 'framer-motion';
 import {
-  MapPinIcon,
-  PhoneIcon,
-  EnvelopeIcon,
-  ChevronUpIcon,
-} from '@heroicons/react/24/outline';
+  Dribbble,
+  Facebook,
+  Github,
+  Instagram,
+  Mail,
+  MapPin,
+  Phone,
+  Twitter,
+} from 'lucide-react';
+
+const data = {
+  facebookLink: 'https://www.facebook.com/ptarchcontinenttech',
+  instaLink: 'https://www.instagram.com/ptarchcontinenttech',
+  twitterLink: 'https://www.twitter.com/ptarchcontinenttech',
+  githubLink: 'https://github.com/ptarchcontinenttech', 
+  dribbbleLink: 'https://dribbble.com/ptarchcontinenttech',
+  linkedinLink: 'https://www.linkedin.com/company/ptarchcontinenttech',
+  services: {
+    webdev: '/services',
+    webdesign: '/services',
+    marketing: '/services',
+    googleads: '/services',
+  },
+  about: {
+    history: '/about',
+    team: '/about',
+    handbook: '/about',
+    careers: '/careers',
+  },
+  help: {
+    faqs: '/faqs',
+    support: '/contact',
+    livechat: '/contact',
+  },
+  contact: {
+    email: 'ptarchcontinenttech@gmail.com',
+    phone: '+62 895-1402-4380',
+    address:
+      'JL WR Supratman GG Sukun, RT 003/RW 006, Cempaka Putih, Ciputat Timur, Tangerang Selatan, Banten 15141',
+  },
+  company: {
+    name: 'PT ARCH CONTINENT TECH',
+    description:
+      'Perusahaan terpercaya yang bergerak di bidang perdagangan besar bahan konstruksi, perlengkapan teknis, dan jasa real estate.',
+    logo: '/logo.png',
+  },
+};
+
+const socialLinks = [
+  { icon: Instagram, label: 'Instagram', href: data.instaLink },
+  { icon: Facebook, label: 'Facebook', href: data.facebookLink },
+  { icon: Twitter, label: 'Twitter', href: data.twitterLink },
+  { icon: Github, label: 'GitHub', href: data.githubLink },
+  { icon: Dribbble, label: 'Dribbble', href: data.dribbbleLink },
+];
+
+const aboutLinks = [
+  { text: 'Company History', href: data.about.history },
+  { text: 'Meet the Team', href: data.about.team },
+  { text: 'Employee Handbook', href: data.about.handbook },
+  { text: 'Careers', href: data.about.careers },
+];
+
+const serviceLinks = [
+  { text: 'Perdagangan Besar Bahan Konstruksi', href: data.services.webdev },
+  { text: 'Distribusi Perlengkapan Teknis', href: data.services.webdesign },
+  { text: 'Jasa Agen & Komisioner', href: data.services.marketing },
+  { text: 'Konsultasi Real Estat', href: data.services.googleads },
+];
+
+const helpfulLinks = [
+  { text: 'FAQs', href: data.help.faqs },
+  { text: 'Support', href: data.help.support },
+  { text: 'Live Chat', href: data.help.livechat, hasIndicator: true },
+];
+
+const contactInfo = [
+  { icon: Mail, text: data.contact.email },
+  { icon: Phone, text: data.contact.phone },
+  { icon: MapPin, text: data.contact.address, isAddress: true },
+];
 
 const Footer = () => {
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
-  const quickLinks = [
-    { name: 'Beranda', href: '/' },
-    { name: 'Tentang Kami', href: '/about' },
-    { name: 'Produk', href: '/products' },
-    { name: 'Layanan', href: '/services' },
-    { name: 'Blog', href: '/blog' },
-    { name: 'Kontak', href: '/contact' },
-  ];
-
-  const services = [
-    'Perdagangan Besar Bahan Konstruksi',
-    'Distribusi Perlengkapan Teknis',
-    'Jasa Agen & Komisioner',
-    'Konsultasi Real Estat',
-  ];
-
   return (
-    <footer className='bg-gray-900 text-white'>
-      <div className='container mx-auto px-4 sm:px-6 lg:px-8 py-12'>
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
-          {/* Company Info */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-            className='lg:col-span-2'
-          >
-            <div className='flex items-center space-x-2 mb-4'>
-              <div className='w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center'>
-                <span className='text-white font-bold text-lg'>ACT</span>
+    <footer className='bg-gray-100 dark:bg-gray-900 mt-16 w-full place-self-end rounded-t-xl'>
+      <div className='mx-auto max-w-screen-xl px-4 pt-16 pb-6 sm:px-6 lg:px-8 lg:pt-24'>
+        <div className='grid grid-cols-1 gap-8 lg:grid-cols-3'>
+          <div>
+            <div className='text-blue-600 dark:text-blue-400 flex justify-center gap-2 sm:justify-start'>
+              <div className='w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center'>
+                <span className='text-white font-bold text-sm'>ACT</span>
               </div>
-              <div>
-                <h3 className='text-xl font-bold'>PT ARCH CONTINENT TECH</h3>
-                <p className='text-gray-400 text-sm'>
-                  Solusi Konstruksi & Teknis Terpercaya
-                </p>
-              </div>
+              <span className='text-2xl font-semibold text-gray-900 dark:text-white'>
+                {data.company.name}
+              </span>
             </div>
-            <p className='text-gray-300 mb-6 leading-relaxed'>
-              Perusahaan terpercaya yang bergerak di bidang perdagangan besar
-              bahan konstruksi, perlengkapan teknis, dan jasa real estate.
+
+            <p className='text-gray-600 dark:text-gray-400 mt-6 max-w-md text-center leading-relaxed sm:max-w-xs sm:text-left'>
+              {data.company.description}
             </p>
 
-            {/* Contact Info */}
-            <div className='space-y-3'>
-              <div className='flex items-start space-x-3'>
-                <MapPinIcon className='h-5 w-5 text-blue-400 mt-1 flex-shrink-0' />
-                <p className='text-gray-300 text-sm'>
-                  JL WR SUPRATMAN GG SUKUN, RT 003/RW 006
-                  <br />
-                  Cempaka Putih, Ciputat Timur
-                  <br />
-                  Tangerang Selatan, Banten 15141
-                </p>
-              </div>
-              <div className='flex items-center space-x-3'>
-                <PhoneIcon className='h-5 w-5 text-blue-400 flex-shrink-0' />
-                <a
-                  href='tel:+6289514024380'
-                  className='text-gray-300 hover:text-white transition-colors'
-                >
-                  +62 895-1402-4380
-                </a>
-              </div>
-              <div className='flex items-center space-x-3'>
-                <EnvelopeIcon className='h-5 w-5 text-blue-400 flex-shrink-0' />
-                <a
-                  href='mailto:ptarchcontinenttech@gmail.com'
-                  className='text-gray-300 hover:text-white transition-colors'
-                >
-                  ptarchcontinenttech@gmail.com
-                </a>
-              </div>
-            </div>
-          </motion.div>
-
-          {/* Quick Links */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            viewport={{ once: true }}
-          >
-            <h3 className='text-lg font-semibold mb-4'>Menu Utama</h3>
-            <ul className='space-y-2'>
-              {quickLinks.map((link) => (
-                <li key={link.name}>
+            <ul className='mt-8 flex justify-center gap-6 sm:justify-start md:gap-8'>
+              {socialLinks.map(({ icon: Icon, label, href }) => (
+                <li key={label}>
                   <Link
-                    href={link.href}
-                    className='text-gray-300 hover:text-white transition-colors duration-300 text-sm'
+                    href={href}
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    className='text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition'
                   >
-                    {link.name}
+                    <span className='sr-only'>{label}</span>
+                    <Icon className='size-6' />
                   </Link>
                 </li>
               ))}
             </ul>
-          </motion.div>
+          </div>
 
-          {/* Services */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            viewport={{ once: true }}
-          >
-            <h3 className='text-lg font-semibold mb-4'>Layanan Kami</h3>
-            <ul className='space-y-2'>
-              {services.map((service) => (
-                <li key={service}>
-                  <span className='text-gray-300 text-sm'>{service}</span>
-                </li>
-              ))}
-            </ul>
-
-            {/* Social Media */}
-            <div className='mt-6'>
-              <h4 className='text-sm font-semibold mb-3'>Ikuti Kami</h4>
-              <div className='flex space-x-3'>
-                <a
-                  href='https://www.instagram.com/ptarchcontinenttech'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  className='w-8 h-8 bg-gradient-to-r from-pink-500 to-purple-600 rounded-lg flex items-center justify-center hover:scale-110 transition-transform duration-300'
-                >
-                  <span className='text-white text-xs font-bold'>IG</span>
-                </a>
-                <a
-                  href='https://www.linkedin.com/company/ptarchcontinenttech'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  className='w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center hover:scale-110 transition-transform duration-300'
-                >
-                  <span className='text-white text-xs font-bold'>LI</span>
-                </a>
-                <a
-                  href={`https://wa.me/6289514024380?text=Halo,%20saya%20tertarik%20dengan%20produk%20PT%20ARCH%20CONTINENT%20TECH`}
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  className='w-8 h-8 bg-green-500 rounded-lg flex items-center justify-center hover:scale-110 transition-transform duration-300'
-                >
-                  <span className='text-white text-xs font-bold'>WA</span>
-                </a>
-              </div>
+          <div className='grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-4 lg:col-span-2'>
+            <div className='text-center sm:text-left'>
+              <p className='text-lg font-medium text-gray-900 dark:text-white'>
+                About Us
+              </p>
+              <ul className='mt-8 space-y-4 text-sm'>
+                {aboutLinks.map(({ text, href }) => (
+                  <li key={text}>
+                    <a
+                      className='text-gray-600 dark:text-gray-400 transition hover:text-gray-900 dark:hover:text-white'
+                      href={href}
+                    >
+                      {text}
+                    </a>
+                  </li>
+                ))}
+              </ul>
             </div>
-          </motion.div>
+
+            <div className='text-center sm:text-left'>
+              <p className='text-lg font-medium text-gray-900 dark:text-white'>
+                Our Services
+              </p>
+              <ul className='mt-8 space-y-4 text-sm'>
+                {serviceLinks.map(({ text, href }) => (
+                  <li key={text}>
+                    <a
+                      className='text-gray-600 dark:text-gray-400 transition hover:text-gray-900 dark:hover:text-white'
+                      href={href}
+                    >
+                      {text}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className='text-center sm:text-left'>
+              <p className='text-lg font-medium text-gray-900 dark:text-white'>
+                Helpful Links
+              </p>
+              <ul className='mt-8 space-y-4 text-sm'>
+                {helpfulLinks.map(({ text, href, hasIndicator }) => (
+                  <li key={text}>
+                    <a
+                      href={href}
+                      className={`${
+                        hasIndicator
+                          ? 'group flex justify-center gap-1.5 sm:justify-start'
+                          : 'text-gray-600 dark:text-gray-400 transition hover:text-gray-900 dark:hover:text-white'
+                      }`}
+                    >
+                      <span className='text-gray-600 dark:text-gray-400 transition hover:text-gray-900 dark:hover:text-white'>
+                        {text}
+                      </span>
+                      {hasIndicator && (
+                        <span className='relative flex size-2'>
+                          <span className='bg-blue-600 absolute inline-flex h-full w-full animate-ping rounded-full opacity-75' />
+                          <span className='bg-blue-600 relative inline-flex size-2 rounded-full' />
+                        </span>
+                      )}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className='text-center sm:text-left'>
+              <p className='text-lg font-medium text-gray-900 dark:text-white'>
+                Contact Us
+              </p>
+              <ul className='mt-8 space-y-4 text-sm'>
+                {contactInfo.map(({ icon: Icon, text, isAddress }) => (
+                  <li key={text}>
+                    <a
+                      className='flex items-center justify-center gap-1.5 sm:justify-start'
+                      href={
+                        isAddress
+                          ? '#'
+                          : text.includes('@')
+                          ? `mailto:${text}`
+                          : `tel:${text}`
+                      }
+                    >
+                      <Icon className='text-blue-600 dark:text-blue-400 size-5 shrink-0 shadow-sm' />
+                      {isAddress ? (
+                        <address className='text-gray-600 dark:text-gray-400 -mt-0.5 flex-1 not-italic transition hover:text-gray-900 dark:hover:text-white'>
+                          {text}
+                        </address>
+                      ) : (
+                        <span className='text-gray-600 dark:text-gray-400 flex-1 transition hover:text-gray-900 dark:hover:text-white'>
+                          {text}
+                        </span>
+                      )}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
         </div>
 
-        {/* Bottom Section */}
-        <div className='border-t border-gray-800 mt-12 pt-8'>
-          <div className='flex flex-col md:flex-row justify-between items-center'>
-            <p className='text-gray-400 text-sm'>
-              © 2025 PT ARCH CONTINENT TECH. All rights reserved.
+        <div className='mt-12 border-t border-gray-300 dark:border-gray-700 pt-6'>
+          <div className='text-center sm:flex sm:justify-between sm:text-left'>
+            <p className='text-sm text-gray-600 dark:text-gray-400'>
+              <span className='block sm:inline'>All rights reserved.</span>
             </p>
-            <div className='flex items-center space-x-4 mt-4 md:mt-0'>
-              <Link
-                href='/legal'
-                className='text-gray-400 hover:text-white text-sm transition-colors'
-              >
-                Legalitas
-              </Link>
-              <Link
-                href='/privacy'
-                className='text-gray-400 hover:text-white text-sm transition-colors'
-              >
-                Kebijakan Privasi
-              </Link>
-              <button
-                onClick={scrollToTop}
-                className='w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors duration-300'
-              >
-                <ChevronUpIcon className='h-4 w-4 text-white' />
-              </button>
-            </div>
+
+            <p className='text-gray-600 dark:text-gray-400 mt-4 text-sm transition sm:order-first sm:mt-0'>
+              &copy; 2025 {data.company.name}
+            </p>
           </div>
         </div>
       </div>
