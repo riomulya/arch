@@ -1,5 +1,5 @@
 export async function GET() {
-  const baseUrl = 'https://archcontinenttech.com';
+  const baseUrl = 'https://arch-continent-tech.vercel.app/';
 
   const staticPages = [
     '',

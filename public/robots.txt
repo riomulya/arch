@@ -1,0 +1,43 @@
+User-agent: *
+Allow: /
+
+# Priority pages
+Allow: /products
+Allow: /products?category=*
+Allow: /about
+Allow: /contact
+Allow: /services
+Allow: /certificates
+
+# Disallow private or admin pages
+Disallow: /admin/
+Disallow: /private/
+Disallow: /_next/
+Disallow: /api/
+
+# Allow search engines to crawl assets
+Allow: /images/
+Allow: /css/
+Allow: /js/
+Allow: *.jpg
+Allow: *.jpeg
+Allow: *.png
+Allow: *.gif
+Allow: *.svg
+Allow: *.webp
+
+# Sitemap location
+Sitemap: https://arch-continent-tech.vercel.app/sitemap.xml
+
+# Crawl-delay (optional - remove if not needed)
+# Crawl-delay: 1
+
+# Specific bots
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
