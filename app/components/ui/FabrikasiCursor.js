@@ -10,23 +10,23 @@ const icons = [
   },
   {
     name: 'CNC Machine',
-    src: '../../../public/cursor/cnc_machine.jpg',
+    src: '../../../public/cur/cnc_mahine.jpg',
   },
   {
     name: 'Laser Cutter',
-    src: '../../../public/cursor/laser_cutter.jpg',
+    src: '../../../public/cur/laser_cutter.jpg',
   },
   {
     name: 'Soldering Iron',
-    src: '../../../public/cursor/soldering_iron.jpg',
+    src: '../../../public/cur/soldering_iron.jpg',
   },
   {
     name: 'Drill',
-    src: '../../../public/cursor/drill.jpg',
+    src: '../../../public/cur/drill.jpg',
   },
   {
     name: 'Wrench',
-    src: '../../../public/cursor/wrench.jpg',
+    src: '../../../public/cur/wrench.jpg',
   },
 ];
 
