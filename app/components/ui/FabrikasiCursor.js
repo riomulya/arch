@@ -1,38 +1,32 @@
 'use client';
 import React, { useEffect, useRef } from 'react';
-import coreTray from './cursor/core_tray.webp';
-import cncMachine from './cursor/cnc_machine.webp';
-import laserCutter from './cursor/laser_cutter.webp';
-import solderingIron from './cursor/soldering_iron.webp';
-import drill from './cursor/drill.webp';
-import wrench from './cursor/wrench.webp';
 
 // Array berisi data ikon alat fabrikasi.
 // Ganti URL gambar dengan ikon yang Anda miliki untuk hasil terbaik.
 const icons = [
   {
     name: 'Core Tray',
-    src: coreTray,
+    src: '../../../public/cur/core_tray.jpg',
   },
   {
     name: 'CNC Machine',
-    src: cncMachine,
+    src: '../../../public/cursor/cnc_machine.jpg',
   },
   {
     name: 'Laser Cutter',
-    src: laserCutter,
+    src: '../../../public/cursor/laser_cutter.jpg',
   },
   {
     name: 'Soldering Iron',
-    src: solderingIron,
+    src: '../../../public/cursor/soldering_iron.jpg',
   },
   {
     name: 'Drill',
-    src: drill,
+    src: '../../../public/cursor/drill.jpg',
   },
   {
     name: 'Wrench',
-    src: wrench,
+    src: '../../../public/cursor/wrench.jpg',
   },
 ];
 
