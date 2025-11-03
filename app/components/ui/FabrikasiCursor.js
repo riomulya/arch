@@ -1,157 +1,271 @@
 'use client';
-import React, { useEffect, useRef } from 'react';
-
-// Array berisi data ikon alat fabrikasi.
-// Ganti URL gambar dengan ikon yang Anda miliki untuk hasil terbaik.
-const icons = [
-  {
-    name: 'Core Tray',
-    src: '/cur/core_tray.webp',
-  },
-  {
-    name: 'CNC Machine',
-    src: '/cur/cnc_mahine.webp',
-  },
-  {
-    name: 'Laser Cutter',
-    src: '/cur/laser_cutter.webp',
-  },
-  {
-    name: 'Soldering Iron',
-    src: '/cur/soldering_iron.webp',
-  },
-  {
-    name: 'Drill',
-    src: '/cur/drill.webp',
-  },
-  {
-    name: 'Wrench',
-    src: '/cur/wrench.webp',
-  },
-];
+import React, { useEffect, useRef, useState } from 'react';
 
 /**
- * Komponen kursor khusus yang menampilkan ikon alat fabrikasi
- * yang mengikuti pergerakan mouse dan memudar.
+ * Custom cursor yang menggantikan cursor default dengan berbagai state
+ * Default: Wrench icon
+ * Pointer: Hand pointer untuk links & buttons
+ * Text: Text cursor untuk input & textarea
  */
 const FabrikasiCursor = () => {
-  // Ref untuk menyimpan elemen canvas
-  const canvasRef = useRef(null);
-  // Ref untuk menyimpan array partikel yang sedang aktif
-  const particlesRef = useRef([]);
-  // Ref untuk menyimpan gambar-gambar yang sudah dimuat
-  const alatImagesRef = useRef([]);
+  // Ref untuk menyimpan elemen cursor
+  const cursorRef = useRef(null);
+  // Ref untuk menyimpan posisi cursor
+  const cursorPositionRef = useRef({ x: 0, y: 0 });
+  // Ref untuk target position (untuk smooth following)
+  const targetPositionRef = useRef({ x: 0, y: 0 });
+  // Ref untuk animasi frame
+  const animationRef = useRef(null);
+  // State untuk cursor state
+  const [cursorState, setCursorState] = useState('default');
+  // State untuk visibility
+  const [isVisible, setIsVisible] = useState(false);
+  // Ref untuk mencegah flicker
+  const stabilityRef = useRef(0);
 
   useEffect(() => {
-    // Fungsi untuk memuat semua gambar secara asinkron sebelum animasi dimulai
-    const loadAlatImages = async () => {
-      const imagePromises = icons.map(({ name, src }) => {
-        return new Promise((resolve) => {
-          const img = new Image();
-          img.src = src;
-          img.onload = () => resolve({ name, src, image: img });
-        });
-      });
-      alatImagesRef.current = await Promise.all(imagePromises);
+    let rafId = null;
+
+    // Ultra-responsive cursor following with hybrid approach
+    const updateCursorPosition = () => {
+      if (cursorRef.current) {
+        const dx = targetPositionRef.current.x - cursorPositionRef.current.x;
+        const dy = targetPositionRef.current.y - cursorPositionRef.current.y;
+
+        // If distance is large, move directly (for quick movements)
+        // If distance is small, use smoothing (for precision)
+        const distance = Math.sqrt(dx * dx + dy * dy);
+
+        if (distance > 10) {
+          // Fast movement - direct positioning
+          cursorPositionRef.current.x = targetPositionRef.current.x;
+          cursorPositionRef.current.y = targetPositionRef.current.y;
+        } else {
+          // Small movements - use smoothing for precision
+          cursorPositionRef.current.x += dx * 0.8; // Very responsive
+          cursorPositionRef.current.y += dy * 0.8;
+        }
+
+        // Apply transformation immediately
+        cursorRef.current.style.transform = `translate(${cursorPositionRef.current.x - 24}px, ${cursorPositionRef.current.y - 24}px)`;
+      }
+
+      rafId = requestAnimationFrame(updateCursorPosition);
     };
 
-    // Memulai proses pemuatan gambar dan inisialisasi canvas
-    loadAlatImages().then(() => {
-      const canvas = canvasRef.current;
-      if (!canvas) return;
-      const ctx = canvas.getContext('2d');
-      if (!ctx) return;
+    // Start animation loop
+    updateCursorPosition();
 
-      // Mengatur ukuran canvas agar mengisi seluruh jendela
-      const handleResize = () => {
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-      };
-      handleResize();
-      window.addEventListener('resize', handleResize);
+    // Determine cursor state based on element
+    const determineCursorState = (element) => {
+      if (!element) return 'default';
 
-      const particles = particlesRef.current;
+      const tagName = element.tagName.toLowerCase();
+      const computedStyle = window.getComputedStyle(element);
+      const cursor = computedStyle.cursor;
 
-      // Loop animasi utama
-      const animate = () => {
-        // Membersihkan canvas pada setiap frame
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
+      // Check for clickable elements
+      if (
+        tagName === 'a' ||
+        tagName === 'button' ||
+        element.onclick ||
+        element.role === 'button' ||
+        cursor === 'pointer' ||
+        element.classList.contains('cursor-pointer') ||
+        element.closest('[onclick]') ||
+        element.closest('a') ||
+        element.closest('button')
+      ) {
+        return 'pointer';
+      }
 
-        // Memproses setiap partikel
-        for (let i = particles.length - 1; i >= 0; i--) {
-          const p = particles[i];
-          p.update(); // Memperbarui posisi dan transparansi partikel
-          p.draw(ctx); // Menggambar partikel ke canvas
+      // Check for text input elements
+      if (
+        tagName === 'input' ||
+        tagName === 'textarea' ||
+        element.contentEditable === 'true' ||
+        cursor === 'text' ||
+        element.closest('[contenteditable="true"]')
+      ) {
+        return 'text';
+      }
 
-          // Menghapus partikel dari array jika sudah tidak terlihat (alpha <= 0)
-          if (p.alpha <= 0) {
-            particles.splice(i, 1);
-          }
+      // Check for drag elements
+      if (cursor === 'grab' || cursor === 'grabbing') {
+        return 'grab';
+      }
+
+      // Check for disabled elements
+      if (
+        element.disabled ||
+        element.getAttribute('aria-disabled') === 'true' ||
+        element.closest('[disabled]') ||
+        element.closest('[aria-disabled="true"]')
+      ) {
+        return 'not-allowed';
+      }
+
+      return 'default';
+    };
+
+    // Handle mouse movement - optimized for instant response
+    const handleMouseMove = (e) => {
+      targetPositionRef.current = { x: e.clientX, y: e.clientY };
+
+      if (!isVisible) {
+        setIsVisible(true);
+        // Initialize position immediately for instant appearance
+        cursorPositionRef.current = { x: e.clientX, y: e.clientY };
+      }
+
+      // Determine cursor state - optimized checking
+      const newState = determineCursorState(e.target);
+      if (newState !== cursorState) {
+        setCursorState(newState);
+      }
+
+      // Reset stability counter
+      stabilityRef.current = 0;
+    };
+
+    // Handle mouse enter to window
+    const handleMouseEnter = () => {
+      setIsVisible(true);
+      stabilityRef.current = 0;
+    };
+
+    // Handle mouse leave from window
+    const handleMouseLeave = () => {
+      stabilityRef.current++;
+      // Only hide if mouse has been out of window for more than 100ms
+      setTimeout(() => {
+        if (stabilityRef.current > 0) {
+          setIsVisible(false);
         }
-        requestAnimationFrame(animate);
-      };
+      }, 100);
+    };
 
-      animate();
+    // Add event listeners
+    window.addEventListener('mousemove', handleMouseMove);
+    window.addEventListener('mouseenter', handleMouseEnter);
+    window.addEventListener('mouseleave', handleMouseLeave);
 
-      // Event handler untuk pergerakan mouse
-      const onMove = (e) => {
-        // Memilih ikon alat secara acak dari yang sudah dimuat
-        const randomAlat =
-          alatImagesRef.current[
-            Math.floor(Math.random() * alatImagesRef.current.length)
-          ];
+    // Hide default cursor
+    document.body.style.cursor = 'none';
 
-        // Menentukan ukuran partikel secara acak untuk variasi visual
-        const size = 22 + Math.random() * 8;
+    // Prevent default cursor on all elements
+    const style = document.createElement('style');
+    style.innerHTML = '* { cursor: none !important; }';
+    style.id = 'custom-cursor-style';
+    document.head.appendChild(style);
 
-        // Membuat objek partikel baru
-        const particle = {
-          x: e.clientX,
-          y: e.clientY,
-          alpha: 1, // Transparansi awal
-          image: randomAlat.image,
-          size: size,
-          // Fungsi untuk memperbarui keadaan partikel pada setiap frame
-          update() {
-            this.y -= 0.4; // Gerakan ke atas
-            this.alpha -= 0.02; // Pengurangan transparansi (efek memudar)
-          },
-          // Fungsi untuk menggambar partikel ke canvas
-          draw(ctx) {
-            ctx.save(); // Menyimpan keadaan canvas saat ini
-            ctx.globalAlpha = this.alpha; // Mengatur transparansi
-            ctx.drawImage(
-              this.image,
-              this.x - this.size / 2, // Posisi x agar tengah
-              this.y - this.size / 2, // Posisi y agar tengah
-              this.size,
-              this.size
-            );
-            ctx.restore(); // Mengembalikan keadaan canvas
-          },
-        };
+    // Cleanup
+    return () => {
+      window.removeEventListener('mousemove', handleMouseMove);
+      window.removeEventListener('mouseenter', handleMouseEnter);
+      window.removeEventListener('mouseleave', handleMouseLeave);
 
-        // Menambahkan partikel baru ke array
-        particles.push(particle);
-      };
+      if (rafId) {
+        cancelAnimationFrame(rafId);
+      }
 
-      // Menambahkan event listener ke window
-      window.addEventListener('mousemove', onMove);
+      document.body.style.cursor = 'auto';
+      const customStyle = document.getElementById('custom-cursor-style');
+      if (customStyle) {
+        customStyle.remove();
+      }
+    };
+  }, [cursorState, isVisible]);
 
-      // Cleanup: menghapus event listener saat komponen tidak lagi digunakan (unmount)
-      return () => {
-        window.removeEventListener('mousemove', onMove);
-        window.removeEventListener('resize', handleResize);
-      };
-    });
-  }, []); // useEffect dijalankan sekali saat komponen dimount
+  // Get cursor content based on state
+  const getCursorContent = () => {
+    switch (cursorState) {
+      case 'pointer':
+        return (
+          <div className="w-12 h-12 flex items-center justify-center">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="drop-shadow-lg">
+              <path d="M3 3L7.5 20.5L12 12L21 10L3 3Z" fill="#3B82F6" stroke="white" strokeWidth="1.5"/>
+            </svg>
+          </div>
+        );
+      case 'text':
+        return (
+          <div className="w-8 h-8 flex items-center justify-center">
+            <div className="w-0.5 h-6 bg-gray-800 rounded-full"></div>
+          </div>
+        );
+      case 'grab':
+        return (
+          <div className="w-12 h-12 flex items-center justify-center">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2L14 9L21 9L16 13L18 20L12 16L6 20L8 13L3 9L10 9L12 2Z" fill="#F59E0B" stroke="white" strokeWidth="1"/>
+            </svg>
+          </div>
+        );
+      case 'not-allowed':
+        return (
+          <div className="w-12 h-12 flex items-center justify-center">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="12" cy="12" r="9" stroke="#EF4444" strokeWidth="2"/>
+              <path d="M8 8L16 16" stroke="#EF4444" strokeWidth="2" strokeLinecap="round"/>
+            </svg>
+          </div>
+        );
+      default:
+        return (
+          <div className="w-12 h-12 flex items-center justify-center">
+            <img
+              src="/cur/pixel_cursor_wrench.png"
+              alt="Custom Cursor"
+              className="w-10 h-10 drop-shadow-lg"
+              style={{
+                filter: 'drop-shadow(0 4px 6px rgba(0,0,0,0.3))',
+                imageRendering: 'pixelated',
+              }}
+              draggable={false}
+            />
+          </div>
+        );
+    }
+  };
+
+  if (!isVisible) {
+    return null;
+  }
 
   return (
-    <canvas
-      ref={canvasRef}
-      className='fixed top-0 left-0 w-full h-full pointer-events-none z-50'
-      style={{ pointerEvents: 'none' }} // Memastikan canvas tidak menghalangi interaksi elemen di bawahnya
-    />
+    <div
+      ref={cursorRef}
+      className={`fixed top-0 left-0 pointer-events-none z-[9999] ${
+        cursorState === 'pointer' ? 'scale-110' : 'scale-100'
+      }`}
+      style={{
+        willChange: 'transform',
+        mixBlendMode: 'normal',
+        // No transition for maximum responsiveness
+      }}
+    >
+      {/* Main cursor */}
+      <div className={`relative ${
+        cursorState === 'pointer' ? 'rotate-12' : 'rotate-0'
+      }`}
+      style={{
+        // No transition for instant state changes
+        transition: 'none',
+      }}>
+        {getCursorContent()}
+      </div>
+
+      {/* Small dot for precision */}
+      {cursorState === 'default' && (
+        <div
+          className="absolute top-1/2 left-1/2 w-1 h-1 bg-blue-500 rounded-full"
+          style={{
+            transform: 'translate(-50%, -50%)',
+          }}
+        />
+      )}
+    </div>
   );
 };
 
