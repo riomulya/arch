@@ -6,27 +6,27 @@ import React, { useEffect, useRef } from 'react';
 const icons = [
   {
     name: 'Core Tray',
-    src: '../../../public/cur/core_tray.jpg',
+    src: '/cur/core_tray.webp',
   },
   {
     name: 'CNC Machine',
-    src: '../../../public/cur/cnc_mahine.jpg',
+    src: '/cur/cnc_mahine.webp',
   },
   {
     name: 'Laser Cutter',
-    src: '../../../public/cur/laser_cutter.jpg',
+    src: '/cur/laser_cutter.webp',
   },
   {
     name: 'Soldering Iron',
-    src: '../../../public/cur/soldering_iron.jpg',
+    src: '/cur/soldering_iron.webp',
   },
   {
     name: 'Drill',
-    src: '../../../public/cur/drill.jpg',
+    src: '/cur/drill.webp',
   },
   {
     name: 'Wrench',
-    src: '../../../public/cur/wrench.jpg',
+    src: '/cur/wrench.webp',
   },
 ];
 
