@@ -11,7 +11,7 @@ You are an expert web developer AI tasked with building a professional, responsi
 - **Business:** Wholesale trade of construction materials, technical equipment, and real estate services (based on KBLI 2020 codes).
 - **Legal Status:** Established under Notary Act No. 25 dated July 3, 2025, in Cirebon.
 - **Address:** JL WR SUPRATMAN GG SUKUN, RT 003/RW 006, Cempaka Putih, Ciputat Timur, Tangerang Selatan, Banten 15141.
-- **Contact:** Phone: 089514024380; Email: (use a placeholder, e.g., ptarchcontinenttech@gmail.com).
+- **Contact:** Phone: +62 852-1544-2024; Email: (use a placeholder, e.g., ptarchcontinenttech@gmail.com).
 - **Product Focus:** Plastik Core Tray (for cable management in data centers, industries, etc.).
 
 ---
@@ -144,7 +144,7 @@ You are an expert web developer AI tasked with building a professional, responsi
       "addressRegion": "Banten",
       "postalCode": "15141"
     },
-    "telephone": "+6289514024380",
+    "telephone": "+62 852-1544-2024",
     "url": "https://archcontinenttech.com"
   }
   ```

@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import Image from 'next/image';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import {
@@ -31,7 +32,7 @@ export default function Cart() {
         aplikasi: 'Inti bor diameter PQ (85 mm)',
       },
       quantity: 2,
-      image: '/products/core-tray-pq.jpg',
+      image: 'https://images.unsplash.com/photo-1605000797499-95a51c5269ae?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
     },
     {
       id: 2,
@@ -47,7 +48,7 @@ export default function Cart() {
         aplikasi: 'Inti bor diameter HQ (63.5 mm)',
       },
       quantity: 1,
-      image: '/products/core-tray-hq.jpg',
+      image: 'https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
     },
     {
       id: 3,
@@ -62,7 +63,7 @@ export default function Cart() {
         keamanan: 'Medical grade plastic',
       },
       quantity: 1,
-      image: '/products/cassette-3p.jpg',
+      image: 'https://images.unsplash.com/photo-1534531187661-9410395f58d0?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
     },
   ]);
 
@@ -209,10 +210,17 @@ Mohon bantuan untuk proses penawaran dan informasi lebih lanjut. Terima kasih.`;
                     <div className='flex items-start justify-between'>
                       <div className='flex items-center space-x-4'>
                         {/* Product Image */}
-                        <div className='w-20 h-20 bg-gradient-to-br from-blue-50 to-indigo-100 rounded-lg flex items-center justify-center flex-shrink-0 border border-blue-200'>
-                          <span className='text-blue-600 text-xs font-semibold'>
-                            ACT
-                          </span>
+                        <div className='w-20 h-20 rounded-lg overflow-hidden flex-shrink-0 border-2 border-gray-200 relative'>
+                          <Image
+                            src={item.image}
+                            alt={`${item.name} - ${item.category}`}
+                            fill
+                            className='object-cover hover:scale-105 transition-transform duration-300'
+                            sizes='(max-width: 80px) 100vw, 80px'
+                            style={{ objectFit: 'cover' }}
+                            placeholder='blur'
+                            blurDataURL='data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwA/8A8A'
+                          />
                         </div>
 
                         {/* Product Info */}
@@ -434,6 +442,7 @@ Mohon bantuan untuk proses penawaran dan informasi lebih lanjut. Terima kasih.`;
               {
                 name: 'Core Tray NQ - Plastik Premium',
                 category: 'Pertambangan',
+                image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
                 specifications: {
                   panjang: '1085 mm',
                   lebar: '390 mm',
@@ -446,6 +455,7 @@ Mohon bantuan untuk proses penawaran dan informasi lebih lanjut. Terima kasih.`;
               {
                 name: 'ODP - Optical Distribution Point',
                 category: 'Telekomunikasi',
+                image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
                 specifications: {
                   material: 'UV Resistant Plastic',
                   fungsi: 'Fiber Optic Management',
@@ -457,6 +467,7 @@ Mohon bantuan untuk proses penawaran dan informasi lebih lanjut. Terima kasih.`;
               {
                 name: 'Baby Scale - Timbangan Bayi',
                 category: 'Medical Devices',
+                image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
                 specifications: {
                   fungsi: 'Medical Weighing',
                   akurasi: 'High Precision',
@@ -484,10 +495,17 @@ Mohon bantuan untuk proses penawaran dan informasi lebih lanjut. Terima kasih.`;
                       {product.highlight}
                     </span>
                   </div>
-                  <div className='w-full h-32 bg-gradient-to-br from-gray-50 to-gray-100 rounded-lg flex items-center justify-center border border-gray-200'>
-                    <span className='text-gray-400 text-sm font-semibold'>
-                      ACT
-                    </span>
+                  <div className='w-full h-32 rounded-lg overflow-hidden border border-gray-200 relative group'>
+                    <Image
+                      src={product.image}
+                      alt={`${product.name} - ${product.category}`}
+                      fill
+                      className='object-cover transition-transform duration-300 group-hover:scale-105'
+                      sizes='(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw'
+                      placeholder='blur'
+                      blurDataURL='data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwA/8A8A'
+                    />
+                    <div className='absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300'></div>
                   </div>
                 </div>
 
