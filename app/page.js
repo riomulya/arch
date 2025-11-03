@@ -18,6 +18,7 @@ import {
 import PulsingCircle from './components/PulsingCircle';
 import { PointerHighlight } from './components/ui/PointerHighlight';
 import { HeroHighlight, Highlight } from './components/ui/HeroHighlight';
+import ChatBot from './components/ChatBot';
 
 // Featured products data structure based on documentation
 const featuredProducts = [
@@ -153,7 +154,7 @@ export default function Home() {
                 href='/products'
                 className='border-2 border-white text-white hover:bg-white hover:text-blue-900 font-bold py-4 px-8 rounded-full transition-all duration-300 transform hover:scale-105'
               >
-                Lihat Portofolio Lengkap
+                Lihat Produk Lengkap
               </Link>
             </motion.div>
           </div>
@@ -356,6 +357,7 @@ export default function Home() {
       </section>
 
       <Footer />
+      <ChatBot />
     </div>
   );
 }
