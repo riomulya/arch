@@ -384,16 +384,16 @@ Apa yang ingin Anda ketahui lebih detail? 😊`;
       {/* Chat Button */}
       <motion.button
         onClick={() => setIsOpen(true)}
-        className='fixed bottom-6 left-6 bg-gradient-to-r from-blue-600 to-purple-600 text-white p-4 rounded-full shadow-2xl hover:shadow-3xl z-40 group'
+        className='fixed bottom-4 sm:bottom-6 left-4 sm:left-6 bg-gradient-to-r from-blue-600 to-purple-600 text-white p-3 sm:p-4 rounded-full shadow-2xl hover:shadow-3xl z-40 group'
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
         initial={{ opacity: 0, scale: 0 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ delay: 1 }}
       >
-        <ChatBubbleLeftRightIcon className='h-6 w-6' />
+        <ChatBubbleLeftRightIcon className='h-5 w-5 sm:h-6 sm:w-6' />
         <motion.span
-          className='absolute left-full ml-3 bg-gray-900 text-white px-3 py-1 rounded-lg text-sm whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity'
+          className='absolute left-full ml-2 sm:ml-3 bg-gray-900 text-white px-2 sm:px-3 py-1 rounded-lg text-xs sm:text-sm whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity'
           initial={{ opacity: 0, x: -10 }}
           animate={{ opacity: 0, x: -10 }}
           whileHover={{ opacity: 1, x: 0 }}
@@ -414,21 +414,21 @@ Apa yang ingin Anda ketahui lebih detail? 😊`;
               onClick={() => setIsOpen(false)}
             />
             <motion.div
-              className='fixed bottom-24 left-6 w-full max-w-md h-[650px] bg-white rounded-2xl shadow-2xl z-50 flex flex-col'
+              className='fixed bottom-20 sm:bottom-24 left-4 right-4 sm:left-6 sm:right-auto md:w-full md:max-w-md lg:max-w-lg xl:max-w-md h-[75vh] sm:h-[85vh] md:h-[70vh] lg:h-[650px] xl:h-[600px] max-h-[700px] bg-white rounded-2xl shadow-2xl z-50 flex flex-col'
               initial={{ opacity: 0, scale: 0.8, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.8, y: 20 }}
               transition={{ type: 'spring', damping: 25, stiffness: 400 }}
             >
               {/* Header */}
-              <div className='bg-gradient-to-r from-blue-600 to-purple-600 text-white p-4 rounded-t-2xl flex items-center justify-between'>
-                <div className='flex items-center space-x-3'>
-                  <div className='w-10 h-10 bg-white/20 rounded-full flex items-center justify-center'>
-                    <SparklesIcon className='h-6 w-6' />
+              <div className='bg-gradient-to-r from-blue-600 to-purple-600 text-white p-3 sm:p-4 rounded-t-2xl flex items-center justify-between'>
+                <div className='flex items-center space-x-2 sm:space-x-3'>
+                  <div className='w-8 h-8 sm:w-10 sm:h-10 bg-white/20 rounded-full flex items-center justify-center'>
+                    <SparklesIcon className='h-5 w-5 sm:h-6 sm:w-6' />
                   </div>
                   <div>
-                    <h3 className='font-semibold'>AI Assistant</h3>
-                    <p className='text-xs opacity-90'>Online - Selalu siap membantu!</p>
+                    <h3 className='font-semibold text-sm sm:text-base'>AI Assistant</h3>
+                    <p className='text-xs opacity-90 hidden sm:block'>Online - Selalu siap membantu!</p>
                   </div>
                 </div>
                 <button
@@ -440,7 +440,7 @@ Apa yang ingin Anda ketahui lebih detail? 😊`;
               </div>
 
               {/* Messages */}
-              <div className='flex-1 overflow-y-auto p-4 space-y-4 bg-gray-50'>
+              <div className='flex-1 overflow-y-auto p-3 sm:p-4 space-y-3 sm:space-y-4 bg-gray-50'>
                 {messages.map((message) => (
                   <motion.div
                     key={message.id}
@@ -449,27 +449,27 @@ Apa yang ingin Anda ketahui lebih detail? 😊`;
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.3 }}
                   >
-                    <div className={`flex items-end space-x-2 max-w-[85%] ${message.role === 'user' ? 'flex-row-reverse space-x-reverse' : ''}`}>
-                      <div className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 ${
+                    <div className={`flex items-end space-x-1.5 sm:space-x-2 max-w-[75%] sm:max-w-[85%] ${message.role === 'user' ? 'flex-row-reverse space-x-reverse' : ''}`}>
+                      <div className={`w-6 h-6 sm:w-8 sm:h-8 rounded-full flex items-center justify-center flex-shrink-0 ${
                         message.role === 'user'
                           ? 'bg-gradient-to-r from-blue-600 to-purple-600'
                           : 'bg-gradient-to-r from-green-500 to-teal-500'
                       }`}>
                         {message.role === 'user' ? (
-                          <UserIcon className='h-5 w-5 text-white' />
+                          <UserIcon className='h-3.5 w-3.5 sm:h-5 sm:w-5 text-white' />
                         ) : (
-                          <SparklesIcon className='h-5 w-5 text-white' />
+                          <SparklesIcon className='h-3.5 w-3.5 sm:h-5 sm:w-5 text-white' />
                         )}
                       </div>
                       <div
-                        className={`p-3 rounded-2xl ${
+                        className={`p-2 sm:p-3 rounded-2xl ${
                           message.role === 'user'
                             ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white'
                             : 'bg-white text-gray-900 shadow-md'
                         }`}
                       >
                         <div
-                          className='text-sm leading-relaxed'
+                          className='text-xs sm:text-sm leading-relaxed'
                           dangerouslySetInnerHTML={{ __html: renderMarkdown(message.content) }}
                         />
                       </div>
@@ -484,19 +484,19 @@ Apa yang ingin Anda ketahui lebih detail? 😊`;
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                   >
-                    <div className='flex items-end space-x-2'>
-                      <div className='w-8 h-8 rounded-full bg-gradient-to-r from-green-500 to-teal-500 flex items-center justify-center'>
-                        <SparklesIcon className='h-5 w-5 text-white' />
+                    <div className='flex items-end space-x-1.5 sm:space-x-2'>
+                      <div className='w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-gradient-to-r from-green-500 to-teal-500 flex items-center justify-center'>
+                        <SparklesIcon className='h-3.5 w-3.5 sm:h-5 sm:w-5 text-white' />
                       </div>
-                      <div className='bg-white text-gray-900 p-3 rounded-2xl shadow-md'>
+                      <div className='bg-white text-gray-900 p-2 sm:p-3 rounded-2xl shadow-md'>
                         <div className='flex items-center space-x-1'>
-                          <div className='w-2 h-2 bg-gray-400 rounded-full animate-bounce' />
-                          <div className='w-2 h-2 bg-gray-400 rounded-full animate-bounce' style={{ animationDelay: '0.1s' }} />
-                          <div className='w-2 h-2 bg-gray-400 rounded-full animate-bounce' style={{ animationDelay: '0.2s' }} />
+                          <div className='w-1.5 h-1.5 sm:w-2 sm:h-2 bg-gray-400 rounded-full animate-bounce' />
+                          <div className='w-1.5 h-1.5 sm:w-2 sm:h-2 bg-gray-400 rounded-full animate-bounce' style={{ animationDelay: '0.1s' }} />
+                          <div className='w-1.5 h-1.5 sm:w-2 sm:h-2 bg-gray-400 rounded-full animate-bounce' style={{ animationDelay: '0.2s' }} />
                         </div>
                         {currentTypingMessage && (
                           <div
-                            className='text-sm leading-relaxed mt-2'
+                            className='text-xs sm:text-sm leading-relaxed mt-2'
                             dangerouslySetInnerHTML={{ __html: renderMarkdown(currentTypingMessage) }}
                           />
                         )}
@@ -508,13 +508,13 @@ Apa yang ingin Anda ketahui lebih detail? 😊`;
               </div>
 
               {/* Quick Suggestions */}
-              <div className='bg-white border-t border-gray-200 p-3 text-black'>
-                <div className='flex flex-wrap gap-2 mb-3'>
-                  {['🔧 Core Tray', '⚙️ Komponen Presisi', '💰 Minta Penawaran', '📞 Kontak Kami'].map((suggestion) => (
+              <div className='bg-white border-t border-gray-200 p-2 sm:p-3 text-black'>
+                <div className='flex flex-wrap gap-1.5 sm:gap-2 mb-2 sm:mb-3'>
+                  {['Core Tray', 'Komponen Presisi', 'Minta Penawaran', 'Kontak Kami'].map((suggestion) => (
                     <button
                       key={suggestion}
                       onClick={() => handleSuggestionClick(suggestion)}
-                      className='text-xs bg-gray-100 hover:bg-gray-200 px-3 py-1 rounded-full transition-colors'
+                      className='text-[10px] sm:text-xs bg-gray-100 hover:bg-gray-200 px-2 sm:px-3 py-1 rounded-full transition-colors'
                     >
                       {suggestion}
                     </button>
@@ -522,7 +522,7 @@ Apa yang ingin Anda ketahui lebih detail? 😊`;
                 </div>
 
                 {/* Input */}
-                <div className='flex space-x-2'>
+                <div className='flex space-x-1.5 sm:space-x-2'>
                   <input
                     ref={inputRef}
                     type='text'
@@ -530,15 +530,15 @@ Apa yang ingin Anda ketahui lebih detail? 😊`;
                     onChange={(e) => setInputValue(e.target.value)}
                     onKeyPress={(e) => e.key === 'Enter' && handleSend()}
                     placeholder='Ketik pertanyaan Anda...'
-                    className='flex-1 px-4 py-2 border border-gray-300 rounded-full focus:outline-none focus:border-blue-500 text-gray-900 placeholder-gray-500'
+                    className='flex-1 px-3 sm:px-4 py-1.5 sm:py-2 border border-gray-300 rounded-full focus:outline-none focus:border-blue-500 text-gray-900 placeholder-gray-500 text-sm'
                     disabled={isTyping}
                   />
                   <button
                     onClick={handleSend}
                     disabled={!inputValue.trim() || isTyping}
-                    className='bg-gradient-to-r from-blue-600 to-purple-600 text-white p-2 rounded-full hover:shadow-lg transition-all disabled:opacity-50 disabled:cursor-not-allowed'
+                    className='bg-gradient-to-r from-blue-600 to-purple-600 text-white p-1.5 sm:p-2 rounded-full hover:shadow-lg transition-all disabled:opacity-50 disabled:cursor-not-allowed'
                   >
-                    <PaperAirplaneIcon className='h-5 w-5' />
+                    <PaperAirplaneIcon className='h-4 w-4 sm:h-5 sm:w-5' />
                   </button>
                 </div>
               </div>

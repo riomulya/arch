@@ -118,7 +118,7 @@ export default function Home() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
               >
-                Mitra Solusi Manufaktur Presisi :{' '}
+                Mitra Solusi Manufaktur Presisi{' '}
                 <span className='bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent'>
                   Kualitas Konsisten, Pengiriman Andal
                 </span>
