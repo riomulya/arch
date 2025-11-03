@@ -5,28 +5,28 @@ import React, { useEffect, useRef } from 'react';
 // Ganti URL gambar dengan ikon yang Anda miliki untuk hasil terbaik.
 const icons = [
   {
-    name: '3D Printer',
-    src: 'https://cdn-icons-png.flaticon.com/512/3202/3202935.png',
+    name: 'Core Tray',
+    src: '../../../public/cur/core_tray.webp',
   },
   {
     name: 'CNC Machine',
-    src: 'https://cdn-icons-png.flaticon.com/512/2992/2992529.png',
+    src: '../../../public/cursor/cnc_machine.webp',
   },
   {
     name: 'Laser Cutter',
-    src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGMIYyDWxWuql5cRmTu0Db_KHoAHKrjiBhIQ&s',
+    src: '../../../public/cursor/laser_cutter.webp',
   },
   {
     name: 'Soldering Iron',
-    src: 'https://cdn-icons-png.flaticon.com/512/1998/1998636.png',
+    src: '../../../public/cursor/soldering_iron.webp',
   },
   {
     name: 'Drill',
-    src: 'https://cdn-icons-png.flaticon.com/512/2992/2992517.png',
+    src: '../../../public/cursor/drill.webp',
   },
   {
     name: 'Wrench',
-    src: 'https://cdn-icons-png.flaticon.com/512/189/189254.png',
+    src: '../../../public/cursor/wrench.webp',
   },
 ];
 
