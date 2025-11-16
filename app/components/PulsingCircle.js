@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 export default function PulsingCircle() {
   return (
     <a
-      href='https://wa.me/6285215442024'
+      href='https://wa.me/6289514024380'
       target='_blank'
       rel='noopener noreferrer'
       className='fixed bottom-4 right-4 z-30 cursor-pointer group'
