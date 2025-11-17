@@ -204,8 +204,8 @@ Kami siap membantu kebutuhan manufaktur Anda dengan **respons cepat 24/7**.
 
 ### 📱 Kontak Lengkap:
 - 📧 **Email:** info@archcontinent.tech
-- 📞 **Telepon:** +62 852-1544-2024
-- 💬 **WhatsApp:** +62 852-1544-2024 (Fastest Response)
+- 📞 **Telepon:** +62 895-14002-4380
+- 💬 **WhatsApp:** +62 895-14002-4380 (Fastest Response)
 - 🌐 **Website:** [Website URL]
 
 ### ⏰ Jam Operasional:
