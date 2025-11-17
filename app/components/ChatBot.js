@@ -15,8 +15,8 @@ const websiteKnowledge = `
 PT ARCH CONTINENT TECH - Company Information:
 - Website: Company website
 - Email: info@archcontinent.tech
-- Phone: +62 852-1544-2024
-- WhatsApp: +62 852-1544-2024
+- Phone: +62 895-1402-4380
+- WhatsApp: +62 895-1402-4380
 - Address: [Company Address]
 
 PRODUCTS:
