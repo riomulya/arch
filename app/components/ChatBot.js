@@ -204,8 +204,8 @@ Kami siap membantu kebutuhan manufaktur Anda dengan **respons cepat 24/7**.
 
 ### 📱 Kontak Lengkap:
 - 📧 **Email:** info@archcontinent.tech
-- 📞 **Telepon:** +62 895-14002-4380
-- 💬 **WhatsApp:** +62 895-14002-4380 (Fastest Response)
+- 📞 **Telepon:** +62 895-1402-4380
+- 💬 **WhatsApp:** +62 895-1402-4380 (Fastest Response)
 - 🌐 **Website:** [Website URL]
 
 ### ⏰ Jam Operasional:
@@ -295,7 +295,7 @@ Apa yang ingin Anda ketahui lebih detail? 😊`;
 
     // Add WhatsApp CTA to all responses
     response += `\n\n---\n\n<div style="display: inline-block; margin-top: 16px;">
-  <a href="https://wa.me/6285215442024?text=Halo%20PT%20ARCH%20CONTINENT%20TECH,%20saya%20tertarik%20dengan%20produk%20Anda"
+  <a href="https://wa.me/6289514024380?text=Halo%20PT%20ARCH%20CONTINENT%20TECH,%20saya%20tertarik%20dengan%20produk%20Anda"
      target="_blank"
      style="display: inline-flex; align-items: center; gap: 8px; background: #25D366; color: white; padding: 12px 20px; border-radius: 25px; text-decoration: none; font-weight: 500; transition: all 0.3s;">
     <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
