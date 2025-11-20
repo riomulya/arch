@@ -330,6 +330,138 @@ export const productCategories = [
           '/PRODUCT/PRODUCT_OTOMOTIF/OTOMOTIF_HANDLE_GRIP.jpg',
         ],
       },
+      {
+        id: 'handle-grip-assist',
+        name: 'Handle Grip Assist',
+        category: 'Otomotif',
+        subcategory: 'Driver Assistance',
+        description:
+          'Handle grip ergonomis dengan tekstur anti-slip untuk meningkatkan kenyamanan berkendara jarak jauh.',
+        fullDescription:
+          'Handle grip assist dirancang dengan kontur telapak tangan dan jalur alur drainase sehingga tetap nyaman walau digunakan pada perjalanan panjang. Proses finishing two-shot memastikan tekstur lembut di bagian luar dan struktur kuat di bagian dalam.',
+        specifications: {
+          Material: 'TPE + Reinforced Nylon Core',
+          Finish: 'Textured micro diamond',
+          Length: '125 mm',
+          Diameter: 'Ø 32 mm',
+          Insert: 'Aluminium sleeve',
+          Compatibility: 'Universal 22 mm handle bar',
+        },
+        technicalData: {
+          ShoreHardness: '60 ±3 A',
+          GripDesign: 'Dual-density ergonomic',
+          Coating: 'UV & sweat resistant',
+          EndCap: 'Closed with logo emboss',
+        },
+        features: [
+          'Dual-material untuk kombinasi kenyamanan dan stiffness',
+          'Tekstur anti-slip yang tetap nyaman saat cuaca panas',
+          'Easy lock design untuk pemasangan cepat',
+          'Opsional laser marking untuk branding OEM',
+          'Tahan terhadap minyak dan chemical ringan',
+        ],
+        applications: [
+          'Motor touring',
+          'Skuter premium',
+          'Sepeda listrik',
+          'Aksesori aftermarket OEM',
+        ],
+        image:
+          '/PRODUCT/PRODUCT_HANDLE_GRIP_ASSIST/HANDLE_GRIP_ASSIST_PRODUCT.jpg',
+        images: [
+          '/PRODUCT/PRODUCT_HANDLE_GRIP_ASSIST/HANDLE_GRIP_ASSIST_PRODUCT.jpg',
+          '/PRODUCT/PRODUCT_HANDLE_GRIP_ASSIST/HANDLE_GRIP_ASSIST_3D_DESIGN.jpg',
+          '/PRODUCT/PRODUCT_HANDLE_GRIP_ASSIST/HANDLE_GRIP_ASSIST_SKECTH.jpg',
+        ],
+      },
+      {
+        id: 'knob-shift-level',
+        name: 'Knob Shift Level Assembly',
+        category: 'Otomotif',
+        subcategory: 'Interior Components',
+        description:
+          'Knob transmisi dengan desain premium dan presisi tinggi untuk kendaraan automatic maupun CVT.',
+        fullDescription:
+          'Knob shift level diproduksi dengan kombinasi injection PC/ABS dan painting metallic sehingga memberikan nuansa mewah pada interior. Bagian internal diperkuat insert zinc untuk memastikan umur pakai mekanisme shifting.',
+        specifications: {
+          Material: 'PC/ABS + Zinc Diecast',
+          Surface: 'High-gloss metallic',
+          Mounting: 'Threaded insert M6',
+          Button: 'Integrated release button',
+          Weight: '210 ±5 gram',
+          Compliance: 'ISO/TS 16949',
+        },
+        technicalData: {
+          FinishProcess: 'UV coating + clear coat',
+          DurabilityTest: '100,000 cycle actuation',
+          Lighting: 'Optional side illumination',
+          Packaging: 'Individual foam blister',
+        },
+        features: [
+          'Desain modular kompatibel dengan beberapa transmisi',
+          'Pilihan finishing chrome, satin, atau piano black',
+          'Tersedia opsi emblem custom',
+          'Internal damper untuk mengurangi NVH',
+          'System locking anti putar',
+        ],
+        applications: [
+          'Passenger car AT/CVT',
+          'Commercial van interior',
+          'Luxury interior refresh program',
+          'Aftermarket personalization',
+        ],
+        image: '/PRODUCT/PRODUCT_KNOB_SHIFT_LEVEL/KNOB_SHIFT_LEVEL_PRODUCT.jpg',
+        images: [
+          '/PRODUCT/PRODUCT_KNOB_SHIFT_LEVEL/KNOB_SHIFT_LEVEL_PRODUCT.jpg',
+          '/PRODUCT/PRODUCT_KNOB_SHIFT_LEVEL/KNOB_SHIFT_LEVEL_3D_DESIGN1.jpg',
+          '/PRODUCT/PRODUCT_KNOB_SHIFT_LEVEL/KNOB_SHIFT_LEVEL_3D_DESIGN2.jpg',
+          '/PRODUCT/PRODUCT_KNOB_SHIFT_LEVEL/KNOB_SHIFT_LEVEL_SKECTH.jpg',
+        ],
+      },
+      {
+        id: 'motor-accessory-kit',
+        name: 'Motorcycle Accessory Kit',
+        category: 'Otomotif',
+        subcategory: 'Aksesori Kendaraan',
+        description:
+          'Set aksesori lengkap untuk motor harian meliputi cover, bracket, dan komponen dekoratif.',
+        fullDescription:
+          'Kit aksesori motor mencakup serangkaian part injeksi seperti cover radiator, tutup CVT, hingga pelindung bodi kecil yang dapat disesuaikan warna dan tekstur permukaannya. Cocok untuk kebutuhan OEM maupun kebutuhan modifikasi fleet.',
+        specifications: {
+          Material: 'ABS / PP Copolymer',
+          Finishing: 'Matte & Gloss dual tone',
+          Mounting: 'Bolt-on & clip-on',
+          Color: 'Custom Pantone matching',
+          Production: 'Multi-cavity tooling',
+        },
+        technicalData: {
+          UVResistance: '800 hr Xenon test',
+          PaintProcess: 'Wet paint / hydrographic',
+          Packaging: 'Set kit dengan foam insert',
+          MOQ: '500 set per warna',
+        },
+        features: [
+          'Komposisi kit dapat disesuaikan model motor',
+          'Tersedia opsi logo emboss/deboss',
+          'Kompatibel dengan standar OEM Jepang',
+          'Proses QC 100% visual dan dimensional',
+          'Siap integrasi reflective sticker',
+        ],
+        applications: [
+          'Motor commuter 110-160cc',
+          'Program limited edition dealer',
+          'Brand activation kit',
+          'Fleet customization',
+        ],
+        image:
+          '/PRODUCT/PRODUCT_AKSESORIES_MOTOR/PRODUCT_AKSESORIES_MOTOR_1.jpg',
+        images: [
+          '/PRODUCT/PRODUCT_AKSESORIES_MOTOR/PRODUCT_AKSESORIES_MOTOR_1.jpg',
+          '/PRODUCT/PRODUCT_AKSESORIES_MOTOR/PRODUCT_AKSESORIES_MOTOR_2.jpg',
+          '/PRODUCT/PRODUCT_AKSESORIES_MOTOR/PRODUCT_AKSESORIES_MOTOR_4.jpg',
+          '/PRODUCT/PRODUCT_AKSESORIES_MOTOR/PRODUCT_AKSESORIES_MOTOR_5.jpg',
+        ],
+      },
     ],
   },
   {
@@ -426,6 +558,50 @@ export const productCategories = [
           '/PRODUCT/PRODUCT_TELEKOMUNIKASI/PRODUCT_TELEKOMUNIKASI_SPLICE_TRAY_HOLE.jpg',
           '/PRODUCT/PRODUCT_TELEKOMUNIKASI/PRODUCT_TELEKOMUNIKASI_SPLICE_TRAY_HOLE2.jpg',
           '/PRODUCT/PRODUCT_TELEKOMUNIKASI/PRODUCT_TELEKOMUNIKASI_DUDUKAN_TRAY.jpg',
+        ],
+      },
+      {
+        id: 'dtc-joint',
+        name: 'Joint Closure DTC Connection',
+        category: 'Telekomunikasi',
+        subcategory: 'Outdoor Fiber Hardware',
+        description:
+          'Joint closure tahan cuaca untuk pelindung sambungan fiber optic dengan kapasitas distribusi besar.',
+        fullDescription:
+          'Joint DTC dibuat dari material engineering plastic tahan UV dengan sistem seal silika gel. Desain dua bagian memudahkan teknisi melakukan maintenance tanpa melepas kabel utama dan mendukung konfigurasi bottom/top connection.',
+        specifications: {
+          Material: 'UV Stabilized Polycarbonate',
+          'Port Configuration': 'Bottom & top entry',
+          Capacity: '96 core fusion splice',
+          Seal: 'Silica gel + stainless clamp',
+          Rating: 'IP68',
+          Mounting: 'Pole / aerial suspension',
+        },
+        technicalData: {
+          TensileStrength: '1000 N axial',
+          PressureResist: '100 kPa',
+          OperatingTemp: '-40°C hingga 80°C',
+          Reentry: 'Tool-less hinge mechanism',
+        },
+        features: [
+          'Sistem buckle stainless untuk keamanan tambahan',
+          'Tray internal bertingkat untuk routing rapi',
+          'Kompatibel dengan splitter mini 1:4 / 1:8',
+          'Marking area untuk identifikasi lapangan',
+          'Opsional bracket grounding',
+        ],
+        applications: [
+          'FTTH distribution',
+          'Backbone aerial network',
+          'Telekom hub outdoor',
+          'Industrial fiber deployment',
+        ],
+        image:
+          '/PRODUCT/PRODUCT_TELEKOMUNIKASI/PRODUCT_TELEKOMUNIKASI_JOINT_BOTTOM_DTC_CONNECTION.jpg',
+        images: [
+          '/PRODUCT/PRODUCT_TELEKOMUNIKASI/PRODUCT_TELEKOMUNIKASI_JOINT_BOTTOM_DTC_CONNECTION.jpg',
+          '/PRODUCT/PRODUCT_TELEKOMUNIKASI/PRODUCT_TELEKOMUNIKASI_JOINT_UPPER_DTC_CONNECTION.jpg',
+          '/PRODUCT/PRODUCT_TELEKOMUNIKASI/PRODUCT_TELEKOMUNIKASI_SPLICE_TRAY_HOLE2.jpg',
         ],
       },
     ],
@@ -527,6 +703,51 @@ export const productCategories = [
         ],
       },
       {
+        id: 'urine-cup',
+        name: 'Cup Urine Plastik Steril',
+        category: 'Medical Devices',
+        subcategory: 'Diagnostic Consumables',
+        description:
+          'Wadah urine plastik dengan tutup rapat dan indikator volume untuk kebutuhan laboratorium klinik.',
+        fullDescription:
+          'Cup urine plastik diproduksi dari polypropylene medical grade dengan skala cetak tahan larutan kimia. Tutup ulir anti bocor memastikan sampel tetap aman selama transportasi, sementara pilihan warna tutup memudahkan identifikasi parameter tes.',
+        specifications: {
+          Material: 'Medical-grade Polypropylene',
+          Capacity: '60 ml & 100 ml',
+          Graduation: '5 ml increment',
+          CapType: 'Screw cap with seal',
+          Sterilization: 'EO / Gamma ready',
+          ColorOptions: 'Blue, red, yellow',
+        },
+        technicalData: {
+          LeakTest: 'Pressure 95 kPa, 15 min',
+          Printing: 'Food-grade ink double side',
+          Packaging: 'Individual PE pouch',
+          ShelfLife: '3 tahun',
+        },
+        features: [
+          'Skala cetak jelas dan tidak mudah pudar',
+          'Tutup ulir ergonomis dengan tekstur anti slip',
+          'Pilihan label sticker untuk barcode',
+          'Bebas BPA dan memenuhi standar medis',
+          'Didesain untuk penggunaan sekali pakai',
+        ],
+        applications: [
+          'Laboratorium klinik',
+          'Rumah sakit & puskesmas',
+          'Program medical check-up',
+          'Pengujian toksikologi',
+        ],
+        image:
+          '/PRODUCT/PRODUCT_CUP_URINE_PLASTIK/CUP_URINE_PLASTIK_PRODUCT.jpg',
+        images: [
+          '/PRODUCT/PRODUCT_CUP_URINE_PLASTIK/CUP_URINE_PLASTIK_PRODUCT.jpg',
+          '/PRODUCT/PRODUCT_CUP_URINE_PLASTIK/CUP_URINE_PLASTIK_SAMPLE.jpg',
+          '/PRODUCT/PRODUCT_CUP_URINE_PLASTIK/CUP_URINE_PLASTIK_REDRAWING_3D.jpg',
+          '/PRODUCT/PRODUCT_CUP_URINE_PLASTIK/CUP_URINE_PLASTIK_DRAWING_PART_2D.jpg',
+        ],
+      },
+      {
         id: 'infantometer',
         name: 'Infantometer / Length Board',
         category: 'Medical Devices',
@@ -569,6 +790,139 @@ export const productCategories = [
           '/PRODUCT/PRODUCT_ALAT_KESEHATAN/INFANTOBOARD/PRODUCT_ALAT_KESEHATAN_INFANTOBOARD.jpg',
           '/PRODUCT/PRODUCT_ALAT_KESEHATAN/INFANTOBOARD/PRODUCT_ALAT_KESEHATAN_INFANTOBOARD_SLIDER_INFANTOMETER.jpg',
           '/PRODUCT/PRODUCT_ALAT_KESEHATAN/INFANTOBOARD/PRODUCT_ALAT_KESEHATAN_INFANTOBOARD_LOCKING_SLIDER.jpg',
+        ],
+      },
+    ],
+  },
+  {
+    id: 'rubber',
+    name: 'Komponen Karet Teknik',
+    description:
+      'Solusi elastomer untuk industri pertambangan, otomotif, dan umum',
+    icon: '🧱',
+    products: [
+      {
+        id: 'rubber-bushing-heavy',
+        name: 'Heavy Duty Rubber Bushing',
+        category: 'Komponen Karet',
+        subcategory: 'Vibration Control',
+        description:
+          'Bushing karet berdaya tahan tinggi untuk meredam getaran dan shock load pada alat berat.',
+        fullDescription:
+          'Diproduksi dari campuran natural rubber dengan reinforcement kain sintetis, bushing ini menjaga kestabilan alat berat pada kondisi ekstrim tambang maupun konstruksi. Desain flensa menjaga alignment saat pemasangan.',
+        specifications: {
+          Material: 'Natural Rubber + Fabric Reinforcement',
+          Hardness: '70 ±5 Shore A',
+          Diameter: 'Ø 80 mm',
+          Length: '95 mm',
+          Insert: 'Sleeve steel plating zinc',
+        },
+        technicalData: {
+          CompressionSet: '<15% @ 70°C, 24h',
+          TemperatureRange: '-30°C sampai 90°C',
+          AgingTest: '168h ozone chamber',
+          Packaging: 'Pair in corrugated box',
+        },
+        features: [
+          'Meredam getaran hingga 60%',
+          'Tahan minyak dan lumpur',
+          'Flange stopper untuk pemasangan presisi',
+          'Ready untuk custom diameter/slot',
+        ],
+        applications: [
+          'Dump truck tambang',
+          'Excavator attachment',
+          'Generator skid',
+          'Peredam mesin industri',
+        ],
+        image: '/PRODUCT/PRODUCT_RUBBER/SAMPLE_PRODUCT_RUBBER1.jpg',
+        images: [
+          '/PRODUCT/PRODUCT_RUBBER/SAMPLE_PRODUCT_RUBBER1.jpg',
+          '/PRODUCT/PRODUCT_RUBBER/SAMPLE_PRODUCT_RUBBER2.jpg',
+          '/PRODUCT/PRODUCT_RUBBER/SAMPLE_PRODUCT_RUBBER3.jpg',
+        ],
+      },
+      {
+        id: 'rubber-seal-precision',
+        name: 'Precision Rubber Seal',
+        category: 'Komponen Karet',
+        subcategory: 'Sealing Components',
+        description:
+          'Seal karet presisi dengan permukaan halus untuk mencegah kebocoran fluida dan debu.',
+        fullDescription:
+          'Seal ini menggunakan compound NBR dengan proses vulkanisasi terkontrol sehingga memiliki ketahanan tekanan tinggi serta kompatibilitas dengan oli hidrolik. Cocok untuk housing aluminium maupun baja.',
+        specifications: {
+          Material: 'NBR 70 Shore',
+          Profile: 'Custom lip double action',
+          Diameter: 'Ø 45-120 mm',
+          Pressure: 'Hingga 16 bar',
+          Color: 'Black / customized',
+        },
+        technicalData: {
+          SurfaceFinish: 'Ra 0.4 μm molded',
+          TensileStrength: '12 MPa',
+          Elongation: '250%',
+          StorageLife: '24 bulan',
+        },
+        features: [
+          'Kompatibel dengan minyak mineral & sintetik',
+          'Bibir ganda untuk sealing ganda',
+          'Tersedia opsi food grade',
+          'Dukungan sertifikasi material lengkap',
+        ],
+        applications: [
+          'Silinder hidrolik',
+          'Gearbox industri',
+          'Peralatan food processing',
+          'Perangkat HVAC',
+        ],
+        image: '/PRODUCT/PRODUCT_RUBBER/SAMPLE_PRODUCT_RUBBER4.jpg',
+        images: [
+          '/PRODUCT/PRODUCT_RUBBER/SAMPLE_PRODUCT_RUBBER4.jpg',
+          '/PRODUCT/PRODUCT_RUBBER/SAMPLE_PRODUCT_RUBBER5.jpg',
+          '/PRODUCT/PRODUCT_RUBBER/SAMPLE_PRODUCT_RUBBER6.jpg',
+        ],
+      },
+      {
+        id: 'rubber-prototype-kit',
+        name: 'Custom Rubber Prototype Kit',
+        category: 'Komponen Karet',
+        subcategory: 'Rapid Prototyping',
+        description:
+          'Layanan prototyping karet multi-varian untuk validasi desain cepat.',
+        fullDescription:
+          'Kit prototipe memungkinkan tim R&D mendapatkan sampel karet dalam waktu singkat dengan variasi hardness dan warna berbeda. Data dimensi dicatat digital untuk mempercepat iterasi tooling produksi.',
+        specifications: {
+          Material: 'NR / EPDM / Silicone options',
+          HardnessRange: '40 - 80 Shore A',
+          LeadTime: '7-10 hari kerja',
+          Color: 'Custom RAL/Pantone',
+          MaxSize: '300 x 300 x 50 mm',
+        },
+        technicalData: {
+          Process: 'Vacuum casting + compression mold',
+          Documentation: 'Dimensional report & COC',
+          MOQ: '10 pcs per variant',
+          Finishing: 'Talc / PTFE coating',
+        },
+        features: [
+          'Iterasi desain cepat tanpa biaya tooling besar',
+          'Pilihan material lengkap termasuk silicone food grade',
+          'Dukungan engineering untuk simulasi load',
+          'Pengujian sifat mekanik optional',
+        ],
+        applications: [
+          'Pengembangan produk OEM',
+          'Line trial manufaktur',
+          'Prototipe aksesoris otomotif',
+          'Perangkat medis & consumer goods',
+        ],
+        image: '/PRODUCT/PRODUCT_RUBBER/SAMPLE_PRODUCT_RUBBER7.jpg',
+        images: [
+          '/PRODUCT/PRODUCT_RUBBER/SAMPLE_PRODUCT_RUBBER7.jpg',
+          '/PRODUCT/PRODUCT_RUBBER/SAMPLE_PRODUCT_RUBBER8.jpg',
+          '/PRODUCT/PRODUCT_RUBBER/SAMPLE_PRODUCT_RUBBER9.jpg',
+          '/PRODUCT/PRODUCT_RUBBER/SAMPLE_PRODUCT_RUBBER10.jpg',
         ],
       },
     ],
