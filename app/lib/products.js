@@ -13,6 +13,8 @@ export const productCategories = [
         subcategory: 'Plastik Core Tray',
         description:
           'Solusi premium untuk pengelolaan inti bor diameter PQ dengan desain presisi dan material berkualitas tinggi.',
+        fullDescription:
+          'Tray PQ berkapasitas tiga baris ini diproduksi dari HDPE UV-stabilized dengan penopang rusuk rapat sehingga aman ditumpuk pada area pengeboran outdoor. Bidang labeling ekstra lebar membantu tim geolog membuat catatan inti yang rapi dan konsisten.',
         specifications: {
           'Overall Length': '1085 mm',
           Width: '390 mm',
@@ -22,6 +24,12 @@ export const productCategories = [
           Material: 'Plastik Presisi HDPE',
           Aplikasi: 'Inti bor diameter PQ (85 mm)',
           Standar: 'International Diamond Core Standards',
+        },
+        technicalData: {
+          'Material Grade': 'UV Stabilized HDPE',
+          'Wall Thickness': '4.5 mm rata',
+          'Temperature Range': '-20°C s/d 80°C',
+          'Stacking Capacity': 'Hingga 15 tray',
         },
         features: [
           'Presisi dimensi tinggi untuk identifikasi inti bor',
@@ -37,7 +45,12 @@ export const productCategories = [
           'Penelitian geoteknik',
         ],
         image:
-          'https://images.unsplash.com/photo-1605000797499-95a51c5269ae?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
+          '/PRODUCT/PRODUCT_PERTAMBANGAN/PRODUCT_PERTAMBANGAN_CORE_TRAY_PQ.jpg',
+        images: [
+          '/PRODUCT/PRODUCT_PERTAMBANGAN/PRODUCT_PERTAMBANGAN_CORE_TRAY_PQ.jpg',
+          '/PRODUCT/PRODUCT_PERTAMBANGAN/PRODUCT_PERTAMBANGAN_UNIVERSAL_COVER_CORE_TRAY.jpg',
+          '/PRODUCT/PRODUCT_PERTAMBANGAN/PRODUCT_PERTAMBANGAN_COVER_CORE_BOX_GALVANUM_UNIVERSAL.jpg',
+        ],
       },
       {
         id: 'core-tray-hq',
@@ -46,6 +59,8 @@ export const productCategories = [
         subcategory: 'Plastik Core Tray',
         description:
           'Core tray presisi untuk inti bor diameter HQ dengan kapasitas optimal dan desain yang efisien.',
+        fullDescription:
+          'Core Tray HQ menghadirkan empat baris penyimpanan dengan drainase built-in sehingga inti bor terjaga kering dan mudah diinspeksi. Kami menambahkan bidang label dua sisi dan pegangan ergonomis agar operator dapat memindahkan tray sepanjang shift tanpa kelelahan.',
         specifications: {
           'Overall Length': '1085 mm',
           Width: '390 mm',
@@ -55,6 +70,12 @@ export const productCategories = [
           Material: 'Plastik Presisi HDPE',
           Aplikasi: 'Inti bor diameter HQ (63.5 mm)',
           Standar: 'International Diamond Core Standards',
+        },
+        technicalData: {
+          'Material Grade': 'Outdoor HDPE',
+          'Drainage System': 'Integrated channel',
+          'Weight Capacity': '120 kg static load',
+          'Color Options': 'Slate Grey & Safety Yellow',
         },
         features: [
           'Kapasitas 4 rows untuk optimal organization',
@@ -70,7 +91,12 @@ export const productCategories = [
           'Mining sampling',
         ],
         image:
-          'https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
+          '/PRODUCT/PRODUCT_PERTAMBANGAN/PRODUCT_PERTAMBANGAN_CORE_TRAY_HQ.jpg',
+        images: [
+          '/PRODUCT/PRODUCT_PERTAMBANGAN/PRODUCT_PERTAMBANGAN_CORE_TRAY_HQ.jpg',
+          '/PRODUCT/PRODUCT_PERTAMBANGAN/PRODUCT_PERTAMBANGAN_UNIVERSAL_COVER_CORE_TRAY.jpg',
+          '/PRODUCT/PRODUCT_PERTAMBANGAN/PRODUCT_PERTAMBANGAN_CORE_TRAY_PQ.jpg',
+        ],
       },
       {
         id: 'core-tray-nq',
@@ -79,6 +105,8 @@ export const productCategories = [
         subcategory: 'Plastik Core Tray',
         description:
           'Core tray dengan kapasitas tertinggi untuk inti bor diameter NQ, dirancang untuk maksimalisasi ruang.',
+        fullDescription:
+          'Versi NQ menampung lima baris inti dengan profil ramping sehingga cocok untuk rig eksplorasi dengan ruang terbatas. Setiap tray melewati proses QC dimensi ±0.3 mm agar kompatibel dengan rak penyimpanan standar dan memudahkan dokumentasi jangka panjang.',
         specifications: {
           'Overall Length': '1085 mm',
           Width: '390 mm',
@@ -88,6 +116,12 @@ export const productCategories = [
           Material: 'Plastik Presisi HDPE',
           Aplikasi: 'Inti bor diameter NQ (47.6 mm)',
           Standar: 'International Diamond Core Standards',
+        },
+        technicalData: {
+          'Material Grade': 'Fiber Reinforced HDPE',
+          'Wall Thickness': '4.0 mm',
+          'Operating Temperature': '-20°C s/d 70°C',
+          'Label Window': '55 mm x 90 mm',
         },
         features: [
           'Kapasitas tertinggi (5 rows) untuk space optimization',
@@ -103,7 +137,12 @@ export const productCategories = [
           'Core logging facilities',
         ],
         image:
-          'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
+          '/PRODUCT/PRODUCT_PERTAMBANGAN/PRODUCT_PERTAMBANGAN_CORE_TRAY_NQ.jpg',
+        images: [
+          '/PRODUCT/PRODUCT_PERTAMBANGAN/PRODUCT_PERTAMBANGAN_CORE_TRAY_NQ.jpg',
+          '/PRODUCT/PRODUCT_PERTAMBANGAN/PRODUCT_PERTAMBANGAN_CORE_TRAY_HQ.jpg',
+          '/PRODUCT/PRODUCT_PERTAMBANGAN/PRODUCT_PERTAMBANGAN_UNIVERSAL_COVER_CORE_TRAY.jpg',
+        ],
       },
       {
         id: 'core-box-galvalum-nq',
@@ -112,6 +151,8 @@ export const productCategories = [
         subcategory: 'Core Box Metal',
         description:
           'Core box dari material Galvalum untuk durability maksimal dalam kondisi lingkungan yang keras.',
+        fullDescription:
+          'Core box galvalum memberikan proteksi maksimal terhadap korosi serta benturan saat pengiriman inti bor. Panel luar dipotong CNC untuk memastikan tutup terkunci rapat, sedangkan sisi dalam diberi marking pengukuran agar teknisi tidak perlu alat tambahan ketika melakukan logging.',
         specifications: {
           'Overall Length': '1000 mm',
           Width: '400 mm',
@@ -121,6 +162,12 @@ export const productCategories = [
           Material: 'Galvalum (Aluminum-Zinc Coated)',
           Aplikasi: 'Inti bor diameter NQ (47.6 mm)',
           Coating: 'Corrosion-resistant Galvalum',
+        },
+        technicalData: {
+          Material: 'Galvalum 0.5 mm',
+          Coating: 'AZ150 anti-korosi',
+          'Stacking Capacity': 'Hingga 20 box',
+          Fastening: 'Slide lock + rivet',
         },
         features: [
           'Material Galvalum untuk superior corrosion resistance',
@@ -136,7 +183,12 @@ export const productCategories = [
           'Archival core storage',
         ],
         image:
-          'https://images.unsplash.com/photo-1565391938248-3781e532e0b0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
+          '/PRODUCT/PRODUCT_PERTAMBANGAN/PRODUCT_PERTAMBANGAN_CORE_BOX_GALVANUM_NQ.jpg',
+        images: [
+          '/PRODUCT/PRODUCT_PERTAMBANGAN/PRODUCT_PERTAMBANGAN_CORE_BOX_GALVANUM_NQ.jpg',
+          '/PRODUCT/PRODUCT_PERTAMBANGAN/PRODUCT_PERTAMBANGAN_CORE_BOX_GALVANUM_PQ.jpg',
+          '/PRODUCT/PRODUCT_PERTAMBANGAN/PRODUCT_PERTAMBANGAN_COVER_CORE_BOX_GALVANUM_UNIVERSAL.jpg',
+        ],
       },
     ],
   },
@@ -153,6 +205,8 @@ export const productCategories = [
         subcategory: 'Interior Components',
         description:
           'Komponen pelindung kolom kemudi dengan presisi tinggi untuk aplikasi OEM automotive.',
+        fullDescription:
+          'Cover steering column dibuat dengan proses injeksi multi-cavity untuk memastikan permukaan halus dan konsistensi warna OEM. Struktur bagian dalam ditopang ribbing untuk meredam getaran, sedangkan snap-fit dirancang agar proses perakitan berlangsung cepat di lini produksi.',
         specifications: {
           Material: 'High-impact ABS Plastic',
           Finish: 'Textured Surface',
@@ -161,6 +215,12 @@ export const productCategories = [
           Temperature: '-40°C to +85°C',
           Certification: 'ISO/TS 16949',
           Application: 'Steering System Protection',
+        },
+        technicalData: {
+          Material: 'ABS High Impact',
+          'Surface Finish': 'Texture 1200 grit',
+          'Mold Cavity': '2+2 multi-cavity',
+          'Color Control': 'Delta E < 1.5',
         },
         features: [
           'Precision-molded untuk perfect fit',
@@ -175,8 +235,12 @@ export const productCategories = [
           'Heavy-duty trucks',
           'Specialty vehicles',
         ],
-        image:
-          'https://images.unsplash.com/photo-1542362567-b07e54358753?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
+        image: '/PRODUCT/PRODUCT_OTOMOTIF/OTOMOTIF_BOX_CONSOLE.jpg',
+        images: [
+          '/PRODUCT/PRODUCT_OTOMOTIF/OTOMOTIF_BOX_CONSOLE.jpg',
+          '/PRODUCT/PRODUCT_HANDLE_GRIP_ASSIST/HANDLE_GRIP_ASSIST_PRODUCT.jpg',
+          '/PRODUCT/PRODUCT_KNOB_SHIFT_LEVEL/KNOB_SHIFT_LEVEL_PRODUCT.jpg',
+        ],
       },
       {
         id: 'trim-pillar',
@@ -185,6 +249,8 @@ export const productCategories = [
         subcategory: 'Interior Trim',
         description:
           'Panel pilar interior dengan desain ergonomis dan material berkualitas tinggi.',
+        fullDescription:
+          'Trim pilar dibuat dari komposit polypropylene dengan filler talc yang memberikan kekakuan tanpa menambah berat. Garis clip didesain ulang agar teknisi bisa memasang panel hanya dengan satu dorongan sambil tetap mempertahankan sealer akustik.',
         specifications: {
           Material: 'Polypropylene Composite',
           Finish: 'Soft-touch Texture',
@@ -193,6 +259,12 @@ export const productCategories = [
           Weight: 'Optimized Design',
           Certification: 'ISO 14001',
           Application: 'Interior Aesthetic',
+        },
+        technicalData: {
+          Material: 'PP + Talc 20%',
+          Mounting: 'Clip-in & screw boss',
+          Coating: 'Soft-touch UV resistant',
+          'Part Weight': '0.46 kg',
         },
         features: [
           'Aesthetic design untuk interior enhancement',
@@ -207,8 +279,12 @@ export const productCategories = [
           'C-pillar applications',
           'Interior styling',
         ],
-        image:
-          'https://images.unsplash.com/photo-1549399835-9bb9727460f3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
+        image: '/PRODUCT/PRODUCT_OTOMOTIF/OTOMOTIF_PLUG_NUT.jpg',
+        images: [
+          '/PRODUCT/PRODUCT_OTOMOTIF/OTOMOTIF_PLUG_NUT.jpg',
+          '/PRODUCT/PRODUCT_OTOMOTIF/OTOMOTIF_WHEEL_CAP.jpg',
+          '/PRODUCT/PRODUCT_OTOMOTIF/OTOMOTIF_HANDLE_GRIP.jpg',
+        ],
       },
       {
         id: 'panel-console-epb',
@@ -217,6 +293,8 @@ export const productCategories = [
         subcategory: 'Console Components',
         description:
           'Panel konsol belakang untuk electronic parking brake dengan integrasi kontrol yang presisi.',
+        fullDescription:
+          'Panel konsol EPB dibuat dari PC/ABS dengan finishing piano black opsional. Titik pemasangan metal insert memastikan stabilitas saat switch ditekan, sedangkan jalur cahaya LED sudah dioptimalkan untuk menghindari hotspot.',
         specifications: {
           Material: 'Reinforced PC/ABS',
           Function: 'EPB Control Integration',
@@ -225,6 +303,12 @@ export const productCategories = [
           Connectivity: 'Wiring Harness Ready',
           Certification: 'ECE R10',
           Application: 'Parking Brake Control',
+        },
+        technicalData: {
+          Material: 'PC/ABS UL94 V0',
+          Illumination: 'Integrated light guide',
+          Electronics: 'EPB switch ready',
+          Assembly: 'Snap fit + screw',
         },
         features: [
           'Integrated electronic controls',
@@ -239,8 +323,12 @@ export const productCategories = [
           'Multi-function panels',
           'Driver interface systems',
         ],
-        image:
-          'https://images.unsplash.com/photo-1550355291-bbee04a92027?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
+        image: '/PRODUCT/PRODUCT_OTOMOTIF/OTOMOTIF_KNOB_SUB_ASSY_LEVEL.jpg',
+        images: [
+          '/PRODUCT/PRODUCT_OTOMOTIF/OTOMOTIF_KNOB_SUB_ASSY_LEVEL.jpg',
+          '/PRODUCT/PRODUCT_OTOMOTIF/OTOMOTIF_BOX_CONSOLE.jpg',
+          '/PRODUCT/PRODUCT_OTOMOTIF/OTOMOTIF_HANDLE_GRIP.jpg',
+        ],
       },
     ],
   },
@@ -257,6 +345,8 @@ export const productCategories = [
         subcategory: 'Fiber Optic Equipment',
         description:
           'Terminal distribusi optik yang tahan cuaca untuk jaringan fiber optic outdoor.',
+        fullDescription:
+          'ODP generasi terbaru ini dibangun dari polycarbonate UV-resistant dengan sistem sealing dua lapis sehingga aman terhadap hujan tropis. Tata letak port modular memudahkan teknisi melakukan ekspansi jaringan tanpa mengganti enclosure.',
         specifications: {
           Material: 'UV-resistant Polycarbonate',
           'IP Rating': 'IP67',
@@ -265,6 +355,12 @@ export const productCategories = [
           Mounting: 'Pole/Wall Mountable',
           Standard: 'ITU-T G.652 compliant',
           Application: 'Fiber Distribution',
+        },
+        technicalData: {
+          'Ingress Protection': 'IP67',
+          'Port Density': '24 core SC/LC',
+          'Mounting Options': 'Pole / Wall bracket',
+          'Cable Entry': '3 gland + 1 mid-span',
         },
         features: [
           'Weatherproof design untuk outdoor deployment',
@@ -280,7 +376,12 @@ export const productCategories = [
           'Urban fiber networks',
         ],
         image:
-          'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
+          '/PRODUCT/PRODUCT_TELEKOMUNIKASI/ODP(OPTICAL_DISTRIBUTION_POINT)/ODP_PRODUCT.jpg',
+        images: [
+          '/PRODUCT/PRODUCT_TELEKOMUNIKASI/ODP(OPTICAL_DISTRIBUTION_POINT)/ODP_PRODUCT.jpg',
+          '/PRODUCT/PRODUCT_TELEKOMUNIKASI/ODP(OPTICAL_DISTRIBUTION_POINT)/ODP_BODY_BOX_KECIL.jpg',
+          '/PRODUCT/PRODUCT_TELEKOMUNIKASI/ODP(OPTICAL_DISTRIBUTION_POINT)/ODP_TUTUP_BESAR.jpg',
+        ],
       },
       {
         id: 'splice-tray',
@@ -289,6 +390,8 @@ export const productCategories = [
         subcategory: 'Fiber Management',
         description:
           'Sistem splice tray untuk manajemen koneksi fiber optic yang terorganisir.',
+        fullDescription:
+          'Tray splice modular dengan dudukan ini memaksimalkan radius pembengkokan fiber dan menyediakan retainer transparan sehingga proses inspeksi berlangsung cepat. Dudukan dapat ditumpuk sehingga cocok untuk kabinet high-density.',
         specifications: {
           Material: 'Flame-retardant ABS',
           Capacity: '12-24 fiber splices',
@@ -297,6 +400,12 @@ export const productCategories = [
           Compatibility: 'Standard fusion splices',
           Standard: 'IEC 60793',
           Application: 'Fiber Splice Organization',
+        },
+        technicalData: {
+          Capacity: '24 core',
+          'Material Grade': 'ABS V-0 flame retardant',
+          Dimensions: '175 x 110 x 12 mm',
+          'Routing Radius': '≥30 mm',
         },
         features: [
           'Organized fiber management',
@@ -312,7 +421,12 @@ export const productCategories = [
           'Maintenance operations',
         ],
         image:
-          'https://images.unsplash.com/photo-1559329007-40df8a9345d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
+          '/PRODUCT/PRODUCT_TELEKOMUNIKASI/PRODUCT_TELEKOMUNIKASI_SPLICE_TRAY_HOLE.jpg',
+        images: [
+          '/PRODUCT/PRODUCT_TELEKOMUNIKASI/PRODUCT_TELEKOMUNIKASI_SPLICE_TRAY_HOLE.jpg',
+          '/PRODUCT/PRODUCT_TELEKOMUNIKASI/PRODUCT_TELEKOMUNIKASI_SPLICE_TRAY_HOLE2.jpg',
+          '/PRODUCT/PRODUCT_TELEKOMUNIKASI/PRODUCT_TELEKOMUNIKASI_DUDUKAN_TRAY.jpg',
+        ],
       },
     ],
   },
@@ -329,6 +443,8 @@ export const productCategories = [
         subcategory: 'Diagnostic Components',
         description:
           'Cassette diagnostik untuk berbagai parameter testing dengan presisi tinggi.',
+        fullDescription:
+          'Cassette diagnostik multi-parameter mendukung konfigurasi 1P hingga 7P dengan jalur fluida yang stabil. Permukaan luar dirancang halus sehingga mudah diberi label maupun kode QR untuk traceability laboratorium.',
         specifications: {
           Material: 'Medical-grade Polystyrene',
           Variants: '1P, 2P, 3P, 5P, 6P, 7P',
@@ -337,6 +453,12 @@ export const productCategories = [
           Sterilization: 'EO compatible',
           Quality: 'Medical grade certification',
           Application: 'In Vitro Diagnostics',
+        },
+        technicalData: {
+          Material: 'Medical PS',
+          'Detection Window': '1-7 parameter',
+          'Shelf Life': '24 bulan',
+          Sterilization: 'Ethylene Oxide compatible',
         },
         features: [
           'Multi-parameter detection capability',
@@ -352,7 +474,12 @@ export const productCategories = [
           'Rapid diagnostic tests',
         ],
         image:
-          'https://images.unsplash.com/photo-1534531187661-9410395f58d0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
+          '/PRODUCT/PRODUCT_ALAT_KESEHATAN/CASSETE/PRODUCT_ALAT_KESEHATAN_CASSETE_SINGLE.jpg',
+        images: [
+          '/PRODUCT/PRODUCT_ALAT_KESEHATAN/CASSETE/PRODUCT_ALAT_KESEHATAN_CASSETE_SINGLE.jpg',
+          '/PRODUCT/PRODUCT_ALAT_KESEHATAN/CASSETE/PRODUCT_ALAT_KESEHATAN_CASSETTE_TWO_HOLE.jpg',
+          '/PRODUCT/PRODUCT_ALAT_KESEHATAN/CASSETE/PRODUCT_ALAT_KESEHATAN_CASSETE_FOR_DUO_PARAMETER.jpg',
+        ],
       },
       {
         id: 'baby-scale',
@@ -361,6 +488,8 @@ export const productCategories = [
         subcategory: 'Medical Equipment',
         description:
           'Komponen lengkap untuk timbangan bayi dengan akurasi tinggi dan desain yang aman.',
+        fullDescription:
+          'Satu set komponen baby scale mencakup baki ergonomis, top cover aerodinamis, dan pelindung baterai untuk memudahkan proses perakitan OEM. Material ABS medical grade memastikan permukaan higienis dan mudah dibersihkan.',
         specifications: {
           Components: 'Baki, Top Cover, Back Cover, Battery Cover, LCD Cover',
           Material: 'Medical-grade ABS',
@@ -369,6 +498,12 @@ export const productCategories = [
           Safety: 'Rounded edges, non-toxic',
           Certification: 'CE, ISO 13485',
           Application: 'Pediatric Weighing',
+        },
+        technicalData: {
+          Components: '13 pcs injection set',
+          Accuracy: '±10 gram',
+          Finish: 'Matte antibacterial coating',
+          Power: '2x AA battery housing',
         },
         features: [
           'Complete component set',
@@ -384,7 +519,12 @@ export const productCategories = [
           'Mobile medical units',
         ],
         image:
-          'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
+          '/PRODUCT/PRODUCT_ALAT_KESEHATAN/BABY_SCALE/PRODUCT_ALAT_KESEHATAN_BABY_SCALE.jpg',
+        images: [
+          '/PRODUCT/PRODUCT_ALAT_KESEHATAN/BABY_SCALE/PRODUCT_ALAT_KESEHATAN_BABY_SCALE.jpg',
+          '/PRODUCT/PRODUCT_ALAT_KESEHATAN/BABY_SCALE/PRODUCT_ALAT_KESEHATAN_BABY_SCALE_TOP_COVER.jpg',
+          '/PRODUCT/PRODUCT_ALAT_KESEHATAN/BABY_SCALE/PRODUCT_ALAT_KESEHATAN_BABY_SCALE_BACK_COVER.jpg',
+        ],
       },
       {
         id: 'infantometer',
@@ -393,6 +533,8 @@ export const productCategories = [
         subcategory: 'Measurement Devices',
         description:
           'Papan pengukur panjang bayi dengan akurasi tinggi untuk monitoring pertumbuhan.',
+        fullDescription:
+          'Infantometer dengan slider ganda ini mengikuti standar WHO untuk memastikan pembacaan panjang bayi yang konsisten. Komponen dikirim dalam kit knock-down sehingga memudahkan distribusi dan pemasangan di fasilitas kesehatan.',
         specifications: {
           Material: 'Medical-grade Components',
           Measurement: '0-100 cm range',
@@ -401,6 +543,12 @@ export const productCategories = [
           Safety: 'Smooth edges, non-toxic finish',
           Standard: 'WHO Growth Standards',
           Application: 'Infant Measurement',
+        },
+        technicalData: {
+          Material: 'ABS Medical + aluminium rail',
+          'Measurement Range': '10-100 cm',
+          'Scale Printing': 'UV cured black',
+          'Lock Mechanism': 'Dual slider lock',
         },
         features: [
           'High precision measurement',
@@ -416,21 +564,16 @@ export const productCategories = [
           'Research studies',
         ],
         image:
-          'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
+          '/PRODUCT/PRODUCT_ALAT_KESEHATAN/INFANTOBOARD/PRODUCT_ALAT_KESEHATAN_INFANTOBOARD.jpg',
+        images: [
+          '/PRODUCT/PRODUCT_ALAT_KESEHATAN/INFANTOBOARD/PRODUCT_ALAT_KESEHATAN_INFANTOBOARD.jpg',
+          '/PRODUCT/PRODUCT_ALAT_KESEHATAN/INFANTOBOARD/PRODUCT_ALAT_KESEHATAN_INFANTOBOARD_SLIDER_INFANTOMETER.jpg',
+          '/PRODUCT/PRODUCT_ALAT_KESEHATAN/INFANTOBOARD/PRODUCT_ALAT_KESEHATAN_INFANTOBOARD_LOCKING_SLIDER.jpg',
+        ],
       },
     ],
   },
 ];
-
-// Get all products
-export function getAllProducts() {
-  return productCategories.flatMap((cat) => cat.products);
-}
-
-// Get product by ID
-export function getProductById(id) {
-  return getAllProducts().find((product) => product.id === id);
-}
 
 // Generate slug from product name
 export function generateSlug(name) {
@@ -440,10 +583,46 @@ export function generateSlug(name) {
     .replace(/(^-|-$)/g, '');
 }
 
+function normalizeProduct(product) {
+  const images = product.images?.length
+    ? product.images
+    : product.image
+    ? [product.image]
+    : [];
+
+  const technicalData =
+    product.technicalData && Object.keys(product.technicalData).length > 0
+      ? product.technicalData
+      : product.specifications || {};
+
+  return {
+    ...product,
+    image: images[0] ?? product.image,
+    images,
+    slug: product.slug ?? generateSlug(product.name),
+    fullDescription: product.fullDescription ?? product.description,
+    technicalData,
+  };
+}
+
+// Get all products
+export function getAllProducts() {
+  return productCategories.flatMap((cat) =>
+    cat.products.map((product) => normalizeProduct(product))
+  );
+}
+
+// Get product by ID
+export function getProductById(id) {
+  return getAllProducts().find((product) => product.id === id);
+}
+
 // Get product by slug
 export function getProductBySlug(slug) {
   const products = getAllProducts();
-  return products.find((product) => generateSlug(product.name) === slug);
+  return products.find(
+    (product) => product.slug === slug || generateSlug(product.name) === slug
+  );
 }
 
 // Get related products (same category, exclude current product)
@@ -457,4 +636,3 @@ export function getRelatedProducts(currentProduct, limit = 3) {
     )
     .slice(0, limit);
 }
-

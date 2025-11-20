@@ -41,8 +41,18 @@ export default function Products() {
     },
   ];
 
+  const featuredProduct = productCategories[0]?.products?.[0];
+  const featuredImage =
+    featuredProduct?.images?.[0] || featuredProduct?.image || '/logo.png';
+  const heroStats = [
+    { label: 'Mesin Injeksi', value: '14+' },
+    { label: 'Sektor Industri', value: '4' },
+    { label: 'Akurasi CNC', value: '±0.01 mm' },
+    { label: 'ISO Certified', value: 'ISO' },
+  ];
+
   // Get all products or filtered by category
-  const getAllProducts = () => {
+  const getFilteredProducts = () => {
     if (selectedCategory === 'all') {
       return productCategories.flatMap((cat) => cat.products);
     }
@@ -81,7 +91,6 @@ Terima kasih.`;
     );
   };
 
-
   return (
     <div className='min-h-screen bg-white'>
       <Header />
@@ -111,45 +120,118 @@ Terima kasih.`;
       </section>
 
       {/* Hero Section */}
-      <section className='py-16 bg-gradient-to-br from-blue-50 to-indigo-100'>
+      <section className='py-16 bg-gradient-to-br from-blue-50 via-white to-indigo-100'>
         <div className='container mx-auto px-4 sm:px-6 lg:px-8'>
-          <motion.div
-            className='text-center'
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h1 className='text-4xl lg:text-5xl font-bold text-gray-900 mb-6'>
-              Katalog Produk{' '}
-              <span className='text-blue-600'>PT Arch Continent Tech</span>
-            </h1>
-            <p className='text-xl text-gray-600 mb-8 max-w-3xl mx-auto'>
-              Solusi manufaktur presisi untuk berbagai industri dengan standar
-              kualitas internasional dan teknologi CNC modern.
-            </p>
+          <div className='grid lg:grid-cols-2 gap-12 items-center'>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <p className='text-sm uppercase tracking-[0.3em] text-blue-600 font-semibold mb-4'>
+                Precision Manufacturing Partner
+              </p>
+              <h1 className='text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight'>
+                Katalog Produk{' '}
+                <span className='text-blue-600'>PT Arch Continent Tech</span>
+              </h1>
+              <p className='text-xl text-gray-600 mb-8 max-w-2xl'>
+                Solusi manufaktur presisi untuk sektor pertambangan,
+                telekomunikasi, otomotif, dan alat kesehatan dengan dukungan
+                fasilitas injeksi berkapasitas besar.
+              </p>
 
-            {/* Company Stats */}
-            <div className='grid md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12'>
-              <div className='bg-white rounded-xl p-6 shadow-lg'>
-                <div className='text-3xl font-bold text-blue-600 mb-2'>14+</div>
-                <div className='text-gray-600'>Mesin Injeksi</div>
+              <div className='grid sm:grid-cols-2 gap-4'>
+                {heroStats.map((stat) => (
+                  <div
+                    key={stat.label}
+                    className='bg-white rounded-2xl p-5 shadow-lg border border-white/70'
+                  >
+                    <div className='text-3xl font-bold text-blue-600'>
+                      {stat.value}
+                    </div>
+                    <div className='text-gray-600'>{stat.label}</div>
+                  </div>
+                ))}
               </div>
-              <div className='bg-white rounded-xl p-6 shadow-lg'>
-                <div className='text-3xl font-bold text-blue-600 mb-2'>4</div>
-                <div className='text-gray-600'>Sektor Industri</div>
-              </div>
-              <div className='bg-white rounded-xl p-6 shadow-lg'>
-                <div className='text-3xl font-bold text-blue-600 mb-2'>
-                  ±0.01
+            </motion.div>
+
+            {featuredProduct && (
+              <motion.div
+                initial={{ opacity: 0, y: 40 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.9, delay: 0.15 }}
+                className='relative'
+              >
+                <div className='absolute inset-0 bg-gradient-to-tr from-blue-200/40 to-transparent rounded-3xl blur-3xl'></div>
+                <div className='relative bg-white rounded-3xl shadow-2xl overflow-hidden border border-white/70'>
+                  <div className='relative h-80'>
+                    <Image
+                      src={featuredImage}
+                      alt={featuredProduct.name}
+                      fill
+                      className='object-cover'
+                      sizes='(max-width: 768px) 100vw, 40vw'
+                      priority
+                    />
+                    <div className='absolute top-4 left-4 flex gap-2'>
+                      <span className='px-4 py-1 rounded-full bg-white/90 text-blue-700 text-xs font-semibold shadow'>
+                        Produk Unggulan
+                      </span>
+                      <span className='px-4 py-1 rounded-full bg-blue-600/90 text-white text-xs font-semibold shadow'>
+                        {featuredProduct.subcategory}
+                      </span>
+                    </div>
+                    <div className='absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/70 to-transparent p-6'>
+                      <p className='text-sm text-white/70 uppercase tracking-wide'>
+                        Plastik Core Tray
+                      </p>
+                      <h3 className='text-2xl font-semibold text-white'>
+                        {featuredProduct.name}
+                      </h3>
+                    </div>
+                  </div>
                 </div>
-                <div className='text-gray-600'>mm Akurasi CNC</div>
+              </motion.div>
+            )}
+          </div>
+        </div>
+      </section>
+
+      {/* Confidence Bar */}
+      <section className='py-6 bg-white border-b border-gray-100'>
+        <div className='container mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='flex flex-wrap gap-6 justify-center'>
+            {[
+              {
+                title: 'Lead Time Produksi',
+                desc: 'Mulai 21 hari kerja untuk order OEM',
+              },
+              {
+                title: 'Custom Tooling',
+                desc: 'Engineering support & reverse engineering',
+              },
+              {
+                title: 'Quality Assurance',
+                desc: 'QC berlapis & laporan inspeksi lengkap',
+              },
+            ].map((item) => (
+              <div
+                key={item.title}
+                className='flex items-center gap-4 bg-gray-50 px-5 py-3 rounded-2xl shadow-sm border border-gray-100'
+              >
+                <div className='w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-700 font-bold'>
+                  ✓
+                </div>
+                <div>
+                  <p className='text-sm font-semibold text-gray-900'>
+                    {item.title}
+                  </p>
+                  <p className='text-xs text-gray-500'>{item.desc}</p>
+                </div>
               </div>
-              <div className='bg-white rounded-xl p-6 shadow-lg'>
-                <div className='text-3xl font-bold text-blue-600 mb-2'>ISO</div>
-                <div className='text-gray-600'>Certified</div>
-              </div>
-            </div>
-          </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -189,145 +271,169 @@ Terima kasih.`;
       <section className='py-16 bg-gray-50'>
         <div className='container mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
-            {getAllProducts().map((product, index) => (
-              <motion.div
-                key={product.id}
-                className='bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden cursor-pointer group'
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                whileHover={{ y: -5 }}
-              >
-                {/* Product Header with Image */}
-                <Link href={`/products/${generateSlug(product.name)}`}>
-                  <div className='relative'>
-                    <div className='h-48 overflow-hidden bg-gray-100 relative group cursor-pointer'>
-                      <Image
-                        src={product.image}
-                        alt={`${product.name} - ${product.category} - ${product.subcategory}`}
-                        fill
-                        className='object-cover transition-transform duration-500 group-hover:scale-105'
-                        sizes='(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw'
-                        priority={index < 6}
-                        placeholder='blur'
-                        blurDataURL='data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwA/8A8A'
-                      />
-                      
-                      {/* Category Badge */}
-                      <div className='absolute top-4 left-4 z-10'>
-                        <span className='px-3 py-1 bg-blue-600 text-white text-xs font-medium rounded-full shadow-lg'>
-                          {product.subcategory}
-                        </span>
-                      </div>
+            {getFilteredProducts().map((product, index) => {
+              const productImage = product.images?.[0] || product.image;
+              const productThumbnails = product.images?.slice(1, 4) || [];
+              return (
+                <motion.div
+                  key={product.id}
+                  className='bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden cursor-pointer group'
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  whileHover={{ y: -5 }}
+                >
+                  {/* Product Header with Image */}
+                  <Link href={`/products/${generateSlug(product.name)}`}>
+                    <div className='relative'>
+                      <div className='h-56 overflow-hidden bg-gray-100 relative group cursor-pointer'>
+                        <Image
+                          src={productImage}
+                          alt={`${product.name} - ${product.category} - ${product.subcategory}`}
+                          fill
+                          className='object-cover transition-transform duration-500 group-hover:scale-105'
+                          sizes='(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw'
+                          priority={index < 6}
+                        />
 
-                      {/* Company Watermark */}
-                      <div className='absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10'>
-                        <div className='w-12 h-12 bg-white/90 backdrop-blur-sm rounded-lg flex items-center justify-center shadow-lg'>
-                          <Image
-                            src='/logo_transparent.png'
-                            alt='ACT'
-                            width={100}
-                            height={100}
-                            className='p-2'
-                          />
+                        {/* Category Badge */}
+                        <div className='absolute top-4 left-4 z-10 flex flex-col gap-2'>
+                          <span className='px-3 py-1 bg-white/90 text-blue-600 text-xs font-semibold rounded-full shadow'>
+                            {product.category}
+                          </span>
+                          <span className='px-3 py-1 bg-blue-600 text-white text-xs font-medium rounded-full shadow-lg'>
+                            {product.subcategory}
+                          </span>
                         </div>
-                      </div>
 
-                      {/* Hover Overlay */}
-                      <div className='absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300'>
-                        <div className='absolute bottom-4 left-4 right-4 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300'>
-                          <p className='text-white text-sm font-medium drop-shadow-lg'>
-                            Lihat Detail Produk
-                          </p>
-                          <p className='text-white/80 text-xs drop-shadow'>
-                            Klik untuk spesifikasi lengkap
-                          </p>
+                        {/* Company Watermark */}
+                        <div className='absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10'>
+                          <div className='w-12 h-12 bg-white/90 backdrop-blur-sm rounded-lg flex items-center justify-center shadow-lg'>
+                            <Image
+                              src='/logo_transparent.png'
+                              alt='ACT'
+                              width={100}
+                              height={100}
+                              className='p-2'
+                            />
+                          </div>
                         </div>
-                      </div>
 
-                      {/* Loading skeleton overlay */}
-                      <div className='absolute inset-0 bg-gray-200 animate-pulse opacity-0 pointer-events-none'></div>
+                        {/* Hover Overlay */}
+                        <div className='absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300'>
+                          <div className='absolute bottom-4 left-4 right-4 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300'>
+                            <p className='text-white text-sm font-medium drop-shadow-lg'>
+                              Lihat Detail Produk
+                            </p>
+                            <p className='text-white/80 text-xs drop-shadow'>
+                              Klik untuk spesifikasi lengkap
+                            </p>
+                          </div>
+                        </div>
+
+                        {/* Loading skeleton overlay */}
+                        <div className='absolute inset-0 bg-gray-200 animate-pulse opacity-0 pointer-events-none'></div>
+                      </div>
                     </div>
-                  </div>
-                </Link>
+                  </Link>
 
-                {/* Product Info */}
-                <div className='p-6'>
-                  <h3 className='text-xl font-bold text-gray-900 mb-3'>
-                    {product.name}
-                  </h3>
-                  <p className='text-gray-600 mb-4 line-clamp-3'>
-                    {product.description}
-                  </p>
+                  {/* Product Info */}
+                  <div className='p-6'>
+                    <h3 className='text-xl font-bold text-gray-900 mb-3'>
+                      {product.name}
+                    </h3>
+                    <p className='text-gray-600 mb-4 line-clamp-3'>
+                      {product.description}
+                    </p>
 
-                  {/* Key Specifications */}
-                  <div className='mb-4'>
-                    <h4 className='text-sm font-semibold text-gray-700 mb-2'>
-                      Spesifikasi Utama:
-                    </h4>
-                    <div className='space-y-1'>
-                      {Object.entries(product.specifications)
-                        .slice(0, 3)
-                        .map(([key, value]) => (
-                          <div
-                            key={key}
-                            className='flex justify-between text-sm'
+                    {/* Key Specifications */}
+                    <div className='mb-4'>
+                      <h4 className='text-sm font-semibold text-gray-700 mb-2'>
+                        Spesifikasi Utama:
+                      </h4>
+                      <div className='space-y-1'>
+                        {Object.entries(product.specifications)
+                          .slice(0, 3)
+                          .map(([key, value]) => (
+                            <div
+                              key={key}
+                              className='flex justify-between text-sm'
+                            >
+                              <span className='text-gray-500'>{key}:</span>
+                              <span className='text-gray-900 font-medium'>
+                                {value}
+                              </span>
+                            </div>
+                          ))}
+                      </div>
+                    </div>
+
+                    {/* Applications */}
+                    <div className='mb-6'>
+                      <h4 className='text-sm font-semibold text-gray-700 mb-2'>
+                        Aplikasi:
+                      </h4>
+                      <div className='flex flex-wrap gap-1'>
+                        {product.applications.slice(0, 2).map((app, i) => (
+                          <span
+                            key={i}
+                            className='px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded-full'
                           >
-                            <span className='text-gray-500'>{key}:</span>
-                            <span className='text-gray-900 font-medium'>
-                              {value}
-                            </span>
+                            {app}
+                          </span>
+                        ))}
+                        {product.applications.length > 2 && (
+                          <span className='px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded-full'>
+                            +{product.applications.length - 2}
+                          </span>
+                        )}
+                      </div>
+                    </div>
+
+                    {productThumbnails.length > 0 && (
+                      <div className='mt-4 flex gap-2'>
+                        {productThumbnails.map((thumb, thumbIndex) => (
+                          <div
+                            key={`${product.id}-thumb-${thumbIndex}`}
+                            className='relative h-16 w-16 rounded-lg overflow-hidden border border-gray-100'
+                          >
+                            <Image
+                              src={thumb}
+                              alt={`${product.name} preview ${thumbIndex + 1}`}
+                              fill
+                              className='object-cover'
+                              sizes='64px'
+                            />
                           </div>
                         ))}
+                      </div>
+                    )}
+
+                    {/* Action Buttons */}
+                    <div className='flex gap-3 mt-6'>
+                      <Link
+                        href={`/products/${generateSlug(product.name)}`}
+                        className='flex-1 btn-outline text-sm py-2.5 group hover:shadow-md transition-all duration-300 text-center'
+                      >
+                        <span className='flex items-center justify-center gap-2'>
+                          <InformationCircleIcon className='h-4 w-4 group-hover:scale-110 transition-transform' />
+                          Lihat Detail
+                        </span>
+                      </Link>
+                      <button
+                        onClick={() => handleRequestQuote(product)}
+                        className='flex-1 btn-primary text-sm py-2.5 group hover:shadow-lg transition-all duration-300'
+                      >
+                        <span className='flex items-center justify-center gap-2'>
+                          <CurrencyDollarIcon className='h-4 w-4 group-hover:scale-110 transition-transform' />
+                          Request Penawaran
+                        </span>
+                      </button>
                     </div>
                   </div>
-
-                  {/* Applications */}
-                  <div className='mb-6'>
-                    <h4 className='text-sm font-semibold text-gray-700 mb-2'>
-                      Aplikasi:
-                    </h4>
-                    <div className='flex flex-wrap gap-1'>
-                      {product.applications.slice(0, 2).map((app, i) => (
-                        <span
-                          key={i}
-                          className='px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded-full'
-                        >
-                          {app}
-                        </span>
-                      ))}
-                      {product.applications.length > 2 && (
-                        <span className='px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded-full'>
-                          +{product.applications.length - 2}
-                        </span>
-                      )}
-                    </div>
-                  </div>
-
-                  {/* Action Buttons */}
-                  <div className='flex gap-3 mt-6'>
-                    <Link
-                      href={`/products/${generateSlug(product.name)}`}
-                      className='flex-1 btn-outline text-sm py-2.5 group hover:shadow-md transition-all duration-300 text-center'
-                    >
-                      <span className='flex items-center justify-center gap-2'>
-                        <InformationCircleIcon className='h-4 w-4 group-hover:scale-110 transition-transform' />
-                        Lihat Detail
-                      </span>
-                    </Link>
-                    <button
-                      onClick={() => handleRequestQuote(product)}
-                      className='flex-1 btn-primary text-sm py-2.5 group hover:shadow-lg transition-all duration-300'
-                    >
-                      <span className='flex items-center justify-center gap-2'>
-                        <CurrencyDollarIcon className='h-4 w-4 group-hover:scale-110 transition-transform' />
-                        Request Penawaran
-                      </span>
-                    </button>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </section>
