@@ -96,9 +96,10 @@ Terima kasih.`;
       '@type': 'Offer',
       availability: 'https://schema.org/InStock',
       priceCurrency: 'IDR',
-      url: typeof window !== 'undefined' 
-        ? `${window.location.origin}/products/${params.slug}`
-        : `https://archcontinenttech.com/products/${params.slug}`,
+      url:
+        typeof window !== 'undefined'
+          ? `${window.location.origin}/products/${params.slug}`
+          : `https://archcontinenttech.com/products/${params.slug}`,
     },
     aggregateRating: {
       '@type': 'AggregateRating',
@@ -121,7 +122,10 @@ Terima kasih.`;
         {/* Breadcrumb */}
         <section className='pt-20 pb-6 bg-gray-50'>
           <div className='container mx-auto px-4 sm:px-6 lg:px-8'>
-            <nav className='flex items-center space-x-2 text-sm' aria-label='Breadcrumb'>
+            <nav
+              className='flex items-center space-x-2 text-sm'
+              aria-label='Breadcrumb'
+            >
               <Link
                 href='/'
                 className='text-gray-500 hover:text-blue-600 transition-colors'
@@ -137,7 +141,9 @@ Terima kasih.`;
               </Link>
               <span className='text-gray-400'>/</span>
               <Link
-                href={`/products?category=${product.category.toLowerCase().replace(/\s+/g, '-')}`}
+                href={`/products?category=${product.category
+                  .toLowerCase()
+                  .replace(/\s+/g, '-')}`}
                 className='text-gray-500 hover:text-blue-600 transition-colors'
               >
                 {product.category}
@@ -198,7 +204,7 @@ Terima kasih.`;
                       </p>
                     </div>
                   </div>
-                  
+
                   {/* Product Image */}
                   <Image
                     src={product.image}
@@ -249,8 +255,13 @@ Terima kasih.`;
                     {Object.entries(product.specifications)
                       .slice(0, 4)
                       .map(([key, value]) => (
-                        <div key={key} className='border-b border-gray-200 pb-2'>
-                          <div className='text-sm text-gray-500 mb-1'>{key}</div>
+                        <div
+                          key={key}
+                          className='border-b border-gray-200 pb-2'
+                        >
+                          <div className='text-sm text-gray-500 mb-1'>
+                            {key}
+                          </div>
                           <div className='text-base font-semibold text-gray-900'>
                             {value}
                           </div>
@@ -271,7 +282,9 @@ Terima kasih.`;
                     </span>
                   </button>
                   <a
-                    href={`https://wa.me/6289514024380?text=Halo,%20saya%20ingin%20bertanya%20tentang%20${encodeURIComponent(product.name)}`}
+                    href={`https://wa.me/6289514024380?text=Halo,%20saya%20ingin%20bertanya%20tentang%20${encodeURIComponent(
+                      product.name
+                    )}`}
                     target='_blank'
                     rel='noopener noreferrer'
                     className='flex-1 btn-outline py-4 text-lg font-semibold group hover:shadow-lg transition-all duration-300'
@@ -397,53 +410,24 @@ Terima kasih.`;
                     Spesifikasi Teknis
                   </h3>
                   <div className='space-y-4'>
-                    {Object.entries(product.specifications).map(([key, value]) => (
-                      <div
-                        key={key}
-                        className='border-b border-gray-200 pb-3 last:border-0'
-                      >
-                        <div className='flex flex-col'>
-                          <span className='text-sm font-medium text-gray-600 mb-1'>
-                            {key}
-                          </span>
-                          <span className='text-base font-semibold text-gray-900'>
-                            {value}
-                          </span>
+                    {Object.entries(product.specifications).map(
+                      ([key, value]) => (
+                        <div
+                          key={key}
+                          className='border-b border-gray-200 pb-3 last:border-0'
+                        >
+                          <div className='flex flex-col'>
+                            <span className='text-sm font-medium text-gray-600 mb-1'>
+                              {key}
+                            </span>
+                            <span className='text-base font-semibold text-gray-900'>
+                              {value}
+                            </span>
+                          </div>
                         </div>
-                      </div>
-                    ))}
+                      )
+                    )}
                   </div>
-                </motion.div>
-
-                {/* Quality Standards */}
-                <motion.div
-                  initial={{ opacity: 0, x: 30 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: 0.2 }}
-                  viewport={{ once: true }}
-                  className='bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-6 border border-blue-200'
-                >
-                  <h4 className='font-bold text-gray-900 mb-4 text-lg'>
-                    Standar Kualitas
-                  </h4>
-                  <ul className='space-y-2 text-sm text-gray-700'>
-                    <li className='flex items-center gap-2'>
-                      <CheckCircleIcon className='h-5 w-5 text-blue-600 flex-shrink-0' />
-                      <span>ISO 9001 Certified</span>
-                    </li>
-                    <li className='flex items-center gap-2'>
-                      <CheckCircleIcon className='h-5 w-5 text-blue-600 flex-shrink-0' />
-                      <span>Quality Control Checked</span>
-                    </li>
-                    <li className='flex items-center gap-2'>
-                      <CheckCircleIcon className='h-5 w-5 text-blue-600 flex-shrink-0' />
-                      <span>International Standards</span>
-                    </li>
-                    <li className='flex items-center gap-2'>
-                      <CheckCircleIcon className='h-5 w-5 text-blue-600 flex-shrink-0' />
-                      <span>Precision Manufacturing</span>
-                    </li>
-                  </ul>
                 </motion.div>
               </div>
             </div>
@@ -551,4 +535,3 @@ Terima kasih.`;
     </>
   );
 }
-
