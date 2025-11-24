@@ -11,8 +11,7 @@ export const siteConfig = {
     ? 'http://localhost:3001'
     : isPreview
     ? 'https://arch-continent-tech.vercel.app'
-    : process.env.NEXT_PUBLIC_SITE_URL ||
-      'https://arch-continent-tech.vercel.app',
+    : process.env.NEXT_PUBLIC_SITE_URL || 'https://archcontinenttech.com',
 
   // Site Information
   name: 'PT ARCH CONTINENT TECH',

@@ -20,7 +20,7 @@ export function generateMetadata({ params }) {
     };
   }
 
-  const canonicalUrl = `${siteConfig.baseUrl}/products/${product.slug}`;
+  const canonicalUrl = `/products/${product.slug}`;
   const image = product.images?.[0] || product.image || '/logo.png';
 
   return {

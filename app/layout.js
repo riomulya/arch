@@ -9,6 +9,7 @@ const inter = Inter({
 });
 
 export const metadata = {
+  metadataBase: new URL('https://archcontinenttech.com'),
   title: {
     default:
       'PT ARCH CONTINENT TECH - Solusi Bahan Konstruksi & Perlengkapan Teknis',
@@ -23,8 +24,13 @@ export const metadata = {
     'cable management',
     'konstruksi',
     'PT ARCH CONTINENT TECH',
+    'mining core tray',
+    'plastic injection',
+    'cnc machining',
   ],
-  authors: [{ name: 'PT ARCH CONTINENT TECH' }],
+  authors: [
+    { name: 'PT ARCH CONTINENT TECH', url: 'https://archcontinenttech.com' },
+  ],
   creator: 'PT ARCH CONTINENT TECH',
   publisher: 'PT ARCH CONTINENT TECH',
   robots: {
@@ -37,6 +43,9 @@ export const metadata = {
       'max-image-preview': 'large',
       'max-snippet': -1,
     },
+  },
+  alternates: {
+    canonical: '/',
   },
   openGraph: {
     type: 'website',
@@ -65,7 +74,7 @@ export const metadata = {
     images: ['/og-image.jpg'],
   },
   verification: {
-    google: 'google-site-verification-code',
+    google: 'EwEVGxZ_pN-_aneRHJCq3oVQVVJYvg3JQVwTaET0FLo',
   },
 };
 
@@ -104,10 +113,6 @@ export default function RootLayout({ children }) {
       suppressHydrationWarning
     >
       <head>
-        <meta
-          name='google-site-verification'
-          content='EwEVGxZ_pN-_aneRHJCq3oVQVVJYvg3JQVwTaET0FLo'
-        />
         <script
           type='application/ld+json'
           dangerouslySetInnerHTML={{
