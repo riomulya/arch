@@ -216,6 +216,373 @@ export default function Services() {
         </div>
       </section>
 
+      {/* Manufacturing Services Section */}
+      <section className='py-24 bg-gradient-to-br from-gray-50 via-blue-50 to-gray-50'>
+        <div className='container mx-auto px-4 sm:px-6 lg:px-8'>
+          <motion.div
+            className='text-center mb-16'
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <div className='inline-flex items-center space-x-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-full mb-6'>
+              <CogIcon className='h-5 w-5' />
+              <span className='font-semibold'>Manufacturing Excellence</span>
+            </div>
+            <h2 className='text-4xl sm:text-6xl font-bold text-gray-900 mb-4'>
+              Usaha & Jasa Manufaktur
+            </h2>
+            <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
+              Layanan manufaktur end-to-end dengan teknologi modern dan tim
+              berpengalaman untuk mendukung produksi Anda
+            </p>
+          </motion.div>
+
+          {/* Services Grid */}
+          <div className='space-y-24'>
+            {/* Molding Services */}
+            <motion.div
+              className='relative'
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <div className='grid lg:grid-cols-2 gap-12 items-center'>
+                {/* Content */}
+                <div>
+                  <div className='inline-block bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-4 py-2 rounded-lg mb-4 font-semibold'>
+                    Precision Manufacturing
+                  </div>
+                  <h3 className='text-4xl font-bold text-gray-900 mb-4'>
+                    Molding Services
+                  </h3>
+                  <p className='text-lg text-gray-600 mb-6 leading-relaxed'>
+                    Layanan pembuatan mold presisi dengan teknologi terkini
+                    untuk produksi massal berkualitas tinggi
+                  </p>
+                  <div className='flex flex-wrap gap-3 mb-6'>
+                    <span className='bg-white border-2 border-gray-200 px-4 py-2 rounded-full text-sm font-semibold text-gray-700 hover:border-blue-500 hover:text-blue-600 transition-all duration-300'>
+                      Precision Assembling
+                    </span>
+                    <span className='bg-white border-2 border-gray-200 px-4 py-2 rounded-full text-sm font-semibold text-gray-700 hover:border-blue-500 hover:text-blue-600 transition-all duration-300'>
+                      Professional Finishing
+                    </span>
+                    <span className='bg-white border-2 border-gray-200 px-4 py-2 rounded-full text-sm font-semibold text-gray-700 hover:border-blue-500 hover:text-blue-600 transition-all duration-300'>
+                      Expert Polishing
+                    </span>
+                  </div>
+                  <Link
+                    href='/contact'
+                    className='inline-flex items-center space-x-2 text-blue-600 font-bold hover:text-blue-700 transition-colors group'
+                  >
+                    <span>Konsultasi Sekarang</span>
+                    <ChartBarIcon className='h-5 w-5 group-hover:translate-x-1 transition-transform' />
+                  </Link>
+                </div>
+
+                {/* Images */}
+                <div>
+                  <div className='grid grid-cols-2 gap-4'>
+                    <motion.div
+                      className='relative overflow-hidden rounded-2xl shadow-2xl group col-span-2'
+                      whileHover={{ scale: 1.02 }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      <div className='aspect-w-16 aspect-h-12 relative h-64'>
+                        <img
+                          src='/USAHA_DAN_JASA/MOLDING/MOLDING_ASSEMBLING.jpg'
+                          alt='Molding Assembling'
+                          className='w-full h-full object-cover group-hover:scale-110 transition-transform duration-500'
+                        />
+                        <div className='absolute inset-0 bg-gradient-to-t from-blue-600 to-transparent opacity-0 group-hover:opacity-30 transition-opacity duration-300'></div>
+                      </div>
+                    </motion.div>
+                    <motion.div
+                      className='relative overflow-hidden rounded-2xl shadow-2xl group'
+                      whileHover={{ scale: 1.02 }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      <div className='aspect-w-16 aspect-h-12 relative h-48'>
+                        <img
+                          src='/USAHA_DAN_JASA/MOLDING/MOLDING_FINISHING.jpg'
+                          alt='Molding Finishing'
+                          className='w-full h-full object-cover group-hover:scale-110 transition-transform duration-500'
+                        />
+                        <div className='absolute inset-0 bg-gradient-to-t from-cyan-600 to-transparent opacity-0 group-hover:opacity-30 transition-opacity duration-300'></div>
+                      </div>
+                    </motion.div>
+                    <motion.div
+                      className='relative overflow-hidden rounded-2xl shadow-2xl group'
+                      whileHover={{ scale: 1.02 }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      <div className='aspect-w-16 aspect-h-12 relative h-48'>
+                        <img
+                          src='/USAHA_DAN_JASA/MOLDING/MOLDING_POLESHING.jpg'
+                          alt='Molding Polishing'
+                          className='w-full h-full object-cover group-hover:scale-110 transition-transform duration-500'
+                        />
+                        <div className='absolute inset-0 bg-gradient-to-t from-blue-600 to-transparent opacity-0 group-hover:opacity-30 transition-opacity duration-300'></div>
+                      </div>
+                    </motion.div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* CNC Machining */}
+            <motion.div
+              className='relative'
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              viewport={{ once: true }}
+            >
+              <div className='grid lg:grid-cols-2 gap-12 items-center'>
+                {/* Images */}
+                <div className='lg:order-1'>
+                  <div className='grid grid-cols-2 gap-4'>
+                    <motion.div
+                      className='relative overflow-hidden rounded-2xl shadow-2xl group'
+                      whileHover={{ scale: 1.02 }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      <div className='aspect-w-16 aspect-h-12 relative h-48'>
+                        <img
+                          src='/USAHA_DAN_JASA/PROSES_MACHINING/PROSES_MACHINING_EDM_CNC.jpg'
+                          alt='CNC EDM'
+                          className='w-full h-full object-cover group-hover:scale-110 transition-transform duration-500'
+                        />
+                        <div className='absolute inset-0 bg-gradient-to-t from-purple-600 to-transparent opacity-0 group-hover:opacity-30 transition-opacity duration-300'></div>
+                      </div>
+                    </motion.div>
+                    <motion.div
+                      className='relative overflow-hidden rounded-2xl shadow-2xl group'
+                      whileHover={{ scale: 1.02 }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      <div className='aspect-w-16 aspect-h-12 relative h-48'>
+                        <img
+                          src='/USAHA_DAN_JASA/PROSES_MACHINING/PROSES_MACHINING_MILLING_CNC.jpg'
+                          alt='CNC Milling'
+                          className='w-full h-full object-cover group-hover:scale-110 transition-transform duration-500'
+                        />
+                        <div className='absolute inset-0 bg-gradient-to-t from-pink-600 to-transparent opacity-0 group-hover:opacity-30 transition-opacity duration-300'></div>
+                      </div>
+                    </motion.div>
+                    <motion.div
+                      className='relative overflow-hidden rounded-2xl shadow-2xl group col-span-2'
+                      whileHover={{ scale: 1.02 }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      <div className='aspect-w-16 aspect-h-12 relative h-64'>
+                        <img
+                          src='/USAHA_DAN_JASA/PROSES_MACHINING/PROSES_MACHINING_MILLING_CNC2.jpg'
+                          alt='CNC Milling Advanced'
+                          className='w-full h-full object-cover group-hover:scale-110 transition-transform duration-500'
+                        />
+                        <div className='absolute inset-0 bg-gradient-to-t from-purple-600 to-transparent opacity-0 group-hover:opacity-30 transition-opacity duration-300'></div>
+                      </div>
+                    </motion.div>
+                  </div>
+                </div>
+
+                {/* Content */}
+                <div className='lg:order-2'>
+                  <div className='inline-block bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rounded-lg mb-4 font-semibold'>
+                    High Precision
+                  </div>
+                  <h3 className='text-4xl font-bold text-gray-900 mb-4'>
+                    CNC Machining
+                  </h3>
+                  <p className='text-lg text-gray-600 mb-6 leading-relaxed'>
+                    Proses machining presisi dengan CNC EDM & Milling untuk
+                    komponen berkualitas tinggi dengan toleransi ketat
+                  </p>
+                  <div className='flex flex-wrap gap-3 mb-6'>
+                    <span className='bg-white border-2 border-gray-200 px-4 py-2 rounded-full text-sm font-semibold text-gray-700 hover:border-purple-500 hover:text-purple-600 transition-all duration-300'>
+                      CNC EDM
+                    </span>
+                    <span className='bg-white border-2 border-gray-200 px-4 py-2 rounded-full text-sm font-semibold text-gray-700 hover:border-purple-500 hover:text-purple-600 transition-all duration-300'>
+                      CNC Milling
+                    </span>
+                    <span className='bg-white border-2 border-gray-200 px-4 py-2 rounded-full text-sm font-semibold text-gray-700 hover:border-purple-500 hover:text-purple-600 transition-all duration-300'>
+                      High Precision
+                    </span>
+                    <span className='bg-white border-2 border-gray-200 px-4 py-2 rounded-full text-sm font-semibold text-gray-700 hover:border-purple-500 hover:text-purple-600 transition-all duration-300'>
+                      Complex Geometries
+                    </span>
+                  </div>
+                  <Link
+                    href='/contact'
+                    className='inline-flex items-center space-x-2 text-purple-600 font-bold hover:text-purple-700 transition-colors group'
+                  >
+                    <span>Konsultasi Sekarang</span>
+                    <ChartBarIcon className='h-5 w-5 group-hover:translate-x-1 transition-transform' />
+                  </Link>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Plastic Injection */}
+            <motion.div
+              className='relative'
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <div className='grid lg:grid-cols-2 gap-12 items-center'>
+                {/* Content */}
+                <div>
+                  <div className='inline-block bg-gradient-to-r from-green-600 to-emerald-600 text-white px-4 py-2 rounded-lg mb-4 font-semibold'>
+                    Mass Production
+                  </div>
+                  <h3 className='text-4xl font-bold text-gray-900 mb-4'>
+                    Plastic Injection
+                  </h3>
+                  <p className='text-lg text-gray-600 mb-6 leading-relaxed'>
+                    Produksi komponen plastik dengan mesin injeksi modern hingga
+                    800 ton kapasitas untuk produksi massal berkualitas
+                  </p>
+                  <div className='flex flex-wrap gap-3 mb-6'>
+                    <span className='bg-white border-2 border-gray-200 px-4 py-2 rounded-full text-sm font-semibold text-gray-700 hover:border-green-500 hover:text-green-600 transition-all duration-300'>
+                      Mass Production
+                    </span>
+                    <span className='bg-white border-2 border-gray-200 px-4 py-2 rounded-full text-sm font-semibold text-gray-700 hover:border-green-500 hover:text-green-600 transition-all duration-300'>
+                      800+ Ton Capacity
+                    </span>
+                    <span className='bg-white border-2 border-gray-200 px-4 py-2 rounded-full text-sm font-semibold text-gray-700 hover:border-green-500 hover:text-green-600 transition-all duration-300'>
+                      Quality Control
+                    </span>
+                  </div>
+                  <Link
+                    href='/contact'
+                    className='inline-flex items-center space-x-2 text-green-600 font-bold hover:text-green-700 transition-colors group'
+                  >
+                    <span>Konsultasi Sekarang</span>
+                    <ChartBarIcon className='h-5 w-5 group-hover:translate-x-1 transition-transform' />
+                  </Link>
+                </div>
+
+                {/* Images */}
+                <div>
+                  <div className='grid grid-cols-1 gap-4'>
+                    <motion.div
+                      className='relative overflow-hidden rounded-2xl shadow-2xl group'
+                      whileHover={{ scale: 1.02 }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      <div className='aspect-w-16 aspect-h-12 relative h-72'>
+                        <img
+                          src='/USAHA_DAN_JASA/PLASTIC_INEJCTION/PLASTIC_INEJCTION_PRODUKSI1.jpg'
+                          alt='Plastic Injection Production 1'
+                          className='w-full h-full object-cover group-hover:scale-110 transition-transform duration-500'
+                        />
+                        <div className='absolute inset-0 bg-gradient-to-t from-green-600 to-transparent opacity-0 group-hover:opacity-30 transition-opacity duration-300'></div>
+                      </div>
+                    </motion.div>
+                    <motion.div
+                      className='relative overflow-hidden rounded-2xl shadow-2xl group'
+                      whileHover={{ scale: 1.02 }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      <div className='aspect-w-16 aspect-h-12 relative h-72'>
+                        <img
+                          src='/USAHA_DAN_JASA/PLASTIC_INEJCTION/PLASTIC_INEJCTION_PRODUKSI2.jpg'
+                          alt='Plastic Injection Production 2'
+                          className='w-full h-full object-cover group-hover:scale-110 transition-transform duration-500'
+                        />
+                        <div className='absolute inset-0 bg-gradient-to-t from-emerald-600 to-transparent opacity-0 group-hover:opacity-30 transition-opacity duration-300'></div>
+                      </div>
+                    </motion.div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Mechanical Engineering */}
+            <motion.div
+              className='relative'
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              viewport={{ once: true }}
+            >
+              <div className='grid lg:grid-cols-2 gap-12 items-center'>
+                {/* Images */}
+                <div className='lg:order-1'>
+                  <div className='grid grid-cols-1 gap-4'>
+                    <motion.div
+                      className='relative overflow-hidden rounded-2xl shadow-2xl group'
+                      whileHover={{ scale: 1.02 }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      <div className='aspect-w-16 aspect-h-12 relative h-72'>
+                        <img
+                          src='/USAHA_DAN_JASA/MECHANICAL_ENGINEERING/MECHANICAL_ENGINEERING_INSTALASI_MESIN.jpg'
+                          alt='Machine Installation'
+                          className='w-full h-full object-cover group-hover:scale-110 transition-transform duration-500'
+                        />
+                        <div className='absolute inset-0 bg-gradient-to-t from-orange-600 to-transparent opacity-0 group-hover:opacity-30 transition-opacity duration-300'></div>
+                      </div>
+                    </motion.div>
+                    <motion.div
+                      className='relative overflow-hidden rounded-2xl shadow-2xl group'
+                      whileHover={{ scale: 1.02 }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      <div className='aspect-w-16 aspect-h-12 relative h-72'>
+                        <img
+                          src='/USAHA_DAN_JASA/MECHANICAL_ENGINEERING/MECHANICAL_ENGINEERING_INSTALASI_LISTRIK.jpg'
+                          alt='Electrical Installation'
+                          className='w-full h-full object-cover group-hover:scale-110 transition-transform duration-500'
+                        />
+                        <div className='absolute inset-0 bg-gradient-to-t from-red-600 to-transparent opacity-0 group-hover:opacity-30 transition-opacity duration-300'></div>
+                      </div>
+                    </motion.div>
+                  </div>
+                </div>
+
+                {/* Content */}
+                <div className='lg:order-2'>
+                  <div className='inline-block bg-gradient-to-r from-orange-600 to-red-600 text-white px-4 py-2 rounded-lg mb-4 font-semibold'>
+                    Expert Installation
+                  </div>
+                  <h3 className='text-4xl font-bold text-gray-900 mb-4'>
+                    Mechanical Engineering
+                  </h3>
+                  <p className='text-lg text-gray-600 mb-6 leading-relaxed'>
+                    Instalasi mesin dan sistem listrik dengan teknisi
+                    berpengalaman untuk memastikan operasional optimal
+                  </p>
+                  <div className='flex flex-wrap gap-3 mb-6'>
+                    <span className='bg-white border-2 border-gray-200 px-4 py-2 rounded-full text-sm font-semibold text-gray-700 hover:border-orange-500 hover:text-orange-600 transition-all duration-300'>
+                      Machine Installation
+                    </span>
+                    <span className='bg-white border-2 border-gray-200 px-4 py-2 rounded-full text-sm font-semibold text-gray-700 hover:border-orange-500 hover:text-orange-600 transition-all duration-300'>
+                      Electrical Systems
+                    </span>
+                    <span className='bg-white border-2 border-gray-200 px-4 py-2 rounded-full text-sm font-semibold text-gray-700 hover:border-orange-500 hover:text-orange-600 transition-all duration-300'>
+                      Maintenance
+                    </span>
+                  </div>
+                  <Link
+                    href='/contact'
+                    className='inline-flex items-center space-x-2 text-orange-600 font-bold hover:text-orange-700 transition-colors group'
+                  >
+                    <span>Konsultasi Sekarang</span>
+                    <ChartBarIcon className='h-5 w-5 group-hover:translate-x-1 transition-transform' />
+                  </Link>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* Additional Services */}
       <section className='py-20 bg-gray-50'>
         <div className='container mx-auto px-4 sm:px-6 lg:px-8'>
