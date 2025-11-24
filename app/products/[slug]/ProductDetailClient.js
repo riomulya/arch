@@ -119,24 +119,25 @@ Terima kasih.`;
       <section className='py-12 bg-gradient-to-br from-blue-50 via-white to-indigo-100'>
         <div className='container mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='grid lg:grid-cols-2 gap-12 items-start'>
-            <motion.div {...fadeUp} className='space-y-4'>
-              <div className='relative bg-white shadow-2xl rounded-3xl overflow-hidden'>
-                <div className='absolute inset-0 bg-gradient-to-tr from-blue-600/5 to-transparent z-0'></div>
-                <div className='relative aspect-[4/3] sm:aspect-[5/3]'>
+            <motion.div {...fadeUp} className='space-y-6'>
+              <div className='relative bg-white shadow-xl rounded-3xl overflow-hidden border border-gray-200'>
+                <div className='absolute inset-0 bg-gradient-to-tr from-blue-600/3 to-transparent z-0'></div>
+                <div className='relative aspect-[4/3] bg-gradient-to-br from-gray-50 via-white to-gray-100'>
                   <Image
                     src={selectedImage}
                     alt={product.name}
                     fill
-                    className='object-cover'
-                    sizes='(max-width: 768px) 100vw, 45vw'
+                    className='object-contain p-8'
+                    quality={95}
+                    sizes='(max-width: 768px) 100vw, 50vw'
                     priority
                   />
                 </div>
-                <div className='absolute top-4 left-4 flex gap-2'>
-                  <span className='px-3 py-1 text-xs font-semibold rounded-full bg-white/90 text-blue-700 shadow'>
+                <div className='absolute top-4 left-4 flex gap-2 z-10'>
+                  <span className='px-3 py-1.5 text-xs font-semibold rounded-full bg-white/95 backdrop-blur-sm text-blue-700 shadow-lg border border-blue-100'>
                     {product.category}
                   </span>
-                  <span className='px-3 py-1 text-xs font-semibold rounded-full bg-blue-600/90 text-white shadow'>
+                  <span className='px-3 py-1.5 text-xs font-semibold rounded-full bg-gradient-to-r from-blue-600 to-blue-500 text-white shadow-lg'>
                     {product.subcategory}
                   </span>
                 </div>
@@ -149,17 +150,18 @@ Terima kasih.`;
                       key={image}
                       type='button'
                       onClick={() => setSelectedImageIndex(index)}
-                      className={`group relative aspect-square rounded-xl border transition-all ${
+                      className={`group relative aspect-square rounded-xl border-2 transition-all duration-200 bg-gradient-to-br from-gray-50 to-white overflow-hidden ${
                         selectedImageIndex === index
-                          ? 'border-blue-600 ring-2 ring-blue-100'
-                          : 'border-gray-200 hover:border-blue-200'
+                          ? 'border-blue-600 ring-2 ring-blue-200 shadow-lg scale-105'
+                          : 'border-gray-200 hover:border-blue-400 hover:shadow-md hover:scale-102'
                       }`}
                     >
                       <Image
                         src={image}
                         alt={`${product.name} - view ${index + 1}`}
                         fill
-                        className='object-cover rounded-xl'
+                        className='object-contain p-2'
+                        quality={85}
                         sizes='120px'
                       />
                     </button>
@@ -478,36 +480,37 @@ Terima kasih.`;
                       ...fadeUp.transition,
                       delay: 0.05 * index,
                     }}
-                    className='bg-white rounded-3xl shadow-lg hover:shadow-2xl border border-gray-100 overflow-hidden group'
+                    className='bg-white rounded-3xl shadow-md hover:shadow-xl border border-gray-100 overflow-hidden group transition-all duration-300'
                   >
-                    <div className='relative h-48 overflow-hidden'>
+                    <div className='relative aspect-[4/3] overflow-hidden bg-gradient-to-br from-gray-50 to-gray-100'>
                       <Image
                         src={relatedImage}
                         alt={related.name}
                         fill
-                        className='object-cover transition-transform duration-500 group-hover:scale-105'
-                        sizes='(max-width: 768px) 100vw, 300px'
+                        className='object-contain p-6 transition-transform duration-300 group-hover:scale-105'
+                        quality={90}
+                        sizes='(max-width: 768px) 100vw, 33vw'
                       />
-                      <div className='absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity'></div>
+                      <div className='absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300'></div>
                     </div>
                     <div className='p-6 space-y-4'>
                       <div>
-                        <p className='text-xs uppercase tracking-widest text-blue-600 font-semibold'>
+                        <p className='text-xs uppercase tracking-widest text-blue-600 font-semibold mb-2'>
                           {related.subcategory}
                         </p>
-                        <h3 className='text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors'>
+                        <h3 className='text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors leading-tight'>
                           {related.name}
                         </h3>
                       </div>
-                      <p className='text-sm text-gray-600 line-clamp-2'>
+                      <p className='text-sm text-gray-600 line-clamp-2 leading-relaxed'>
                         {related.description}
                       </p>
                       <Link
                         href={`/products/${related.slug}`}
-                        className='inline-flex items-center text-blue-600 font-semibold'
+                        className='inline-flex items-center text-blue-600 font-semibold hover:gap-3 transition-all duration-200'
                       >
                         Detail Produk
-                        <ArrowLeftIcon className='ml-2 h-4 w-4 rotate-180' />
+                        <ArrowLeftIcon className='ml-2 h-4 w-4 rotate-180 group-hover:translate-x-1 transition-transform' />
                       </Link>
                     </div>
                   </motion.article>

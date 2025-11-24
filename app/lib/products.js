@@ -45,11 +45,11 @@ export const productCategories = [
           'Penelitian geoteknik',
         ],
         image:
-          '/PRODUCT/PRODUCT_PERTAMBANGAN/PRODUCT_PERTAMBANGAN_CORE_TRAY_PQ.jpg',
+          '/PRODUCT/PRODUCT_PERTAMBANGAN/PRODUCT_PERTAMBANGAN_CORE_TRAY_PQ.png',
         images: [
-          '/PRODUCT/PRODUCT_PERTAMBANGAN/PRODUCT_PERTAMBANGAN_CORE_TRAY_PQ.jpg',
-          '/PRODUCT/PRODUCT_PERTAMBANGAN/PRODUCT_PERTAMBANGAN_UNIVERSAL_COVER_CORE_TRAY.jpg',
-          '/PRODUCT/PRODUCT_PERTAMBANGAN/PRODUCT_PERTAMBANGAN_COVER_CORE_BOX_GALVANUM_UNIVERSAL.jpg',
+          '/PRODUCT/PRODUCT_PERTAMBANGAN/PRODUCT_PERTAMBANGAN_CORE_TRAY_PQ.png',
+          '/PRODUCT/PRODUCT_PERTAMBANGAN/PRODUCT_PERTAMBANGAN_UNIVERSAL_COVER_CORE_TRAY.png',
+          '/PRODUCT/PRODUCT_PERTAMBANGAN/PRODUCT_PERTAMBANGAN_COVER_CORE_BOX_GALVANUM_UNIVERSAL.png',
         ],
       },
       {
@@ -91,11 +91,11 @@ export const productCategories = [
           'Mining sampling',
         ],
         image:
-          '/PRODUCT/PRODUCT_PERTAMBANGAN/PRODUCT_PERTAMBANGAN_CORE_TRAY_HQ.jpg',
+          '/PRODUCT/PRODUCT_PERTAMBANGAN/PRODUCT_PERTAMBANGAN_CORE_TRAY_HQ.png',
         images: [
-          '/PRODUCT/PRODUCT_PERTAMBANGAN/PRODUCT_PERTAMBANGAN_CORE_TRAY_HQ.jpg',
-          '/PRODUCT/PRODUCT_PERTAMBANGAN/PRODUCT_PERTAMBANGAN_UNIVERSAL_COVER_CORE_TRAY.jpg',
-          '/PRODUCT/PRODUCT_PERTAMBANGAN/PRODUCT_PERTAMBANGAN_CORE_TRAY_PQ.jpg',
+          '/PRODUCT/PRODUCT_PERTAMBANGAN/PRODUCT_PERTAMBANGAN_CORE_TRAY_HQ.png',
+          '/PRODUCT/PRODUCT_PERTAMBANGAN/PRODUCT_PERTAMBANGAN_UNIVERSAL_COVER_CORE_TRAY.png',
+          '/PRODUCT/PRODUCT_PERTAMBANGAN/PRODUCT_PERTAMBANGAN_CORE_TRAY_PQ.png',
         ],
       },
       {
@@ -137,11 +137,11 @@ export const productCategories = [
           'Core logging facilities',
         ],
         image:
-          '/PRODUCT/PRODUCT_PERTAMBANGAN/PRODUCT_PERTAMBANGAN_CORE_TRAY_NQ.jpg',
+          '/PRODUCT/PRODUCT_PERTAMBANGAN/PRODUCT_PERTAMBANGAN_CORE_TRAY_NQ.png',
         images: [
-          '/PRODUCT/PRODUCT_PERTAMBANGAN/PRODUCT_PERTAMBANGAN_CORE_TRAY_NQ.jpg',
-          '/PRODUCT/PRODUCT_PERTAMBANGAN/PRODUCT_PERTAMBANGAN_CORE_TRAY_HQ.jpg',
-          '/PRODUCT/PRODUCT_PERTAMBANGAN/PRODUCT_PERTAMBANGAN_UNIVERSAL_COVER_CORE_TRAY.jpg',
+          '/PRODUCT/PRODUCT_PERTAMBANGAN/PRODUCT_PERTAMBANGAN_CORE_TRAY_NQ.png',
+          '/PRODUCT/PRODUCT_PERTAMBANGAN/PRODUCT_PERTAMBANGAN_CORE_TRAY_HQ.png',
+          '/PRODUCT/PRODUCT_PERTAMBANGAN/PRODUCT_PERTAMBANGAN_UNIVERSAL_COVER_CORE_TRAY.png',
         ],
       },
       {
@@ -183,11 +183,103 @@ export const productCategories = [
           'Archival core storage',
         ],
         image:
-          '/PRODUCT/PRODUCT_PERTAMBANGAN/PRODUCT_PERTAMBANGAN_CORE_BOX_GALVANUM_NQ.jpg',
+          '/PRODUCT/PRODUCT_PERTAMBANGAN/PRODUCT_PERTAMBANGAN_CORE_BOX_GALVANUM_NQ.png',
         images: [
-          '/PRODUCT/PRODUCT_PERTAMBANGAN/PRODUCT_PERTAMBANGAN_CORE_BOX_GALVANUM_NQ.jpg',
-          '/PRODUCT/PRODUCT_PERTAMBANGAN/PRODUCT_PERTAMBANGAN_CORE_BOX_GALVANUM_PQ.jpg',
-          '/PRODUCT/PRODUCT_PERTAMBANGAN/PRODUCT_PERTAMBANGAN_COVER_CORE_BOX_GALVANUM_UNIVERSAL.jpg',
+          '/PRODUCT/PRODUCT_PERTAMBANGAN/PRODUCT_PERTAMBANGAN_CORE_BOX_GALVANUM_NQ.png',
+          '/PRODUCT/PRODUCT_PERTAMBANGAN/PRODUCT_PERTAMBANGAN_CORE_BOX_GALVANUM_PQ.png',
+          '/PRODUCT/PRODUCT_PERTAMBANGAN/PRODUCT_PERTAMBANGAN_COVER_CORE_BOX_GALVANUM_UNIVERSAL.png',
+        ],
+      },
+      {
+        id: 'core-box-galvalum-hq',
+        name: 'Core Box Galvalum HQ',
+        category: 'Pertambangan',
+        subcategory: 'Core Box Metal',
+        description:
+          'Core box galvalum untuk inti bor HQ dengan konstruksi kokoh dan perlindungan korosi superior.',
+        fullDescription:
+          'Core Box Galvalum HQ dirancang khusus untuk penyimpanan inti bor diameter HQ (63.5mm) dengan material galvalum yang tahan korosi ekstrim. Desain 5 rows memberikan kapasitas penyimpanan optimal sambil menjaga portabilitas untuk operasi lapangan yang dinamis.',
+        specifications: {
+          'Overall Length': '1000 mm',
+          Width: '400 mm',
+          Height: '75 mm',
+          'Core Capacity': '5 rows',
+          Weight: '1.6 kg',
+          Material: 'Galvalum (Aluminum-Zinc Coated)',
+          Aplikasi: 'Inti bor diameter HQ (63.5 mm)',
+          Coating: 'Corrosion-resistant Galvalum',
+        },
+        technicalData: {
+          Material: 'Galvalum 0.5 mm',
+          Coating: 'AZ150 anti-korosi',
+          'Stacking Capacity': 'Hingga 22 box',
+          Fastening: 'Slide lock + rivet',
+        },
+        features: [
+          'Material Galvalum untuk superior corrosion resistance',
+          'Kapasitas 5 rows untuk optimal storage HQ cores',
+          'Lightweight design untuk easy handling',
+          'Weather-resistant untuk outdoor long-term storage',
+          'CNC precision cutting untuk perfect lid fit',
+        ],
+        applications: [
+          'HQ core drilling operations',
+          'Long-term core storage',
+          'Coastal and marine environments',
+          'Mining exploration archives',
+        ],
+        image:
+          '/PRODUCT/PRODUCT_PERTAMBANGAN/PRODUCT_PERTAMBANGAN_CORE_BOX_GALVANUM_HQ.png',
+        images: [
+          '/PRODUCT/PRODUCT_PERTAMBANGAN/PRODUCT_PERTAMBANGAN_CORE_BOX_GALVANUM_HQ.png',
+          '/PRODUCT/PRODUCT_PERTAMBANGAN/PRODUCT_PERTAMBANGAN_CORE_BOX_GALVANUM_NQ.png',
+          '/PRODUCT/PRODUCT_PERTAMBANGAN/PRODUCT_PERTAMBANGAN_COVER_CORE_BOX_GALVANUM_UNIVERSAL.png',
+        ],
+      },
+      {
+        id: 'core-box-galvalum-pq',
+        name: 'Core Box Galvalum PQ',
+        category: 'Pertambangan',
+        subcategory: 'Core Box Metal',
+        description:
+          'Core box galvalum heavy-duty untuk inti bor PQ dengan kapasitas besar dan durabilitas maksimal.',
+        fullDescription:
+          'Core Box Galvalum PQ adalah solusi penyimpanan premium untuk inti bor diameter PQ (85mm) yang memerlukan proteksi maksimal. Dengan kapasitas 4 rows dan konstruksi galvalum reinforced, box ini ideal untuk proyek eksplorasi skala besar dengan kebutuhan arsip jangka panjang.',
+        specifications: {
+          'Overall Length': '1000 mm',
+          Width: '400 mm',
+          Height: '95 mm',
+          'Core Capacity': '4 rows',
+          Weight: '1.9 kg',
+          Material: 'Galvalum (Aluminum-Zinc Coated)',
+          Aplikasi: 'Inti bor diameter PQ (85 mm)',
+          Coating: 'Corrosion-resistant Galvalum',
+        },
+        technicalData: {
+          Material: 'Galvalum 0.5 mm',
+          Coating: 'AZ150 anti-korosi',
+          'Stacking Capacity': 'Hingga 18 box',
+          Fastening: 'Reinforced slide lock + rivet',
+        },
+        features: [
+          'Heavy-duty construction untuk large diameter cores',
+          'Material Galvalum dengan enhanced corrosion protection',
+          'Kapasitas 4 rows untuk PQ core management',
+          'Reinforced edges untuk extra durability',
+          'Internal measurement markings untuk logging',
+        ],
+        applications: [
+          'Large diameter core drilling',
+          'Major mining exploration projects',
+          'Archival core storage facilities',
+          'Harsh environment operations',
+        ],
+        image:
+          '/PRODUCT/PRODUCT_PERTAMBANGAN/PRODUCT_PERTAMBANGAN_CORE_BOX_GALVANUM_PQ.png',
+        images: [
+          '/PRODUCT/PRODUCT_PERTAMBANGAN/PRODUCT_PERTAMBANGAN_CORE_BOX_GALVANUM_PQ.png',
+          '/PRODUCT/PRODUCT_PERTAMBANGAN/PRODUCT_PERTAMBANGAN_CORE_BOX_GALVANUM_HQ.png',
+          '/PRODUCT/PRODUCT_PERTAMBANGAN/PRODUCT_PERTAMBANGAN_COVER_CORE_BOX_GALVANUM_UNIVERSAL.png',
         ],
       },
     ],
@@ -235,11 +327,11 @@ export const productCategories = [
           'Heavy-duty trucks',
           'Specialty vehicles',
         ],
-        image: '/PRODUCT/PRODUCT_OTOMOTIF/OTOMOTIF_BOX_CONSOLE.jpg',
+        image: '/PRODUCT/PRODUCT_OTOMOTIF/OTOMOTIF_BOX_CONSOLE.png',
         images: [
-          '/PRODUCT/PRODUCT_OTOMOTIF/OTOMOTIF_BOX_CONSOLE.jpg',
-          '/PRODUCT/PRODUCT_HANDLE_GRIP_ASSIST/HANDLE_GRIP_ASSIST_PRODUCT.jpg',
-          '/PRODUCT/PRODUCT_KNOB_SHIFT_LEVEL/KNOB_SHIFT_LEVEL_PRODUCT.jpg',
+          '/PRODUCT/PRODUCT_OTOMOTIF/OTOMOTIF_BOX_CONSOLE.png',
+          '/PRODUCT/PRODUCT_HANDLE_GRIP_ASSIST/HANDLE_GRIP_ASSIST_PRODUCT.png',
+          '/PRODUCT/PRODUCT_KNOB_SHIFT_LEVEL/KNOB_SHIFT_LEVEL_PRODUCT.png',
         ],
       },
       {
@@ -279,11 +371,11 @@ export const productCategories = [
           'C-pillar applications',
           'Interior styling',
         ],
-        image: '/PRODUCT/PRODUCT_OTOMOTIF/OTOMOTIF_PLUG_NUT.jpg',
+        image: '/PRODUCT/PRODUCT_OTOMOTIF/OTOMOTIF_PLUG_NUT.png',
         images: [
-          '/PRODUCT/PRODUCT_OTOMOTIF/OTOMOTIF_PLUG_NUT.jpg',
-          '/PRODUCT/PRODUCT_OTOMOTIF/OTOMOTIF_WHEEL_CAP.jpg',
-          '/PRODUCT/PRODUCT_OTOMOTIF/OTOMOTIF_HANDLE_GRIP.jpg',
+          '/PRODUCT/PRODUCT_OTOMOTIF/OTOMOTIF_PLUG_NUT.png',
+          '/PRODUCT/PRODUCT_OTOMOTIF/OTOMOTIF_WHEEL_CAP.png',
+          '/PRODUCT/PRODUCT_OTOMOTIF/OTOMOTIF_HANDLE_GRIP.png',
         ],
       },
       {
@@ -323,11 +415,11 @@ export const productCategories = [
           'Multi-function panels',
           'Driver interface systems',
         ],
-        image: '/PRODUCT/PRODUCT_OTOMOTIF/OTOMOTIF_KNOB_SUB_ASSY_LEVEL.jpg',
+        image: '/PRODUCT/PRODUCT_OTOMOTIF/OTOMOTIF_KNOB_SUB_ASSY_LEVEL.png',
         images: [
-          '/PRODUCT/PRODUCT_OTOMOTIF/OTOMOTIF_KNOB_SUB_ASSY_LEVEL.jpg',
-          '/PRODUCT/PRODUCT_OTOMOTIF/OTOMOTIF_BOX_CONSOLE.jpg',
-          '/PRODUCT/PRODUCT_OTOMOTIF/OTOMOTIF_HANDLE_GRIP.jpg',
+          '/PRODUCT/PRODUCT_OTOMOTIF/OTOMOTIF_KNOB_SUB_ASSY_LEVEL.png',
+          '/PRODUCT/PRODUCT_OTOMOTIF/OTOMOTIF_BOX_CONSOLE.png',
+          '/PRODUCT/PRODUCT_OTOMOTIF/OTOMOTIF_HANDLE_GRIP.png',
         ],
       },
       {
@@ -367,11 +459,11 @@ export const productCategories = [
           'Aksesori aftermarket OEM',
         ],
         image:
-          '/PRODUCT/PRODUCT_HANDLE_GRIP_ASSIST/HANDLE_GRIP_ASSIST_PRODUCT.jpg',
+          '/PRODUCT/PRODUCT_HANDLE_GRIP_ASSIST/HANDLE_GRIP_ASSIST_PRODUCT.png',
         images: [
-          '/PRODUCT/PRODUCT_HANDLE_GRIP_ASSIST/HANDLE_GRIP_ASSIST_PRODUCT.jpg',
-          '/PRODUCT/PRODUCT_HANDLE_GRIP_ASSIST/HANDLE_GRIP_ASSIST_3D_DESIGN.jpg',
-          '/PRODUCT/PRODUCT_HANDLE_GRIP_ASSIST/HANDLE_GRIP_ASSIST_SKECTH.jpg',
+          '/PRODUCT/PRODUCT_HANDLE_GRIP_ASSIST/HANDLE_GRIP_ASSIST_PRODUCT.png',
+          '/PRODUCT/PRODUCT_HANDLE_GRIP_ASSIST/HANDLE_GRIP_ASSIST_3D_DESIGN.png',
+          '/PRODUCT/PRODUCT_HANDLE_GRIP_ASSIST/HANDLE_GRIP_ASSIST_SKECTH.png',
         ],
       },
       {
@@ -410,12 +502,12 @@ export const productCategories = [
           'Luxury interior refresh program',
           'Aftermarket personalization',
         ],
-        image: '/PRODUCT/PRODUCT_KNOB_SHIFT_LEVEL/KNOB_SHIFT_LEVEL_PRODUCT.jpg',
+        image: '/PRODUCT/PRODUCT_KNOB_SHIFT_LEVEL/KNOB_SHIFT_LEVEL_PRODUCT.png',
         images: [
-          '/PRODUCT/PRODUCT_KNOB_SHIFT_LEVEL/KNOB_SHIFT_LEVEL_PRODUCT.jpg',
-          '/PRODUCT/PRODUCT_KNOB_SHIFT_LEVEL/KNOB_SHIFT_LEVEL_3D_DESIGN1.jpg',
-          '/PRODUCT/PRODUCT_KNOB_SHIFT_LEVEL/KNOB_SHIFT_LEVEL_3D_DESIGN2.jpg',
-          '/PRODUCT/PRODUCT_KNOB_SHIFT_LEVEL/KNOB_SHIFT_LEVEL_SKECTH.jpg',
+          '/PRODUCT/PRODUCT_KNOB_SHIFT_LEVEL/KNOB_SHIFT_LEVEL_PRODUCT.png',
+          '/PRODUCT/PRODUCT_KNOB_SHIFT_LEVEL/KNOB_SHIFT_LEVEL_3D_DESIGN1.png',
+          '/PRODUCT/PRODUCT_KNOB_SHIFT_LEVEL/KNOB_SHIFT_LEVEL_3D_DESIGN2.png',
+          '/PRODUCT/PRODUCT_KNOB_SHIFT_LEVEL/KNOB_SHIFT_LEVEL_SKECTH.png',
         ],
       },
       {
@@ -454,12 +546,12 @@ export const productCategories = [
           'Fleet customization',
         ],
         image:
-          '/PRODUCT/PRODUCT_AKSESORIES_MOTOR/PRODUCT_AKSESORIES_MOTOR_1.jpg',
+          '/PRODUCT/PRODUCT_AKSESORIES_MOTOR/PRODUCT_AKSESORIES_MOTOR_1.png',
         images: [
-          '/PRODUCT/PRODUCT_AKSESORIES_MOTOR/PRODUCT_AKSESORIES_MOTOR_1.jpg',
-          '/PRODUCT/PRODUCT_AKSESORIES_MOTOR/PRODUCT_AKSESORIES_MOTOR_2.jpg',
-          '/PRODUCT/PRODUCT_AKSESORIES_MOTOR/PRODUCT_AKSESORIES_MOTOR_4.jpg',
-          '/PRODUCT/PRODUCT_AKSESORIES_MOTOR/PRODUCT_AKSESORIES_MOTOR_5.jpg',
+          '/PRODUCT/PRODUCT_AKSESORIES_MOTOR/PRODUCT_AKSESORIES_MOTOR_1.png',
+          '/PRODUCT/PRODUCT_AKSESORIES_MOTOR/PRODUCT_AKSESORIES_MOTOR_2.png',
+          '/PRODUCT/PRODUCT_AKSESORIES_MOTOR/PRODUCT_AKSESORIES_MOTOR_4.png',
+          '/PRODUCT/PRODUCT_AKSESORIES_MOTOR/PRODUCT_AKSESORIES_MOTOR_5.png',
         ],
       },
     ],
@@ -508,11 +600,11 @@ export const productCategories = [
           'Urban fiber networks',
         ],
         image:
-          '/PRODUCT/PRODUCT_TELEKOMUNIKASI/ODP(OPTICAL_DISTRIBUTION_POINT)/ODP_PRODUCT.jpg',
+          '/PRODUCT/PRODUCT_TELEKOMUNIKASI/ODP(OPTICAL_DISTRIBUTION_POINT)/ODP_PRODUCT.png',
         images: [
-          '/PRODUCT/PRODUCT_TELEKOMUNIKASI/ODP(OPTICAL_DISTRIBUTION_POINT)/ODP_PRODUCT.jpg',
-          '/PRODUCT/PRODUCT_TELEKOMUNIKASI/ODP(OPTICAL_DISTRIBUTION_POINT)/ODP_BODY_BOX_KECIL.jpg',
-          '/PRODUCT/PRODUCT_TELEKOMUNIKASI/ODP(OPTICAL_DISTRIBUTION_POINT)/ODP_TUTUP_BESAR.jpg',
+          '/PRODUCT/PRODUCT_TELEKOMUNIKASI/ODP(OPTICAL_DISTRIBUTION_POINT)/ODP_PRODUCT.png',
+          '/PRODUCT/PRODUCT_TELEKOMUNIKASI/ODP(OPTICAL_DISTRIBUTION_POINT)/ODP_BODY_BOX_KECIL.png',
+          '/PRODUCT/PRODUCT_TELEKOMUNIKASI/ODP(OPTICAL_DISTRIBUTION_POINT)/ODP_TUTUP_BESAR.png',
         ],
       },
       {
@@ -553,11 +645,11 @@ export const productCategories = [
           'Maintenance operations',
         ],
         image:
-          '/PRODUCT/PRODUCT_TELEKOMUNIKASI/PRODUCT_TELEKOMUNIKASI_SPLICE_TRAY_HOLE.jpg',
+          '/PRODUCT/PRODUCT_TELEKOMUNIKASI/PRODUCT_TELEKOMUNIKASI_SPLICE_TRAY_HOLE.png',
         images: [
-          '/PRODUCT/PRODUCT_TELEKOMUNIKASI/PRODUCT_TELEKOMUNIKASI_SPLICE_TRAY_HOLE.jpg',
-          '/PRODUCT/PRODUCT_TELEKOMUNIKASI/PRODUCT_TELEKOMUNIKASI_SPLICE_TRAY_HOLE2.jpg',
-          '/PRODUCT/PRODUCT_TELEKOMUNIKASI/PRODUCT_TELEKOMUNIKASI_DUDUKAN_TRAY.jpg',
+          '/PRODUCT/PRODUCT_TELEKOMUNIKASI/PRODUCT_TELEKOMUNIKASI_SPLICE_TRAY_HOLE.png',
+          '/PRODUCT/PRODUCT_TELEKOMUNIKASI/PRODUCT_TELEKOMUNIKASI_SPLICE_TRAY_HOLE2.png',
+          '/PRODUCT/PRODUCT_TELEKOMUNIKASI/PRODUCT_TELEKOMUNIKASI_DUDUKAN_TRAY.png',
         ],
       },
       {
@@ -597,11 +689,11 @@ export const productCategories = [
           'Industrial fiber deployment',
         ],
         image:
-          '/PRODUCT/PRODUCT_TELEKOMUNIKASI/PRODUCT_TELEKOMUNIKASI_JOINT_BOTTOM_DTC_CONNECTION.jpg',
+          '/PRODUCT/PRODUCT_TELEKOMUNIKASI/PRODUCT_TELEKOMUNIKASI_JOINT_BOTTOM_DTC_CONNECTION.png',
         images: [
-          '/PRODUCT/PRODUCT_TELEKOMUNIKASI/PRODUCT_TELEKOMUNIKASI_JOINT_BOTTOM_DTC_CONNECTION.jpg',
-          '/PRODUCT/PRODUCT_TELEKOMUNIKASI/PRODUCT_TELEKOMUNIKASI_JOINT_UPPER_DTC_CONNECTION.jpg',
-          '/PRODUCT/PRODUCT_TELEKOMUNIKASI/PRODUCT_TELEKOMUNIKASI_SPLICE_TRAY_HOLE2.jpg',
+          '/PRODUCT/PRODUCT_TELEKOMUNIKASI/PRODUCT_TELEKOMUNIKASI_JOINT_BOTTOM_DTC_CONNECTION.png',
+          '/PRODUCT/PRODUCT_TELEKOMUNIKASI/PRODUCT_TELEKOMUNIKASI_JOINT_UPPER_DTC_CONNECTION.png',
+          '/PRODUCT/PRODUCT_TELEKOMUNIKASI/PRODUCT_TELEKOMUNIKASI_SPLICE_TRAY_HOLE2.png',
         ],
       },
     ],
@@ -650,11 +742,11 @@ export const productCategories = [
           'Rapid diagnostic tests',
         ],
         image:
-          '/PRODUCT/PRODUCT_ALAT_KESEHATAN/CASSETE/PRODUCT_ALAT_KESEHATAN_CASSETE_SINGLE.jpg',
+          '/PRODUCT/PRODUCT_ALAT_KESEHATAN/CASSETE/PRODUCT_ALAT_KESEHATAN_CASSETE_SINGLE.png',
         images: [
-          '/PRODUCT/PRODUCT_ALAT_KESEHATAN/CASSETE/PRODUCT_ALAT_KESEHATAN_CASSETE_SINGLE.jpg',
-          '/PRODUCT/PRODUCT_ALAT_KESEHATAN/CASSETE/PRODUCT_ALAT_KESEHATAN_CASSETTE_TWO_HOLE.jpg',
-          '/PRODUCT/PRODUCT_ALAT_KESEHATAN/CASSETE/PRODUCT_ALAT_KESEHATAN_CASSETE_FOR_DUO_PARAMETER.jpg',
+          '/PRODUCT/PRODUCT_ALAT_KESEHATAN/CASSETE/PRODUCT_ALAT_KESEHATAN_CASSETE_SINGLE.png',
+          '/PRODUCT/PRODUCT_ALAT_KESEHATAN/CASSETE/PRODUCT_ALAT_KESEHATAN_CASSETTE_TWO_HOLE.png',
+          '/PRODUCT/PRODUCT_ALAT_KESEHATAN/CASSETE/PRODUCT_ALAT_KESEHATAN_CASSETE_FOR_DUO_PARAMETER.png',
         ],
       },
       {
@@ -695,11 +787,11 @@ export const productCategories = [
           'Mobile medical units',
         ],
         image:
-          '/PRODUCT/PRODUCT_ALAT_KESEHATAN/BABY_SCALE/PRODUCT_ALAT_KESEHATAN_BABY_SCALE.jpg',
+          '/PRODUCT/PRODUCT_ALAT_KESEHATAN/BABY_SCALE/PRODUCT_ALAT_KESEHATAN_BABY_SCALE.png',
         images: [
-          '/PRODUCT/PRODUCT_ALAT_KESEHATAN/BABY_SCALE/PRODUCT_ALAT_KESEHATAN_BABY_SCALE.jpg',
-          '/PRODUCT/PRODUCT_ALAT_KESEHATAN/BABY_SCALE/PRODUCT_ALAT_KESEHATAN_BABY_SCALE_TOP_COVER.jpg',
-          '/PRODUCT/PRODUCT_ALAT_KESEHATAN/BABY_SCALE/PRODUCT_ALAT_KESEHATAN_BABY_SCALE_BACK_COVER.jpg',
+          '/PRODUCT/PRODUCT_ALAT_KESEHATAN/BABY_SCALE/PRODUCT_ALAT_KESEHATAN_BABY_SCALE.png',
+          '/PRODUCT/PRODUCT_ALAT_KESEHATAN/BABY_SCALE/PRODUCT_ALAT_KESEHATAN_BABY_SCALE_TOP_COVER.png',
+          '/PRODUCT/PRODUCT_ALAT_KESEHATAN/BABY_SCALE/PRODUCT_ALAT_KESEHATAN_BABY_SCALE_BACK_COVER.png',
         ],
       },
       {
@@ -739,12 +831,12 @@ export const productCategories = [
           'Pengujian toksikologi',
         ],
         image:
-          '/PRODUCT/PRODUCT_CUP_URINE_PLASTIK/CUP_URINE_PLASTIK_PRODUCT.jpg',
+          '/PRODUCT/PRODUCT_CUP_URINE_PLASTIK/CUP_URINE_PLASTIK_PRODUCT.png',
         images: [
-          '/PRODUCT/PRODUCT_CUP_URINE_PLASTIK/CUP_URINE_PLASTIK_PRODUCT.jpg',
-          '/PRODUCT/PRODUCT_CUP_URINE_PLASTIK/CUP_URINE_PLASTIK_SAMPLE.jpg',
-          '/PRODUCT/PRODUCT_CUP_URINE_PLASTIK/CUP_URINE_PLASTIK_REDRAWING_3D.jpg',
-          '/PRODUCT/PRODUCT_CUP_URINE_PLASTIK/CUP_URINE_PLASTIK_DRAWING_PART_2D.jpg',
+          '/PRODUCT/PRODUCT_CUP_URINE_PLASTIK/CUP_URINE_PLASTIK_PRODUCT.png',
+          '/PRODUCT/PRODUCT_CUP_URINE_PLASTIK/CUP_URINE_PLASTIK_SAMPLE.png',
+          '/PRODUCT/PRODUCT_CUP_URINE_PLASTIK/CUP_URINE_PLASTIK_REDRAWING_3D.png',
+          '/PRODUCT/PRODUCT_CUP_URINE_PLASTIK/CUP_URINE_PLASTIK_DRAWING_PART_2D.png',
         ],
       },
       {
@@ -785,11 +877,60 @@ export const productCategories = [
           'Research studies',
         ],
         image:
-          '/PRODUCT/PRODUCT_ALAT_KESEHATAN/INFANTOBOARD/PRODUCT_ALAT_KESEHATAN_INFANTOBOARD.jpg',
+          '/PRODUCT/PRODUCT_ALAT_KESEHATAN/INFANTOBOARD/PRODUCT_ALAT_KESEHATAN_INFANTOBOARD.png',
         images: [
-          '/PRODUCT/PRODUCT_ALAT_KESEHATAN/INFANTOBOARD/PRODUCT_ALAT_KESEHATAN_INFANTOBOARD.jpg',
-          '/PRODUCT/PRODUCT_ALAT_KESEHATAN/INFANTOBOARD/PRODUCT_ALAT_KESEHATAN_INFANTOBOARD_SLIDER_INFANTOMETER.jpg',
-          '/PRODUCT/PRODUCT_ALAT_KESEHATAN/INFANTOBOARD/PRODUCT_ALAT_KESEHATAN_INFANTOBOARD_LOCKING_SLIDER.jpg',
+          '/PRODUCT/PRODUCT_ALAT_KESEHATAN/INFANTOBOARD/PRODUCT_ALAT_KESEHATAN_INFANTOBOARD.png',
+          '/PRODUCT/PRODUCT_ALAT_KESEHATAN/INFANTOBOARD/PRODUCT_ALAT_KESEHATAN_INFANTOBOARD_SLIDER_INFANTOMETER.png',
+          '/PRODUCT/PRODUCT_ALAT_KESEHATAN/INFANTOBOARD/PRODUCT_ALAT_KESEHATAN_INFANTOBOARD_LOCKING_SLIDER.png',
+        ],
+      },
+      {
+        id: 'exam-lamp',
+        name: 'Examination Lamp / Surgical Light',
+        category: 'Medical Devices',
+        subcategory: 'Medical Equipment',
+        description:
+          'Lampu pemeriksaan medis dengan pencahayaan LED berkualitas tinggi untuk prosedur medis dan bedah.',
+        fullDescription:
+          'Examination lamp ini dirancang sebagai solusi pencahayaan medis yang dapat disesuaikan dengan berbagai posisi. Dilengkapi dengan sistem kaki bintang stabil, handle ergonomis, dan lens holder presisi sehingga teknisi medis mendapat fokus cahaya optimal saat pemeriksaan pasien atau tindakan bedah minor.',
+        specifications: {
+          Material: 'Medical-grade ABS + Polycarbonate',
+          LightSource: 'LED high-brightness',
+          'Color Temperature': '4500-5500K daylight',
+          Adjustment: '360° rotation + tilt mechanism',
+          BaseType: 'Star base with caster wheels',
+          Power: 'AC adapter 12V / battery option',
+          Application: 'Medical Examination',
+        },
+        technicalData: {
+          Components:
+            'Front Cover, Rear Cover, Lens Holder, Handle, Star Base, Fitting Lamp',
+          Illuminance: '50,000 Lux @ 50 cm',
+          LampLife: '50,000 hours LED',
+          Mobility: '5-star base + lockable caster',
+        },
+        features: [
+          'Pencahayaan LED hemat energi dengan umur pakai panjang',
+          'Desain modular untuk perawatan mudah',
+          'Handle anti-slip untuk positioning cepat',
+          'Lens holder dengan fokus adjustable',
+          'Kaki bintang stabil dengan roda lockable',
+          'Material medical-grade mudah disterilisasi',
+        ],
+        applications: [
+          'Ruang pemeriksaan klinik',
+          'Operasi bedah minor',
+          'Dental examination',
+          'Veterinary clinics',
+          'Laboratory work',
+        ],
+        image:
+          '/PRODUCT/PRODUCT_ALAT_KESEHATAN/EXAM_LAMP/PRODUCT_ALAT_KESEHATAN_EXAM_LAMP.png',
+        images: [
+          '/PRODUCT/PRODUCT_ALAT_KESEHATAN/EXAM_LAMP/PRODUCT_ALAT_KESEHATAN_EXAM_LAMP.png',
+          '/PRODUCT/PRODUCT_ALAT_KESEHATAN/EXAM_LAMP/PRODUCT_ALAT_KESEHATAN_EXAM_LAMP_FRONT_COVER.png',
+          '/PRODUCT/PRODUCT_ALAT_KESEHATAN/EXAM_LAMP/PRODUCT_ALAT_KESEHATAN_EXAM_LAMP_HANDLE.png',
+          '/PRODUCT/PRODUCT_ALAT_KESEHATAN/EXAM_LAMP/PRODUCT_ALAT_KESEHATAN_EXAM_LAMP_KAKI_BINTANG.png',
         ],
       },
     ],
@@ -835,11 +976,11 @@ export const productCategories = [
           'Generator skid',
           'Peredam mesin industri',
         ],
-        image: '/PRODUCT/PRODUCT_RUBBER/SAMPLE_PRODUCT_RUBBER1.jpg',
+        image: '/PRODUCT/PRODUCT_RUBBER/SAMPLE_PRODUCT_RUBBER1.png',
         images: [
-          '/PRODUCT/PRODUCT_RUBBER/SAMPLE_PRODUCT_RUBBER1.jpg',
-          '/PRODUCT/PRODUCT_RUBBER/SAMPLE_PRODUCT_RUBBER2.jpg',
-          '/PRODUCT/PRODUCT_RUBBER/SAMPLE_PRODUCT_RUBBER3.jpg',
+          '/PRODUCT/PRODUCT_RUBBER/SAMPLE_PRODUCT_RUBBER1.png',
+          '/PRODUCT/PRODUCT_RUBBER/SAMPLE_PRODUCT_RUBBER2.png',
+          '/PRODUCT/PRODUCT_RUBBER/SAMPLE_PRODUCT_RUBBER3.png',
         ],
       },
       {
@@ -876,11 +1017,11 @@ export const productCategories = [
           'Peralatan food processing',
           'Perangkat HVAC',
         ],
-        image: '/PRODUCT/PRODUCT_RUBBER/SAMPLE_PRODUCT_RUBBER4.jpg',
+        image: '/PRODUCT/PRODUCT_RUBBER/SAMPLE_PRODUCT_RUBBER4.png',
         images: [
-          '/PRODUCT/PRODUCT_RUBBER/SAMPLE_PRODUCT_RUBBER4.jpg',
-          '/PRODUCT/PRODUCT_RUBBER/SAMPLE_PRODUCT_RUBBER5.jpg',
-          '/PRODUCT/PRODUCT_RUBBER/SAMPLE_PRODUCT_RUBBER6.jpg',
+          '/PRODUCT/PRODUCT_RUBBER/SAMPLE_PRODUCT_RUBBER4.png',
+          '/PRODUCT/PRODUCT_RUBBER/SAMPLE_PRODUCT_RUBBER5.png',
+          '/PRODUCT/PRODUCT_RUBBER/SAMPLE_PRODUCT_RUBBER6.png',
         ],
       },
       {
@@ -917,12 +1058,12 @@ export const productCategories = [
           'Prototipe aksesoris otomotif',
           'Perangkat medis & consumer goods',
         ],
-        image: '/PRODUCT/PRODUCT_RUBBER/SAMPLE_PRODUCT_RUBBER7.jpg',
+        image: '/PRODUCT/PRODUCT_RUBBER/SAMPLE_PRODUCT_RUBBER7.png',
         images: [
-          '/PRODUCT/PRODUCT_RUBBER/SAMPLE_PRODUCT_RUBBER7.jpg',
-          '/PRODUCT/PRODUCT_RUBBER/SAMPLE_PRODUCT_RUBBER8.jpg',
-          '/PRODUCT/PRODUCT_RUBBER/SAMPLE_PRODUCT_RUBBER9.jpg',
-          '/PRODUCT/PRODUCT_RUBBER/SAMPLE_PRODUCT_RUBBER10.jpg',
+          '/PRODUCT/PRODUCT_RUBBER/SAMPLE_PRODUCT_RUBBER7.png',
+          '/PRODUCT/PRODUCT_RUBBER/SAMPLE_PRODUCT_RUBBER8.png',
+          '/PRODUCT/PRODUCT_RUBBER/SAMPLE_PRODUCT_RUBBER9.png',
+          '/PRODUCT/PRODUCT_RUBBER/SAMPLE_PRODUCT_RUBBER10.png',
         ],
       },
     ],

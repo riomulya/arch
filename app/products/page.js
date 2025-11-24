@@ -164,13 +164,14 @@ Terima kasih.`;
                 className='relative'
               >
                 <div className='absolute inset-0 bg-gradient-to-tr from-blue-200/40 to-transparent rounded-3xl blur-3xl'></div>
-                <div className='relative bg-white rounded-3xl shadow-2xl overflow-hidden border border-white/70'>
-                  <div className='relative h-80'>
+                <div className='relative bg-white rounded-3xl shadow-2xl overflow-hidden border border-gray-100'>
+                  <div className='relative h-80 bg-gradient-to-br from-gray-50 via-white to-gray-100'>
                     <Image
                       src={featuredImage}
                       alt={featuredProduct.name}
                       fill
-                      className='object-cover'
+                      className='object-contain p-8'
+                      quality={95}
                       sizes='(max-width: 768px) 100vw, 40vw'
                       priority
                     />
@@ -277,31 +278,32 @@ Terima kasih.`;
               return (
                 <motion.div
                   key={product.id}
-                  className='bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden cursor-pointer group'
+                  className='bg-white rounded-2xl shadow-md hover:shadow-xl border border-gray-100 transition-all duration-300 overflow-hidden cursor-pointer group'
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  whileHover={{ y: -5 }}
+                  transition={{ duration: 0.6, delay: index * 0.08 }}
+                  whileHover={{ scale: 1.02, y: -4 }}
                 >
                   {/* Product Header with Image */}
                   <Link href={`/products/${generateSlug(product.name)}`}>
                     <div className='relative'>
-                      <div className='h-56 overflow-hidden bg-gray-100 relative group cursor-pointer'>
+                      <div className='relative w-full aspect-[4/3] bg-gradient-to-br from-gray-50 via-white to-gray-100 overflow-hidden'>
                         <Image
                           src={productImage}
                           alt={`${product.name} - ${product.category} - ${product.subcategory}`}
                           fill
-                          className='object-cover transition-transform duration-500 group-hover:scale-105'
+                          className='object-contain p-6 transition-all duration-300 group-hover:scale-105'
+                          quality={90}
                           sizes='(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw'
                           priority={index < 6}
                         />
 
                         {/* Category Badge */}
                         <div className='absolute top-4 left-4 z-10 flex flex-col gap-2'>
-                          <span className='px-3 py-1 bg-white/90 text-blue-600 text-xs font-semibold rounded-full shadow'>
+                          <span className='px-3 py-1.5 bg-white/95 backdrop-blur-sm text-blue-600 text-xs font-semibold rounded-full shadow-md border border-blue-100'>
                             {product.category}
                           </span>
-                          <span className='px-3 py-1 bg-blue-600 text-white text-xs font-medium rounded-full shadow-lg'>
+                          <span className='px-3 py-1.5 bg-gradient-to-r from-blue-600 to-blue-500 text-white text-xs font-medium rounded-full shadow-lg'>
                             {product.subcategory}
                           </span>
                         </div>
@@ -320,12 +322,12 @@ Terima kasih.`;
                         </div>
 
                         {/* Hover Overlay */}
-                        <div className='absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300'>
-                          <div className='absolute bottom-4 left-4 right-4 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300'>
-                            <p className='text-white text-sm font-medium drop-shadow-lg'>
+                        <div className='absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300'>
+                          <div className='absolute bottom-4 left-4 right-4 transform translate-y-3 group-hover:translate-y-0 transition-all duration-300'>
+                            <p className='text-white text-sm font-semibold drop-shadow-lg'>
                               Lihat Detail Produk
                             </p>
-                            <p className='text-white/80 text-xs drop-shadow'>
+                            <p className='text-white/90 text-xs drop-shadow-md'>
                               Klik untuk spesifikasi lengkap
                             </p>
                           </div>
@@ -339,28 +341,30 @@ Terima kasih.`;
 
                   {/* Product Info */}
                   <div className='p-6'>
-                    <h3 className='text-xl font-bold text-gray-900 mb-3'>
+                    <h3 className='text-xl font-bold text-gray-900 mb-2 leading-tight'>
                       {product.name}
                     </h3>
-                    <p className='text-gray-600 mb-4 line-clamp-3'>
+                    <p className='text-gray-600 text-sm mb-5 line-clamp-3 leading-relaxed'>
                       {product.description}
                     </p>
 
                     {/* Key Specifications */}
-                    <div className='mb-4'>
-                      <h4 className='text-sm font-semibold text-gray-700 mb-2'>
-                        Spesifikasi Utama:
+                    <div className='mb-5 bg-gray-50 rounded-xl p-4 border border-gray-100'>
+                      <h4 className='text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3'>
+                        Spesifikasi Utama
                       </h4>
-                      <div className='space-y-1'>
+                      <div className='space-y-2'>
                         {Object.entries(product.specifications)
                           .slice(0, 3)
                           .map(([key, value]) => (
                             <div
                               key={key}
-                              className='flex justify-between text-sm'
+                              className='flex justify-between text-sm items-start'
                             >
-                              <span className='text-gray-500'>{key}:</span>
-                              <span className='text-gray-900 font-medium'>
+                              <span className='text-gray-600 text-xs'>
+                                {key}:
+                              </span>
+                              <span className='text-gray-900 font-semibold text-xs text-right ml-2'>
                                 {value}
                               </span>
                             </div>
@@ -369,21 +373,21 @@ Terima kasih.`;
                     </div>
 
                     {/* Applications */}
-                    <div className='mb-6'>
-                      <h4 className='text-sm font-semibold text-gray-700 mb-2'>
-                        Aplikasi:
+                    <div className='mb-5'>
+                      <h4 className='text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2'>
+                        Aplikasi
                       </h4>
-                      <div className='flex flex-wrap gap-1'>
+                      <div className='flex flex-wrap gap-1.5'>
                         {product.applications.slice(0, 2).map((app, i) => (
                           <span
                             key={i}
-                            className='px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded-full'
+                            className='px-3 py-1 bg-blue-50 text-blue-700 text-xs rounded-lg font-medium border border-blue-100'
                           >
                             {app}
                           </span>
                         ))}
                         {product.applications.length > 2 && (
-                          <span className='px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded-full'>
+                          <span className='px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-lg font-medium border border-gray-200'>
                             +{product.applications.length - 2}
                           </span>
                         )}
@@ -395,13 +399,13 @@ Terima kasih.`;
                         {productThumbnails.map((thumb, thumbIndex) => (
                           <div
                             key={`${product.id}-thumb-${thumbIndex}`}
-                            className='relative h-16 w-16 rounded-lg overflow-hidden border border-gray-100'
+                            className='relative h-16 w-16 rounded-lg overflow-hidden border-2 border-gray-200 bg-gray-50 hover:border-blue-400 transition-all duration-200 cursor-pointer'
                           >
                             <Image
                               src={thumb}
                               alt={`${product.name} preview ${thumbIndex + 1}`}
                               fill
-                              className='object-cover'
+                              className='object-contain p-1'
                               sizes='64px'
                             />
                           </div>
@@ -413,20 +417,20 @@ Terima kasih.`;
                     <div className='flex gap-3 mt-6'>
                       <Link
                         href={`/products/${generateSlug(product.name)}`}
-                        className='flex-1 btn-outline text-sm py-2.5 group hover:shadow-md transition-all duration-300 text-center'
+                        className='flex-1 px-4 py-3 border-2 border-blue-600 text-blue-600 rounded-xl font-semibold text-sm hover:bg-blue-50 transition-all duration-200 text-center group'
                       >
                         <span className='flex items-center justify-center gap-2'>
                           <InformationCircleIcon className='h-4 w-4 group-hover:scale-110 transition-transform' />
-                          Lihat Detail
+                          Detail
                         </span>
                       </Link>
                       <button
                         onClick={() => handleRequestQuote(product)}
-                        className='flex-1 btn-primary text-sm py-2.5 group hover:shadow-lg transition-all duration-300'
+                        className='flex-1 px-4 py-3 bg-gradient-to-r from-blue-600 to-blue-500 text-white rounded-xl font-semibold text-sm hover:from-blue-700 hover:to-blue-600 shadow-md hover:shadow-lg transition-all duration-200 group'
                       >
                         <span className='flex items-center justify-center gap-2'>
                           <CurrencyDollarIcon className='h-4 w-4 group-hover:scale-110 transition-transform' />
-                          Request Penawaran
+                          Penawaran
                         </span>
                       </button>
                     </div>

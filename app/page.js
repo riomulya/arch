@@ -20,7 +20,7 @@ import {
 import PulsingCircle from './components/PulsingCircle';
 import { PointerHighlight } from './components/ui/PointerHighlight';
 import { HeroHighlight, Highlight } from './components/ui/HeroHighlight';
-import ChatBot from './components/ChatBot';
+// import ChatBot from './components/ChatBot';
 
 // Featured products data structure based on documentation
 const featuredProducts = [
@@ -617,7 +617,6 @@ export default function Home() {
       </section>
 
       <Footer />
-      <ChatBot />
     </div>
   );
 }
