@@ -433,8 +433,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Product Category Highlight */}
-      <section className='py-20 bg-gray-50'>
+      {/* Featured Products Section */}
+      <section className='py-24 bg-gradient-to-br from-gray-50 via-blue-50 to-gray-50'>
         <div className='container mx-auto px-4 sm:px-6 lg:px-8'>
           <motion.div
             className='text-center mb-16'
@@ -443,47 +443,479 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className='text-4xl sm:text-5xl font-bold text-gray-900 mb-4'>
-              Kategori Produk Unggulan
+            <div className='inline-flex items-center space-x-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-full mb-6'>
+              <SparklesIcon className='h-5 w-5' />
+              <span className='font-semibold'>Produk Unggulan Kami</span>
+            </div>
+            <h2 className='text-4xl sm:text-6xl font-bold text-gray-900 mb-4'>
+              Portfolio Produk Berkualitas Tinggi
             </h2>
-            <p className='text-xl text-gray-600 max-w-2xl mx-auto'>
-              Solusi manufaktur presisi untuk berbagai industri dengan kualitas
-              terjamin
+            <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
+              Menyediakan solusi manufaktur presisi untuk berbagai industri —
+              dari pertambangan hingga alat kesehatan
             </p>
           </motion.div>
 
-          <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
-            {featuredProducts.map((product, index) => (
-              <motion.div
-                key={product.id}
-                className='group bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden cursor-pointer'
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                whileHover={{ y: -5 }}
-              >
-                <div className='aspect-w-16 aspect-h-12 bg-gradient-to-br from-blue-100 to-purple-100 p-8 flex items-center justify-center'>
-                  <product.icon className='h-16 w-16 text-blue-600 group-hover:scale-110 transition-transform duration-300' />
+          {/* Products Grid */}
+          <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12'>
+            {/* Core Tray PQ - Mining */}
+            <motion.div
+              className='group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden'
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              viewport={{ once: true }}
+              whileHover={{ y: -8 }}
+            >
+              <div className='relative h-64 overflow-hidden bg-gradient-to-br from-blue-100 to-cyan-100'>
+                <Image
+                  src='/PRODUCT/PRODUCT_PERTAMBANGAN/PRODUCT_PERTAMBANGAN_CORE_TRAY_PQ.png'
+                  alt='Core Tray PQ'
+                  fill
+                  className='object-contain p-6 group-hover:scale-110 transition-transform duration-500'
+                />
+                <div className='absolute top-4 right-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-semibold'>
+                  Pertambangan
                 </div>
-                <div className='p-6'>
-                  <h3 className='text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors'>
-                    {product.title}
-                  </h3>
-                  <p className='text-gray-600 leading-relaxed mb-4'>
-                    {product.description}
-                  </p>
-                  <Link
-                    href={product.slug}
-                    className='inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition-colors'
-                  >
-                    Pelajari Lebih Lanjut
-                    <ArrowRightIcon className='h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform' />
-                  </Link>
+              </div>
+              <div className='p-6'>
+                <h3 className='text-2xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors'>
+                  Core Tray PQ
+                </h3>
+                <p className='text-gray-600 mb-4 leading-relaxed'>
+                  Plastik core tray presisi untuk inti bor diameter PQ dengan
+                  material HDPE UV-stabilized
+                </p>
+                <div className='flex flex-wrap gap-2 mb-4'>
+                  <span className='bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-xs font-semibold'>
+                    3 Rows
+                  </span>
+                  <span className='bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-xs font-semibold'>
+                    UV Resistant
+                  </span>
+                  <span className='bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-xs font-semibold'>
+                    1085mm
+                  </span>
                 </div>
-              </motion.div>
-            ))}
+                <Link
+                  href='/products/core-tray-pq'
+                  className='inline-flex items-center text-blue-600 font-bold hover:text-blue-700 transition-colors group/link'
+                >
+                  <span>Lihat Detail</span>
+                  <ArrowRightIcon className='h-4 w-4 ml-2 group-hover/link:translate-x-2 transition-transform' />
+                </Link>
+              </div>
+            </motion.div>
+
+            {/* Core Tray HQ - Mining */}
+            <motion.div
+              className='group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden'
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.15 }}
+              viewport={{ once: true }}
+              whileHover={{ y: -8 }}
+            >
+              <div className='relative h-64 overflow-hidden bg-gradient-to-br from-cyan-100 to-blue-100'>
+                <Image
+                  src='/PRODUCT/PRODUCT_PERTAMBANGAN/PRODUCT_PERTAMBANGAN_CORE_TRAY_HQ.png'
+                  alt='Core Tray HQ'
+                  fill
+                  className='object-contain p-6 group-hover:scale-110 transition-transform duration-500'
+                />
+                <div className='absolute top-4 right-4 bg-cyan-600 text-white px-3 py-1 rounded-full text-sm font-semibold'>
+                  Pertambangan
+                </div>
+              </div>
+              <div className='p-6'>
+                <h3 className='text-2xl font-bold text-gray-900 mb-2 group-hover:text-cyan-600 transition-colors'>
+                  Core Tray HQ
+                </h3>
+                <p className='text-gray-600 mb-4 leading-relaxed'>
+                  Core tray presisi untuk inti bor diameter HQ dengan sistem
+                  drainase terintegrasi
+                </p>
+                <div className='flex flex-wrap gap-2 mb-4'>
+                  <span className='bg-cyan-50 text-cyan-700 px-3 py-1 rounded-full text-xs font-semibold'>
+                    4 Rows
+                  </span>
+                  <span className='bg-cyan-50 text-cyan-700 px-3 py-1 rounded-full text-xs font-semibold'>
+                    Drainage System
+                  </span>
+                  <span className='bg-cyan-50 text-cyan-700 px-3 py-1 rounded-full text-xs font-semibold'>
+                    HQ 63.5mm
+                  </span>
+                </div>
+                <Link
+                  href='/products/core-tray-hq'
+                  className='inline-flex items-center text-cyan-600 font-bold hover:text-cyan-700 transition-colors group/link'
+                >
+                  <span>Lihat Detail</span>
+                  <ArrowRightIcon className='h-4 w-4 ml-2 group-hover/link:translate-x-2 transition-transform' />
+                </Link>
+              </div>
+            </motion.div>
+
+            {/* Core Tray NQ - Mining */}
+            <motion.div
+              className='group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden'
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+              whileHover={{ y: -8 }}
+            >
+              <div className='relative h-64 overflow-hidden bg-gradient-to-br from-blue-100 to-indigo-100'>
+                <Image
+                  src='/PRODUCT/PRODUCT_PERTAMBANGAN/PRODUCT_PERTAMBANGAN_CORE_TRAY_NQ.png'
+                  alt='Core Tray NQ'
+                  fill
+                  className='object-contain p-6 group-hover:scale-110 transition-transform duration-500'
+                />
+                <div className='absolute top-4 right-4 bg-indigo-600 text-white px-3 py-1 rounded-full text-sm font-semibold'>
+                  Pertambangan
+                </div>
+              </div>
+              <div className='p-6'>
+                <h3 className='text-2xl font-bold text-gray-900 mb-2 group-hover:text-indigo-600 transition-colors'>
+                  Core Tray NQ
+                </h3>
+                <p className='text-gray-600 mb-4 leading-relaxed'>
+                  Core tray kapasitas tertinggi untuk inti bor diameter NQ
+                  dengan profil ramping
+                </p>
+                <div className='flex flex-wrap gap-2 mb-4'>
+                  <span className='bg-indigo-50 text-indigo-700 px-3 py-1 rounded-full text-xs font-semibold'>
+                    5 Rows
+                  </span>
+                  <span className='bg-indigo-50 text-indigo-700 px-3 py-1 rounded-full text-xs font-semibold'>
+                    Slim Profile
+                  </span>
+                  <span className='bg-indigo-50 text-indigo-700 px-3 py-1 rounded-full text-xs font-semibold'>
+                    NQ 47.6mm
+                  </span>
+                </div>
+                <Link
+                  href='/products/core-tray-nq'
+                  className='inline-flex items-center text-indigo-600 font-bold hover:text-indigo-700 transition-colors group/link'
+                >
+                  <span>Lihat Detail</span>
+                  <ArrowRightIcon className='h-4 w-4 ml-2 group-hover/link:translate-x-2 transition-transform' />
+                </Link>
+              </div>
+            </motion.div>
+
+            {/* Handle Grip Assist - Automotive */}
+            <motion.div
+              className='group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden'
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.25 }}
+              viewport={{ once: true }}
+              whileHover={{ y: -8 }}
+            >
+              <div className='relative h-64 overflow-hidden bg-gradient-to-br from-purple-100 to-pink-100'>
+                <Image
+                  src='/PRODUCT/PRODUCT_HANDLE_GRIP_ASSIST/HANDLE_GRIP_ASSIST_PRODUCT.png'
+                  alt='Handle Grip Assist'
+                  fill
+                  className='object-contain p-6 group-hover:scale-110 transition-transform duration-500'
+                />
+                <div className='absolute top-4 right-4 bg-purple-600 text-white px-3 py-1 rounded-full text-sm font-semibold'>
+                  Otomotif
+                </div>
+              </div>
+              <div className='p-6'>
+                <h3 className='text-2xl font-bold text-gray-900 mb-2 group-hover:text-purple-600 transition-colors'>
+                  Handle Grip Assist
+                </h3>
+                <p className='text-gray-600 mb-4 leading-relaxed'>
+                  Handle grip ergonomis dual-material dengan tekstur anti-slip
+                  untuk kenyamanan maksimal
+                </p>
+                <div className='flex flex-wrap gap-2 mb-4'>
+                  <span className='bg-purple-50 text-purple-700 px-3 py-1 rounded-full text-xs font-semibold'>
+                    TPE + Nylon
+                  </span>
+                  <span className='bg-purple-50 text-purple-700 px-3 py-1 rounded-full text-xs font-semibold'>
+                    Anti-Slip
+                  </span>
+                  <span className='bg-purple-50 text-purple-700 px-3 py-1 rounded-full text-xs font-semibold'>
+                    Ergonomic
+                  </span>
+                </div>
+                <Link
+                  href='/products/handle-grip-assist'
+                  className='inline-flex items-center text-purple-600 font-bold hover:text-purple-700 transition-colors group/link'
+                >
+                  <span>Lihat Detail</span>
+                  <ArrowRightIcon className='h-4 w-4 ml-2 group-hover/link:translate-x-2 transition-transform' />
+                </Link>
+              </div>
+            </motion.div>
+
+            {/* Knob Shift Level - Automotive */}
+            <motion.div
+              className='group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden'
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              viewport={{ once: true }}
+              whileHover={{ y: -8 }}
+            >
+              <div className='relative h-64 overflow-hidden bg-gradient-to-br from-pink-100 to-rose-100'>
+                <Image
+                  src='/PRODUCT/PRODUCT_KNOB_SHIFT_LEVEL/KNOB_SHIFT_LEVEL_PRODUCT.png'
+                  alt='Knob Shift Level'
+                  fill
+                  className='object-contain p-6 group-hover:scale-110 transition-transform duration-500'
+                />
+                <div className='absolute top-4 right-4 bg-pink-600 text-white px-3 py-1 rounded-full text-sm font-semibold'>
+                  Otomotif
+                </div>
+              </div>
+              <div className='p-6'>
+                <h3 className='text-2xl font-bold text-gray-900 mb-2 group-hover:text-pink-600 transition-colors'>
+                  Knob Shift Level Assembly
+                </h3>
+                <p className='text-gray-600 mb-4 leading-relaxed'>
+                  Knob transmisi premium dengan finishing metallic dan presisi
+                  tinggi untuk AT/CVT
+                </p>
+                <div className='flex flex-wrap gap-2 mb-4'>
+                  <span className='bg-pink-50 text-pink-700 px-3 py-1 rounded-full text-xs font-semibold'>
+                    PC/ABS + Zinc
+                  </span>
+                  <span className='bg-pink-50 text-pink-700 px-3 py-1 rounded-full text-xs font-semibold'>
+                    Metallic Finish
+                  </span>
+                  <span className='bg-pink-50 text-pink-700 px-3 py-1 rounded-full text-xs font-semibold'>
+                    Premium
+                  </span>
+                </div>
+                <Link
+                  href='/products/knob-shift-level-assembly'
+                  className='inline-flex items-center text-pink-600 font-bold hover:text-pink-700 transition-colors group/link'
+                >
+                  <span>Lihat Detail</span>
+                  <ArrowRightIcon className='h-4 w-4 ml-2 group-hover/link:translate-x-2 transition-transform' />
+                </Link>
+              </div>
+            </motion.div>
+
+            {/* ODP - Telekomunikasi */}
+            <motion.div
+              className='group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden'
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.35 }}
+              viewport={{ once: true }}
+              whileHover={{ y: -8 }}
+            >
+              <div className='relative h-64 overflow-hidden bg-gradient-to-br from-green-100 to-emerald-100'>
+                <Image
+                  src='/PRODUCT/PRODUCT_TELEKOMUNIKASI/ODP(OPTICAL_DISTRIBUTION_POINT)/ODP_PRODUCT.png'
+                  alt='ODP Optical Distribution Point'
+                  fill
+                  className='object-contain p-6 group-hover:scale-110 transition-transform duration-500'
+                />
+                <div className='absolute top-4 right-4 bg-green-600 text-white px-3 py-1 rounded-full text-sm font-semibold'>
+                  Telekomunikasi
+                </div>
+              </div>
+              <div className='p-6'>
+                <h3 className='text-2xl font-bold text-gray-900 mb-2 group-hover:text-green-600 transition-colors'>
+                  ODP Terminal Box
+                </h3>
+                <p className='text-gray-600 mb-4 leading-relaxed'>
+                  Terminal distribusi optik tahan cuaca untuk jaringan fiber
+                  optic outdoor FTTH
+                </p>
+                <div className='flex flex-wrap gap-2 mb-4'>
+                  <span className='bg-green-50 text-green-700 px-3 py-1 rounded-full text-xs font-semibold'>
+                    IP67
+                  </span>
+                  <span className='bg-green-50 text-green-700 px-3 py-1 rounded-full text-xs font-semibold'>
+                    24 Port
+                  </span>
+                  <span className='bg-green-50 text-green-700 px-3 py-1 rounded-full text-xs font-semibold'>
+                    UV Resistant
+                  </span>
+                </div>
+                <Link
+                  href='/products/odp-optical-distribution-point'
+                  className='inline-flex items-center text-green-600 font-bold hover:text-green-700 transition-colors group/link'
+                >
+                  <span>Lihat Detail</span>
+                  <ArrowRightIcon className='h-4 w-4 ml-2 group-hover/link:translate-x-2 transition-transform' />
+                </Link>
+              </div>
+            </motion.div>
+
+            {/* Cassette Diagnostic - Medical */}
+            <motion.div
+              className='group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden'
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              viewport={{ once: true }}
+              whileHover={{ y: -8 }}
+            >
+              <div className='relative h-64 overflow-hidden bg-gradient-to-br from-orange-100 to-amber-100'>
+                <Image
+                  src='/PRODUCT/PRODUCT_ALAT_KESEHATAN/CASSETE/PRODUCT_ALAT_KESEHATAN_CASSETE_SINGLE.png'
+                  alt='Cassette Diagnostic'
+                  fill
+                  className='object-contain p-6 group-hover:scale-110 transition-transform duration-500'
+                />
+                <div className='absolute top-4 right-4 bg-orange-600 text-white px-3 py-1 rounded-full text-sm font-semibold'>
+                  Alat Kesehatan
+                </div>
+              </div>
+              <div className='p-6'>
+                <h3 className='text-2xl font-bold text-gray-900 mb-2 group-hover:text-orange-600 transition-colors'>
+                  Cassette Diagnostik
+                </h3>
+                <p className='text-gray-600 mb-4 leading-relaxed'>
+                  Cassette diagnostik multi-parameter medical-grade untuk
+                  testing laboratorium presisi
+                </p>
+                <div className='flex flex-wrap gap-2 mb-4'>
+                  <span className='bg-orange-50 text-orange-700 px-3 py-1 rounded-full text-xs font-semibold'>
+                    ISO 13485
+                  </span>
+                  <span className='bg-orange-50 text-orange-700 px-3 py-1 rounded-full text-xs font-semibold'>
+                    Medical Grade
+                  </span>
+                  <span className='bg-orange-50 text-orange-700 px-3 py-1 rounded-full text-xs font-semibold'>
+                    1P-7P
+                  </span>
+                </div>
+                <Link
+                  href='/products/cassette-diagnostik-multi-parameter'
+                  className='inline-flex items-center text-orange-600 font-bold hover:text-orange-700 transition-colors group/link'
+                >
+                  <span>Lihat Detail</span>
+                  <ArrowRightIcon className='h-4 w-4 ml-2 group-hover/link:translate-x-2 transition-transform' />
+                </Link>
+              </div>
+            </motion.div>
+
+            {/* Baby Scale - Medical */}
+            <motion.div
+              className='group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden'
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.45 }}
+              viewport={{ once: true }}
+              whileHover={{ y: -8 }}
+            >
+              <div className='relative h-64 overflow-hidden bg-gradient-to-br from-red-100 to-rose-100'>
+                <Image
+                  src='/PRODUCT/PRODUCT_ALAT_KESEHATAN/BABY_SCALE/PRODUCT_ALAT_KESEHATAN_BABY_SCALE.png'
+                  alt='Baby Scale Components'
+                  fill
+                  className='object-contain p-6 group-hover:scale-110 transition-transform duration-500'
+                />
+                <div className='absolute top-4 right-4 bg-red-600 text-white px-3 py-1 rounded-full text-sm font-semibold'>
+                  Alat Kesehatan
+                </div>
+              </div>
+              <div className='p-6'>
+                <h3 className='text-2xl font-bold text-gray-900 mb-2 group-hover:text-red-600 transition-colors'>
+                  Baby Scale Components
+                </h3>
+                <p className='text-gray-600 mb-4 leading-relaxed'>
+                  Komponen lengkap timbangan bayi medical-grade dengan akurasi
+                  ±10 gram
+                </p>
+                <div className='flex flex-wrap gap-2 mb-4'>
+                  <span className='bg-red-50 text-red-700 px-3 py-1 rounded-full text-xs font-semibold'>
+                    CE Certified
+                  </span>
+                  <span className='bg-red-50 text-red-700 px-3 py-1 rounded-full text-xs font-semibold'>
+                    ±10g Accuracy
+                  </span>
+                  <span className='bg-red-50 text-red-700 px-3 py-1 rounded-full text-xs font-semibold'>
+                    Child-Safe
+                  </span>
+                </div>
+                <Link
+                  href='/products/baby-scale-components'
+                  className='inline-flex items-center text-red-600 font-bold hover:text-red-700 transition-colors group/link'
+                >
+                  <span>Lihat Detail</span>
+                  <ArrowRightIcon className='h-4 w-4 ml-2 group-hover/link:translate-x-2 transition-transform' />
+                </Link>
+              </div>
+            </motion.div>
+
+            {/* Motor Accessory Kit - Automotive */}
+            <motion.div
+              className='group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden'
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.5 }}
+              viewport={{ once: true }}
+              whileHover={{ y: -8 }}
+            >
+              <div className='relative h-64 overflow-hidden bg-gradient-to-br from-violet-100 to-purple-100'>
+                <Image
+                  src='/PRODUCT/PRODUCT_AKSESORIES_MOTOR/PRODUCT_AKSESORIES_MOTOR_1.png'
+                  alt='Motorcycle Accessory Kit'
+                  fill
+                  className='object-contain p-6 group-hover:scale-110 transition-transform duration-500'
+                />
+                <div className='absolute top-4 right-4 bg-violet-600 text-white px-3 py-1 rounded-full text-sm font-semibold'>
+                  Otomotif
+                </div>
+              </div>
+              <div className='p-6'>
+                <h3 className='text-2xl font-bold text-gray-900 mb-2 group-hover:text-violet-600 transition-colors'>
+                  Motorcycle Accessory Kit
+                </h3>
+                <p className='text-gray-600 mb-4 leading-relaxed'>
+                  Set aksesori lengkap untuk motor dengan custom color matching
+                  dan finishing premium
+                </p>
+                <div className='flex flex-wrap gap-2 mb-4'>
+                  <span className='bg-violet-50 text-violet-700 px-3 py-1 rounded-full text-xs font-semibold'>
+                    Custom Color
+                  </span>
+                  <span className='bg-violet-50 text-violet-700 px-3 py-1 rounded-full text-xs font-semibold'>
+                    OEM Quality
+                  </span>
+                  <span className='bg-violet-50 text-violet-700 px-3 py-1 rounded-full text-xs font-semibold'>
+                    Bolt-On
+                  </span>
+                </div>
+                <Link
+                  href='/products/motorcycle-accessory-kit'
+                  className='inline-flex items-center text-violet-600 font-bold hover:text-violet-700 transition-colors group/link'
+                >
+                  <span>Lihat Detail</span>
+                  <ArrowRightIcon className='h-4 w-4 ml-2 group-hover/link:translate-x-2 transition-transform' />
+                </Link>
+              </div>
+            </motion.div>
           </div>
+
+          {/* CTA Button */}
+          <motion.div
+            className='text-center'
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <Link
+              href='/products'
+              className='inline-flex items-center bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl'
+            >
+              <span>Lihat Semua Produk</span>
+              <ArrowRightIcon className='h-5 w-5 ml-2' />
+            </Link>
+          </motion.div>
         </div>
       </section>
 
@@ -500,10 +932,6 @@ export default function Home() {
             <h2 className='text-4xl sm:text-5xl font-bold text-gray-900 mb-4'>
               Keunggulan Kompetitif Kami
             </h2>
-            <p className='text-xl text-gray-600 max-w-2xl mx-auto'>
-              Didukung oleh mitra strategis PT Hoshi Manufacturing Indonesia
-              (HMI)
-            </p>
           </motion.div>
 
           <div className='grid md:grid-cols-3 gap-8'>
