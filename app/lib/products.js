@@ -1068,6 +1068,581 @@ export const productCategories = [
       },
     ],
   },
+  {
+    id: 'kabel',
+    name: 'Kabel',
+    description:
+      'Solusi kabel lengkap untuk berbagai kebutuhan industri dan infrastruktur',
+    icon: '🔌',
+    products: [
+      // A. KABEL TEGANGAN RENDAH (Low Voltage ≤1 kV)
+      {
+        id: 'nya-nyaf-series',
+        name: 'NYA/NYAF Series',
+        category: 'Kabel',
+        subcategory: 'Low Voltage Cables',
+        description: 'Kabel fleksibel indoor untuk wiring rumah dan gedung.',
+        fullDescription:
+          'Kabel fleksibel indoor untuk wiring rumah dan gedung. Harga paling kompetitif, tersedia 0,5-400 mm².',
+        specifications: {
+          Voltage: '≤1 kV',
+          Size: '0.5-400 mm²',
+          Type: 'Flexible Indoor',
+          Conductor: 'Copper',
+        },
+        technicalData: {
+          Voltage: '≤1 kV',
+          Standard: 'SNI',
+        },
+        features: [
+          'Harga paling kompetitif',
+          'Fleksibel mudah diinstal',
+          'Tersedia berbagai ukuran',
+        ],
+        applications: ['Wiring rumah', 'Wiring gedung', 'Panel listrik'],
+        image: '/PRODUCT/PLACEHOLDER/CABLE_PLACEHOLDER.png',
+        images: ['/PRODUCT/PLACEHOLDER/CABLE_PLACEHOLDER.png'],
+      },
+      {
+        id: 'nym-series',
+        name: 'NYM Series',
+        category: 'Kabel',
+        subcategory: 'Low Voltage Cables',
+        description: 'Standar nasional untuk instalasi dalam rumah.',
+        fullDescription:
+          'Standar nasional untuk instalasi dalam rumah dengan 3 lapisan isolasi proteksi, kode warna internasional.',
+        specifications: {
+          Layers: '3 lapisan isolasi',
+          Standard: 'Nasional (SNI)',
+          ColorCode: 'International',
+        },
+        technicalData: {
+          Insulation: 'PVC',
+          Voltage: '300/500V',
+        },
+        features: [
+          '3 lapisan isolasi proteksi',
+          'Kode warna internasional',
+          'Aman untuk instalasi tetap',
+        ],
+        applications: ['Instalasi rumah', 'Gedung perkantoran'],
+        image: '/PRODUCT/PLACEHOLDER/CABLE_PLACEHOLDER.png',
+        images: ['/PRODUCT/PLACEHOLDER/CABLE_PLACEHOLDER.png'],
+      },
+      {
+        id: 'nymhy-series',
+        name: 'NYMHY Series',
+        category: 'Kabel',
+        subcategory: 'Low Voltage Cables',
+        description:
+          'Kabel semi-portable medium-heavy untuk aplikasi dengan pergerakan terbatas.',
+        fullDescription:
+          'Kabel semi-portable medium-heavy untuk aplikasi dengan pergerakan terbatas, ukuran 0,75-2,5 mm².',
+        specifications: {
+          Size: '0.75-2.5 mm²',
+          Type: 'Semi-portable Medium-Heavy',
+          Flexibility: 'High',
+        },
+        technicalData: {
+          Voltage: '300/500V',
+          Conductor: 'Stranded Copper',
+        },
+        features: [
+          'Tahan terhadap pergerakan terbatas',
+          'Fleksibel',
+          'Cocok untuk alat elektronik portable',
+        ],
+        applications: ['Peralatan elektronik', 'Extension cord'],
+        image: '/PRODUCT/PLACEHOLDER/CABLE_PLACEHOLDER.png',
+        images: ['/PRODUCT/PLACEHOLDER/CABLE_PLACEHOLDER.png'],
+      },
+      {
+        id: 'nyyhy-series',
+        name: 'NYYHY Series',
+        category: 'Kabel',
+        subcategory: 'Low Voltage Cables',
+        description: 'Heavy duty fleksibel untuk mesin berat dan manufaktur.',
+        fullDescription:
+          'Heavy duty fleksibel untuk mesin berat, lini manufaktur, sistem AC dengan tahan tekanan mekanik ekstrem.',
+        specifications: {
+          Type: 'Heavy Duty Flexible',
+          Resistance: 'Mechanical Pressure',
+          Application: 'Industrial',
+        },
+        technicalData: {
+          Voltage: '450/750V',
+          Sheath: 'PVC Heavy Duty',
+        },
+        features: [
+          'Tahan tekanan mekanik ekstrem',
+          'Durabilitas tinggi',
+          'Cocok untuk lingkungan industri',
+        ],
+        applications: ['Mesin berat', 'Lini manufaktur', 'Sistem AC'],
+        image: '/PRODUCT/PLACEHOLDER/CABLE_PLACEHOLDER.png',
+        images: ['/PRODUCT/PLACEHOLDER/CABLE_PLACEHOLDER.png'],
+      },
+      {
+        id: 'nyy-nayy-series',
+        name: 'NYY/NAYY Series',
+        category: 'Kabel',
+        subcategory: 'Low Voltage Cables',
+        description: 'Kabel power utama untuk instalasi underground dan duct.',
+        fullDescription:
+          'Kabel power utama untuk instalasi underground dan duct dengan tegangan 0,6/1 kV, tersedia hingga 500 mm².',
+        specifications: {
+          Voltage: '0.6/1 kV',
+          Size: 'Up to 500 mm²',
+          Application: 'Underground/Duct',
+        },
+        technicalData: {
+          Conductor: 'Copper (NYY) / Aluminium (NAYY)',
+          Insulation: 'PVC',
+        },
+        features: [
+          'Tahan tanam langsung (dengan pelindung)',
+          'Kapasitas arus besar',
+          'Tersedia opsi konduktor aluminium',
+        ],
+        applications: ['Distribusi daya utama', 'Instalasi bawah tanah'],
+        image: '/PRODUCT/PLACEHOLDER/CABLE_PLACEHOLDER.png',
+        images: ['/PRODUCT/PLACEHOLDER/CABLE_PLACEHOLDER.png'],
+      },
+      {
+        id: 'nyfgby-series',
+        name: 'NYFGBY Series',
+        category: 'Kabel',
+        subcategory: 'Low Voltage Cables',
+        description:
+          'Kabel dengan armour baja berlapis untuk perlindungan maksimal.',
+        fullDescription:
+          'Kabel dengan armour baja berlapis untuk perlindungan maksimal di area berbahaya dan underground dengan tekanan tinggi.',
+        specifications: {
+          Protection: 'Steel Armour (Flat/Round)',
+          Application: 'Hazardous Areas/Underground',
+          Voltage: '0.6/1 kV',
+        },
+        technicalData: {
+          Armour: 'Galvanized Steel',
+          Sheath: 'PVC',
+        },
+        features: [
+          'Perlindungan mekanis maksimal',
+          'Tahan tekanan tinggi',
+          'Aman untuk area berbahaya',
+        ],
+        applications: ['Area pertambangan', 'Instalasi tanam langsung'],
+        image: '/PRODUCT/PLACEHOLDER/CABLE_PLACEHOLDER.png',
+        images: ['/PRODUCT/PLACEHOLDER/CABLE_PLACEHOLDER.png'],
+      },
+      {
+        id: 'nfa2x-series',
+        name: 'NFA2X Series',
+        category: 'Kabel',
+        subcategory: 'Low Voltage Cables',
+        description:
+          'Khusus service drop dari kotak distribusi ke rumah konsumen.',
+        fullDescription:
+          'Khusus service drop dari kotak distribusi ke rumah konsumen. Kabel twisted pair aluminium untuk saluran udara.',
+        specifications: {
+          Application: 'Service Drop',
+          Conductor: 'Aluminium',
+          Type: 'Twisted Cable',
+        },
+        technicalData: {
+          Voltage: '0.6/1 kV',
+          Insulation: 'XLPE',
+        },
+        features: [
+          'Ringan dan kuat',
+          'Tahan cuaca',
+          'Khusus distribusi PLN ke rumah',
+        ],
+        applications: ['Service drop PLN', 'Penerangan jalan umum'],
+        image: '/PRODUCT/PLACEHOLDER/CABLE_PLACEHOLDER.png',
+        images: ['/PRODUCT/PLACEHOLDER/CABLE_PLACEHOLDER.png'],
+      },
+
+      // B. KABEL TEGANGAN MENENGAH (Medium Voltage 1-35 kV)
+      {
+        id: 'n2xsey-na2xsey-series',
+        name: 'N2XSEY/NA2XSEY Series',
+        category: 'Kabel',
+        subcategory: 'Medium Voltage Cables',
+        description: 'Isolasi XLPE berkualitas tinggi untuk transmisi daya.',
+        fullDescription:
+          'Isolasi XLPE berkualitas tinggi (tembaga atau aluminium) untuk transmisi daya dan gardu induk.',
+        specifications: {
+          Insulation: 'XLPE',
+          Conductor: 'Copper/Aluminium',
+          Voltage: '1-35 kV',
+        },
+        technicalData: {
+          Screen: 'Copper Tape/Wire',
+          Sheath: 'PVC/PE',
+        },
+        features: [
+          'High quality XLPE insulation',
+          'Low dielectric loss',
+          'Reliable for medium voltage',
+        ],
+        applications: ['Gardu induk', 'Distribusi industri', 'Power plant'],
+        image: '/PRODUCT/PLACEHOLDER/CABLE_PLACEHOLDER.png',
+        images: ['/PRODUCT/PLACEHOLDER/CABLE_PLACEHOLDER.png'],
+      },
+      {
+        id: 'overhead-transmission-lines',
+        name: 'Overhead Transmission Lines',
+        category: 'Kabel',
+        subcategory: 'Medium Voltage Cables',
+        description:
+          'AAC, AAAC, ACSR untuk saluran transmisi udara jarak jauh.',
+        fullDescription:
+          'Kabel konduktor telanjang (AAC, AAAC, ACSR) dirancang untuk saluran transmisi udara jarak jauh dengan kekuatan tarik tinggi.',
+        specifications: {
+          Type: 'AAC, AAAC, ACSR',
+          Application: 'Overhead Transmission',
+          Voltage: 'High Voltage',
+        },
+        technicalData: {
+          Material: 'Aluminium / Aluminium Alloy / Steel Reinforced',
+        },
+        features: [
+          'Kekuatan tarik tinggi (ACSR)',
+          'Ringan dan konduktivitas baik',
+          'Tahan korosi (AAAC)',
+        ],
+        applications: ['Saluran transmisi udara (SUTM/SUTT)'],
+        image: '/PRODUCT/PLACEHOLDER/CABLE_PLACEHOLDER.png',
+        images: ['/PRODUCT/PLACEHOLDER/CABLE_PLACEHOLDER.png'],
+      },
+      {
+        id: 'lead-sheathed-cables',
+        name: 'Lead Sheathed Cables',
+        category: 'Kabel',
+        subcategory: 'Medium Voltage Cables',
+        description: 'Untuk sistem lama yang masih beroperasi.',
+        fullDescription:
+          'Kabel dengan pelindung timbal (lead sheath) untuk perlindungan ekstra terhadap kelembaban dan bahan kimia, sering digunakan pada sistem lama.',
+        specifications: {
+          Protection: 'Lead Sheath',
+          Application: 'Legacy Systems / Chemical Environment',
+        },
+        technicalData: {
+          Sheath: 'Lead Alloy',
+        },
+        features: [
+          'Impermeable to water and chemicals',
+          'Excellent corrosion resistance',
+          'Proven durability',
+        ],
+        applications: [
+          'Kilang minyak',
+          'Industri kimia',
+          'Sistem bawah tanah lama',
+        ],
+        image: '/PRODUCT/PLACEHOLDER/CABLE_PLACEHOLDER.png',
+        images: ['/PRODUCT/PLACEHOLDER/CABLE_PLACEHOLDER.png'],
+      },
+
+      // C. KABEL TAHAN API (Fire Resistant Cable - FRC)
+      {
+        id: 'fire-resistant-cable',
+        name: 'Fire Resistant Cable (FRC)',
+        category: 'Kabel',
+        subcategory: 'Fire Resistant Cables',
+        description: 'Produk unggulan untuk keselamatan kebakaran.',
+        fullDescription:
+          'Teknologi berlapis 3 layer proteksi: Mica Glass Tape (MGT), XLPE Insulation, Low Smoke Zero Halogen (LSZH). Tahan hingga 750-950°C selama 3 jam tetap menghantarkan listrik.',
+        specifications: {
+          'Temp Resistance': '750-950°C (3 hours)',
+          Voltage: '300/500V - 1 kV',
+          Standard: 'IEC 60331, BS 6387',
+          Core: 'Various sizes',
+        },
+        technicalData: {
+          Layer1: 'Mica Glass Tape (MGT)',
+          Layer2: 'XLPE Insulation (90°C)',
+          Layer3: 'LSZH Sheath',
+        },
+        features: [
+          'Tetap menghantarkan listrik saat kebakaran',
+          'Low Smoke Zero Halogen (tidak beracun)',
+          'Tahan panas ekstrem',
+        ],
+        applications: [
+          'Sistem alarm kebakaran',
+          'Pencahayaan darurat',
+          'Rumah sakit & Data center',
+          'Gedung pencakar langit',
+          'Jalur evakuasi',
+        ],
+        image: '/PRODUCT/PLACEHOLDER/CABLE_PLACEHOLDER.png',
+        images: ['/PRODUCT/PLACEHOLDER/CABLE_PLACEHOLDER.png'],
+      },
+
+      // D. KABEL INSTRUMENTATION & CONTROL
+      {
+        id: 'instrumentation-cables',
+        name: 'Instrumentation Cables (OS/IS)',
+        category: 'Kabel',
+        subcategory: 'Instrumentation & Control',
+        description: 'Armoured & non-armoured untuk SCADA dan sensor industri.',
+        fullDescription:
+          'Kabel instrumentasi (Overall Screen / Individual Screen) tersedia dalam varian armoured dan non-armoured untuk sistem SCADA, sensor industri, dan monitoring RTU.',
+        specifications: {
+          Type: 'OS (Overall Screen) / IS (Individual Screen)',
+          Protection: 'Armoured / Non-armoured',
+          Application: 'Signal Transmission',
+        },
+        technicalData: {
+          Screen: 'Aluminium Foil / Copper Tape',
+          Conductor: 'Tinned Copper',
+        },
+        features: [
+          'Perlindungan terhadap interferensi sinyal (EMI)',
+          'Akurasi transmisi data tinggi',
+          'Tersedia opsi armoured untuk perlindungan mekanis',
+        ],
+        applications: ['SCADA systems', 'Sensor industri', 'RTU monitoring'],
+        image: '/PRODUCT/PLACEHOLDER/CABLE_PLACEHOLDER.png',
+        images: ['/PRODUCT/PLACEHOLDER/CABLE_PLACEHOLDER.png'],
+      },
+      {
+        id: 'control-cables',
+        name: 'Control Cables',
+        category: 'Kabel',
+        subcategory: 'Instrumentation & Control',
+        description: 'Multi-core untuk PLC, relay logic, dan motor starter.',
+        fullDescription:
+          'Kabel kontrol multi-core fleksibel untuk menghubungkan PLC, relay logic, motor starter, dan switching mesin.',
+        specifications: {
+          Core: 'Multi-core',
+          Application: 'Control System',
+          Flexibility: 'Flexible',
+        },
+        technicalData: {
+          Voltage: '300/500V',
+          Insulation: 'PVC',
+        },
+        features: [
+          'Identifikasi core dengan nomor/warna',
+          'Fleksibel untuk instalasi panel',
+          'Tahan minyak (opsional)',
+        ],
+        applications: [
+          'PLC wiring',
+          'Relay logic',
+          'Motor starter',
+          'Machine switching',
+        ],
+        image: '/PRODUCT/PLACEHOLDER/CABLE_PLACEHOLDER.png',
+        images: ['/PRODUCT/PLACEHOLDER/CABLE_PLACEHOLDER.png'],
+      },
+
+      // E. KABEL KHUSUS (SPECIALTY CABLES)
+      {
+        id: 'marine-cables',
+        name: 'Marine Cables',
+        category: 'Kabel',
+        subcategory: 'Specialty Cables',
+        description:
+          'Untuk kapal dan platform offshore, tahan korosi air asin.',
+        fullDescription:
+          'Kabel khusus marine grade untuk aplikasi di kapal dan platform offshore, dirancang tahan terhadap korosi air asin ekstrem, minyak, dan getaran.',
+        specifications: {
+          Application: 'Marine & Offshore',
+          Resistance: 'Salt water, Oil, Vibration',
+          Standard: 'IEC 60092',
+        },
+        technicalData: {
+          Sheath: 'SHF1 / SHF2 (Low Smoke)',
+          FlameRetardant: 'IEC 60332',
+        },
+        features: [
+          'Tahan korosi air laut',
+          'Flame retardant & Low smoke',
+          'Sertifikasi marine class',
+        ],
+        applications: ['Kapal laut', 'Platform offshore', 'Dermaga'],
+        image: '/PRODUCT/PLACEHOLDER/CABLE_PLACEHOLDER.png',
+        images: ['/PRODUCT/PLACEHOLDER/CABLE_PLACEHOLDER.png'],
+      },
+      {
+        id: 'fiber-optic-cables',
+        name: 'Fiber Optic Cables',
+        category: 'Kabel',
+        subcategory: 'Specialty Cables',
+        description: 'Bandwidth unlimited hingga terabit/detik, jarak jauh.',
+        fullDescription:
+          'Kabel Fiber Optic untuk transmisi data kecepatan tinggi dengan bandwidth unlimited hingga terabit/detik. Mampu menjangkau jarak 80+ km tanpa repeater.',
+        specifications: {
+          Type: 'Single Mode / Multi Mode',
+          Bandwidth: 'Unlimited (Terabit/s)',
+          Distance: '80+ km without repeater',
+        },
+        technicalData: {
+          Core: 'Glass Fiber',
+          Protection: 'Aramid Yarn / Steel Armour',
+        },
+        features: [
+          'Kecepatan transmisi cahaya',
+          'Tidak terpengaruh interferensi elektromagnetik',
+          'Kapasitas data sangat besar',
+        ],
+        applications: [
+          'Backbone internet',
+          'Jaringan 5G',
+          'Data center interconnect',
+        ],
+        image: '/PRODUCT/PLACEHOLDER/CABLE_PLACEHOLDER.png',
+        images: ['/PRODUCT/PLACEHOLDER/CABLE_PLACEHOLDER.png'],
+      },
+      {
+        id: 'solar-pv-cable',
+        name: 'Solar PV Cable',
+        category: 'Kabel',
+        subcategory: 'Specialty Cables',
+        description: 'Untuk sistem surya dengan rated voltage 1000-1500V DC.',
+        fullDescription:
+          'Kabel khusus panel surya (PV) dengan rated voltage 1000-1500V DC. Tahan sinar UV dan cuaca ekstrem hingga 25+ tahun penggunaan outdoor.',
+        specifications: {
+          Voltage: '1000-1500V DC',
+          LifeSpan: '25+ years',
+          Resistance: 'UV & Weather',
+        },
+        technicalData: {
+          Insulation: 'Cross-linked Polyolefin',
+          Conductor: 'Tinned Copper',
+        },
+        features: [
+          'Tahan sinar UV ekstrem',
+          'Tahan suhu tinggi',
+          'Umur pakai panjang (25+ tahun)',
+        ],
+        applications: [
+          'PLTS (Pembangkit Listrik Tenaga Surya)',
+          'Rooftop solar panel',
+        ],
+        image: '/PRODUCT/PLACEHOLDER/CABLE_PLACEHOLDER.png',
+        images: ['/PRODUCT/PLACEHOLDER/CABLE_PLACEHOLDER.png'],
+      },
+      {
+        id: 'telecom-cable',
+        name: 'Telecom Cable',
+        category: 'Kabel',
+        subcategory: 'Specialty Cables',
+        description:
+          'Twisted pair copper atau fiber optic untuk jaringan telekomunikasi.',
+        fullDescription:
+          'Kabel telekomunikasi tembaga (Twisted Pair) atau Fiber Optic untuk infrastruktur jaringan suara dan data.',
+        specifications: {
+          Type: 'Twisted Pair / FO',
+          Application: 'Telecommunication',
+        },
+        technicalData: {
+          Pairs: 'Multi-pair',
+        },
+        features: [
+          'Standar telekomunikasi',
+          'Kualitas transmisi suara jernih',
+          'Reliabilitas tinggi',
+        ],
+        applications: ['PSTN', 'PBX', 'Corporate network'],
+        image: '/PRODUCT/PLACEHOLDER/CABLE_PLACEHOLDER.png',
+        images: ['/PRODUCT/PLACEHOLDER/CABLE_PLACEHOLDER.png'],
+      },
+      {
+        id: 'airfield-lighting-cable',
+        name: 'Airfield Lighting Cable',
+        category: 'Kabel',
+        subcategory: 'Specialty Cables',
+        description: 'Untuk runway dan taxiway dengan sertifikasi FAA/ICAO.',
+        fullDescription:
+          'Kabel primer dan sekunder untuk sistem penerangan lapangan terbang (runway, taxiway, approach lighting). Memenuhi sertifikasi FAA/ICAO.',
+        specifications: {
+          Application: 'Airfield Lighting',
+          Certification: 'FAA / ICAO',
+          Voltage: '5 kV',
+        },
+        technicalData: {
+          Insulation: 'XLPE / EPR',
+          Sheath: 'PCP / CSP',
+        },
+        features: [
+          'Tahan bahan kimia aviasi',
+          'Reliabilitas tinggi untuk keselamatan penerbangan',
+          'Tahan cuaca bandara',
+        ],
+        applications: [
+          'Runway lighting',
+          'Taxiway lighting',
+          'Approach lighting',
+        ],
+        image: '/PRODUCT/PLACEHOLDER/CABLE_PLACEHOLDER.png',
+        images: ['/PRODUCT/PLACEHOLDER/CABLE_PLACEHOLDER.png'],
+      },
+      {
+        id: 'oil-gas-subsea-cable',
+        name: 'Oil & Gas Subsea Cable',
+        category: 'Kabel',
+        subcategory: 'Specialty Cables',
+        description: 'Untuk well completion dan deepwater drilling.',
+        fullDescription:
+          'Kabel umbilical dan power subsea untuk aplikasi pengeboran lepas pantai dalam (deepwater drilling) dan well completion. Tahan tekanan ribuan PSI.',
+        specifications: {
+          Application: 'Subsea / Deepwater',
+          Resistance: 'High Pressure (Thousands PSI)',
+          Type: 'Umbilical / Power',
+        },
+        technicalData: {
+          Armour: 'High Tensile Steel',
+          WaterBlock: 'Yes',
+        },
+        features: [
+          'Tahan tekanan hidrostatik ekstrem',
+          'Desain custom sesuai kedalaman',
+          'Integrasi power dan data',
+        ],
+        applications: [
+          'Well completion',
+          'Deepwater drilling',
+          'Subsea control',
+        ],
+        image: '/PRODUCT/PLACEHOLDER/CABLE_PLACEHOLDER.png',
+        images: ['/PRODUCT/PLACEHOLDER/CABLE_PLACEHOLDER.png'],
+      },
+      {
+        id: 'metal-corrugated-cable',
+        name: 'Metal Corrugated Cable',
+        category: 'Kabel',
+        subcategory: 'Specialty Cables',
+        description:
+          'Fleksibilitas tinggi dengan perlindungan korosi maksimal.',
+        fullDescription:
+          'Kabel dengan pelindung metal bergelombang (corrugated metal armour) yang memberikan kombinasi fleksibilitas tinggi dan perlindungan mekanis/korosi maksimal.',
+        specifications: {
+          Protection: 'Corrugated Metal Armour',
+          Flexibility: 'High',
+          Application: 'Industrial / Hazardous',
+        },
+        technicalData: {
+          Armour: 'Corrugated Aluminium / Copper / Steel',
+        },
+        features: [
+          'Sangat fleksibel namun kuat',
+          'Perlindungan 100% terhadap cairan dan gas',
+          'Ringan dibanding steel wire armour',
+        ],
+        applications: [
+          'Industri petrokimia',
+          'Instalasi dengan radius belok sempit',
+        ],
+        image: '/PRODUCT/PLACEHOLDER/CABLE_PLACEHOLDER.png',
+        images: ['/PRODUCT/PLACEHOLDER/CABLE_PLACEHOLDER.png'],
+      },
+    ],
+  },
 ];
 
 // Generate slug from product name
