@@ -14,103 +14,28 @@ import {
 
 // Metadata will be handled by layout.js for this page
 
-export default function Blog() {
-  const featuredPost = {
-    slug: 'pentingnya-cable-management-dengan-core-tray',
-    title: 'Pentingnya Cable Management dengan Core Tray di Data Center Modern',
-    excerpt:
-      'Pelajari mengapa manajemen kabel yang baik menggunakan core tray sangat penting untuk efisiensi operasional data center dan bagaimana memilih produk yang tepat.',
-    image: '/blog/cable-management.jpg',
-    author: 'Tim PT ARCH CONTINENT TECH',
-    date: '2025-01-15',
-    readTime: '8 menit',
-    category: 'Teknologi',
-    tags: ['Cable Management', 'Core Tray', 'Data Center'],
-  };
+import { getAllBlogPosts } from '../lib/blog';
 
-  const blogPosts = [
-    {
-      slug: 'cara-memilih-bahan-konstruksi-berkualitas',
-      title: 'Cara Memilih Bahan Konstruksi Berkualitas untuk Proyek Anda',
-      excerpt:
-        'Panduan lengkap dalam memilih bahan konstruksi yang tepat, termasuk faktor-faktor yang harus dipertimbangkan dan tips praktis dari ahli.',
-      image: '/blog/construction-materials.jpg',
-      author: 'Tim PT ARCH CONTINENT TECH',
-      date: '2025-01-12',
-      readTime: '6 menit',
-      category: 'Konstruksi',
-      tags: ['Bahan Konstruksi', 'Tips', 'Kualitas'],
-    },
-    {
-      slug: 'profil-pt-arch-continent-tech',
-      title:
-        'Mengenal PT ARCH CONTINENT TECH: Mitra Terpercaya di Industri Konstruksi',
-      excerpt:
-        'Sejarah, visi misi, dan komitmen PT ARCH CONTINENT TECH dalam menyediakan solusi terbaik untuk kebutuhan konstruksi dan teknis.',
-      image: '/blog/company-profile.jpg',
-      author: 'Tim PT ARCH CONTINENT TECH',
-      date: '2025-01-10',
-      readTime: '5 menit',
-      category: 'Perusahaan',
-      tags: ['Company Profile', 'Sejarah', 'Visi Misi'],
-    },
-    {
-      slug: 'tren-teknologi-konstruksi-2025',
-      title: 'Tren Teknologi Konstruksi 2025: Inovasi yang Mengubah Industri',
-      excerpt:
-        'Eksplorasi teknologi terbaru dalam industri konstruksi dan bagaimana inovasi ini mempengaruhi cara kita membangun di masa depan.',
-      image: '/blog/construction-tech.jpg',
-      author: 'Tim PT ARCH CONTINENT TECH',
-      date: '2025-01-08',
-      readTime: '7 menit',
-      category: 'Teknologi',
-      tags: ['Teknologi', 'Inovasi', 'Konstruksi'],
-    },
-    {
-      slug: 'panduan-instalasi-core-tray',
-      title: 'Panduan Lengkap Instalasi Core Tray untuk Pemula',
-      excerpt:
-        'Step-by-step guide untuk instalasi core tray yang benar, termasuk tools yang dibutuhkan dan best practices dari profesional.',
-      image: '/blog/installation-guide.jpg',
-      author: 'Tim PT ARCH CONTINENT TECH',
-      date: '2025-01-05',
-      readTime: '10 menit',
-      category: 'Tutorial',
-      tags: ['Tutorial', 'Instalasi', 'Core Tray'],
-    },
-    {
-      slug: 'keunggulan-plastik-core-tray',
-      title: 'Keunggulan Plastik Core Tray Dibanding Material Lain',
-      excerpt:
-        'Analisis komprehensif tentang mengapa plastik core tray menjadi pilihan utama untuk cable management dibanding material tradisional.',
-      image: '/blog/plastic-advantages.jpg',
-      author: 'Tim PT ARCH CONTINENT TECH',
-      date: '2025-01-03',
-      readTime: '6 menit',
-      category: 'Produk',
-      tags: ['Plastik', 'Core Tray', 'Perbandingan'],
-    },
-    {
-      slug: 'tips-maintenance-core-tray',
-      title: 'Tips Maintenance Core Tray untuk Daya Tahan Maksimal',
-      excerpt:
-        'Cara merawat dan maintenance core tray agar tahan lama dan berfungsi optimal, termasuk jadwal perawatan yang direkomendasikan.',
-      image: '/blog/maintenance-tips.jpg',
-      author: 'Tim PT ARCH CONTINENT TECH',
-      date: '2025-01-01',
-      readTime: '5 menit',
-      category: 'Maintenance',
-      tags: ['Maintenance', 'Tips', 'Perawatan'],
-    },
-  ];
+export default function Blog() {
+  const allPosts = getAllBlogPosts();
+
+  // Sort posts by date (newest first)
+  const sortedPosts = [...allPosts].sort(
+    (a, b) => new Date(b.date) - new Date(a.date)
+  );
+
+  const featuredPost = sortedPosts[0];
+  const blogPosts = sortedPosts.slice(1);
+
+  // Calculate categories dynamically
+  const categoryCounts = allPosts.reduce((acc, post) => {
+    acc[post.category] = (acc[post.category] || 0) + 1;
+    return acc;
+  }, {});
 
   const categories = [
-    { name: 'Semua', count: blogPosts.length + 1 },
-    { name: 'Teknologi', count: 2 },
-    { name: 'Konstruksi', count: 1 },
-    { name: 'Tutorial', count: 1 },
-    { name: 'Produk', count: 1 },
-    { name: 'Perusahaan', count: 1 },
+    { name: 'Semua', count: allPosts.length },
+    ...Object.entries(categoryCounts).map(([name, count]) => ({ name, count })),
   ];
 
   return (
