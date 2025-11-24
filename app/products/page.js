@@ -330,7 +330,7 @@ Terima kasih.`;
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder='Cari produk berdasarkan nama, kategori, spesifikasi, atau aplikasi...'
-                className='w-full pl-14 pr-32 py-4 text-base rounded-2xl border-2 border-gray-200 focus:border-blue-500 focus:ring-4 focus:ring-blue-100 transition-all duration-200 outline-none bg-white shadow-sm hover:shadow-md'
+                className='w-full pl-14 pr-32 py-4 text-base text-gray-900 placeholder:text-gray-500 rounded-2xl border-2 border-gray-200 focus:border-blue-500 focus:ring-4 focus:ring-blue-100 transition-all duration-200 outline-none bg-white shadow-sm hover:shadow-md'
               />
               {searchQuery && (
                 <button
@@ -344,7 +344,7 @@ Terima kasih.`;
                   <XMarkIcon className='h-5 w-5 text-gray-500' />
                 </button>
               )}
-              <div className='absolute right-4 top-1/2 -translate-y-1/2 hidden sm:flex items-center gap-1 px-3 py-1.5 bg-gray-100 rounded-lg text-xs font-medium text-gray-600 border border-gray-200'>
+              <div className='absolute right-4 top-1/2 -translate-y-1/2 hidden sm:flex items-center gap-1 px-3 py-1.5 bg-gray-100 rounded-lg text-xs font-medium text-gray-900 border border-gray-200'>
                 <kbd className='font-mono'>⌘</kbd>
                 <span>+</span>
                 <kbd className='font-mono'>K</kbd>
@@ -356,7 +356,7 @@ Terima kasih.`;
                 animate={{ opacity: 1, y: 0 }}
                 className='mt-4 text-center'
               >
-                <p className='text-sm text-gray-600'>
+                <p className='text-sm text-gray-900'>
                   Ditemukan{' '}
                   <span className='font-bold text-blue-600'>
                     {filteredProducts.length}
@@ -378,7 +378,7 @@ Terima kasih.`;
               className={`px-6 py-3 rounded-full font-medium transition-all ${
                 selectedCategory === 'all'
                   ? 'bg-blue-600 text-white shadow-lg'
-                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                  : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
               }`}
             >
               Semua Produk
@@ -390,7 +390,7 @@ Terima kasih.`;
                 className={`px-6 py-3 rounded-full font-medium transition-all flex items-center space-x-2 ${
                   selectedCategory === category.id
                     ? 'bg-blue-600 text-white shadow-lg'
-                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                    : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
                 }`}
               >
                 <span>{category.icon}</span>

@@ -98,7 +98,11 @@ const structuredData = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang='id' className='scroll-smooth' suppressHydrationWarning>
+    <html
+      lang='id'
+      className='scroll-smooth bg-white text-gray-900'
+      suppressHydrationWarning
+    >
       <head>
         <meta
           name='google-site-verification'
