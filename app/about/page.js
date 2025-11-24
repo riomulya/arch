@@ -262,7 +262,7 @@ export default function About() {
             <div className='space-y-12'>
               {timeline.map((item, index) => (
                 <motion.div
-                  key={item.year}
+                  key={`${item.year}-${index}`}
                   className={`flex items-center ${
                     index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'
                   }`}
